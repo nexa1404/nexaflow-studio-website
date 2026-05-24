@@ -387,20 +387,36 @@
     if (!form) return;
 
     form.addEventListener('submit', function (e) {
-      /* If no real endpoint is set, handle client-side */
-      var action = form.getAttribute('action') || '';
-      if (action === '#' || action === '') {
-        e.preventDefault();
-        /* Show simulated success */
-        if (submitBtn) submitBtn.classList.add('is-loading');
-        setTimeout(function () {
+      e.preventDefault(); /* Siempre: nunca redirigir a Formspree */
+
+      if (submitBtn) submitBtn.classList.add('is-loading');
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(function (res) {
+        if (res.ok) {
+          /* Éxito: mostrar mensaje inline */
           form.style.opacity = '0.3';
           form.style.pointerEvents = 'none';
           if (successEl) successEl.classList.add('is-visible');
-          if (submitBtn) submitBtn.classList.remove('is-loading');
-        }, 1200);
-      }
-      /* Otherwise let Formspree handle it */
+        } else {
+          res.json().then(function (data) {
+            var msg = (data.errors || []).map(function (e) { return e.message; }).join(', ');
+            alert('Error al enviar' + (msg ? ': ' + msg : '') + '. Escríbenos a hola.nexaflow@gmail.com');
+          }).catch(function () {
+            alert('Error al enviar. Escríbenos a hola.nexaflow@gmail.com');
+          });
+        }
+      })
+      .catch(function () {
+        alert('Error de conexión. Escríbenos a hola.nexaflow@gmail.com');
+      })
+      .finally(function () {
+        if (submitBtn) submitBtn.classList.remove('is-loading');
+      });
     });
   }
 

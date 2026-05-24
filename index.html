@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260524g">
+  <link rel="stylesheet" href="styles.css?v=20260524h">
 </head>
 <body>
 
@@ -954,6 +954,12 @@
           <label for="f-message">¿Qué quieres mejorar?</label>
           <textarea id="f-message" name="message" rows="4" placeholder="Más clientes, menos trabajo manual, mejor presencia digital… cuéntanos." required></textarea>
         </div>
+        <div class="form-group form-rgpd">
+          <label class="rgpd-label">
+            <input type="checkbox" id="f-rgpd" name="rgpd" required>
+            <span>He leído y acepto el tratamiento de mis datos para gestionar mi consulta. <a href="politica-privacidad.html" target="_blank">Política de Privacidad</a>.</span>
+          </label>
+        </div>
         <button type="submit" class="btn btn-primary btn-full" id="form-submit">
           <span class="btn-text">Solicitar valoración gratuita</span>
           <span class="btn-loading" aria-hidden="true">Enviando…</span>
@@ -1019,6 +1025,10 @@
     </div>
     <div class="footer-bottom">
       <p>© 2026 NexaFlow Studio. Todos los derechos reservados.</p>
+      <p class="footer-legal-note">
+        Aviso Legal en elaboración &middot;
+        Consultas sobre privacidad: <a href="mailto:hola.nexaflow@gmail.com">hola.nexaflow@gmail.com</a>
+      </p>
       <p class="footer-tagline-sm">Diseñado con precisión. Construido para convertir.</p>
     </div>
   </div>
@@ -1030,8 +1040,29 @@
   <span>WhatsApp</span>
 </a>
 
+<!-- Banner de cookies -->
+<div class="cookie-banner" id="cookie-banner" role="alert" aria-live="polite">
+  <p>Esta web usa cookies técnicas necesarias para su funcionamiento. No usamos cookies de rastreo ni publicidad.</p>
+  <button class="cookie-accept" id="cookie-accept">Entendido</button>
+</div>
+<script>
+  (function(){
+    if(localStorage.getItem('nf-cookies-ok')){
+      var b=document.getElementById('cookie-banner');
+      if(b) b.style.display='none';
+    }
+    document.addEventListener('DOMContentLoaded',function(){
+      var btn=document.getElementById('cookie-accept');
+      if(btn) btn.addEventListener('click',function(){
+        localStorage.setItem('nf-cookies-ok','1');
+        document.getElementById('cookie-banner').style.display='none';
+      });
+    });
+  })();
+</script>
+
 <script defer src="lib/gsap.min.js"></script>
 <script defer src="lib/ScrollTrigger.min.js"></script>
-<script defer src="main.js?v=20260524g"></script>
+<script defer src="main.js?v=20260524h"></script>
 </body>
 </html>

@@ -3007,3 +3007,90 @@ textarea { resize: vertical; min-height: 120px; }
     padding: 6rem 0;
   }
 }
+
+/* ============================================================
+   LEGAL — RGPD checkbox, cookie banner, footer note
+   ============================================================ */
+
+/* RGPD checkbox */
+.form-rgpd { margin-bottom: 1.1rem; }
+.rgpd-label {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: rgba(240,237,232,0.55);
+  line-height: 1.55;
+}
+.rgpd-label input[type="checkbox"] {
+  flex-shrink: 0;
+  margin-top: 2px;
+  accent-color: var(--lime);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+.rgpd-label a {
+  color: var(--lime);
+  text-decoration: underline;
+  text-decoration-color: rgba(163,230,53,0.35);
+  transition: text-decoration-color 0.2s;
+}
+.rgpd-label a:hover { text-decoration-color: var(--lime); }
+
+/* Cookie banner */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: rgba(18,17,16,0.97);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(163,230,53,0.14);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.cookie-banner p {
+  font-size: 0.82rem;
+  color: rgba(240,237,232,0.65);
+  margin: 0;
+  max-width: 680px;
+  line-height: 1.5;
+}
+.cookie-accept {
+  flex-shrink: 0;
+  background: var(--lime);
+  color: #0a0a08;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+.cookie-accept:hover { opacity: 0.85; }
+@media (max-width: 600px) {
+  .cookie-banner { flex-direction: column; text-align: center; padding: 1.2rem 1rem; }
+}
+
+/* Footer legal note */
+.footer-legal-note {
+  font-size: 0.74rem;
+  color: rgba(240,237,232,0.3);
+  margin-top: 0.4rem;
+}
+.footer-legal-note a {
+  color: rgba(240,237,232,0.45);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.footer-legal-note a:hover { color: var(--lime); }
