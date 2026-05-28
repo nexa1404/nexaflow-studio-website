@@ -1,5 +1,5 @@
 # Robots.txt — NexaFlow Studio
-# https://nexaflow.studio
+# https://nexaflowestudio.com
 
 User-agent: *
 Allow: /
@@ -9,4 +9,4 @@ Disallow: /lib/
 Disallow: /assets/credits.json
 
 # Sitemap
-Sitemap: https://nexaflow.studio/sitemap.xml
+Sitemap: https://nexaflowestudio.com/sitemap.xml
