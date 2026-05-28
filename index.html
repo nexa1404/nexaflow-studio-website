@@ -1,23 +1,203 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-ES">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NexaFlow Studio — Automatización, IA y Webs Premium para Negocios Locales | Valencia</title>
-  <meta name="description" content="Agencia digital especializada en automatización, IA y diseño web para negocios locales y pymes en Valencia. Chatbots, Google Maps, captación de leads y sistemas que trabajan solos. Auditoría gratuita.">
-  <meta name="keywords" content="automatización para negocios, IA para empresas, diseño web negocios locales, agencia digital Valencia, automatización WhatsApp, chatbot IA, SEO local Valencia, captación leads automática, pymes digitales">
-  <meta name="robots" content="index, follow">
-  <meta property="og:title" content="NexaFlow Studio — Automatización, IA y Webs para Negocios Locales">
-  <meta property="og:description" content="Tu negocio merece clientes que llegan solos. Webs premium, chatbots IA y automatizaciones para negocios locales. Primera auditoría gratis.">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#1c1b1a">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
+  <!-- ═══════════════════════════════════════════════
+       TITLE & META DESCRIPTION
+       Target: 55-60 chars title | 150-158 chars desc
+  ═══════════════════════════════════════════════ -->
+  <title>Diseño Web y Automatización IA para Negocios Locales | NexaFlow Studio Valencia</title>
+  <meta name="description" content="Agencia digital en Valencia: webs que convierten, chatbots IA 24h y automatización para pymes. Diseño web, SEO local y Google Maps. Primera auditoría completamente gratis.">
+
+  <!-- Keywords locales Valencia -->
+  <meta name="keywords" content="diseño web Valencia, agencia digital Valencia, automatización negocios Valencia, chatbot IA Valencia, SEO local Valencia, páginas web negocios locales, agencia IA Valencia, web para pymes Valencia, automatización WhatsApp Valencia, captación leads automatizada">
+
+  <!-- Crawling & indexación -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://nexaflow.studio/">
+
+  <!-- ═══════════════════════════════════════════════
+       OPEN GRAPH (Facebook, LinkedIn, WhatsApp…)
+  ═══════════════════════════════════════════════ -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nexaflow.studio/">
+  <meta property="og:title" content="NexaFlow Studio — Diseño Web, IA y Automatización para Negocios Locales en Valencia">
+  <meta property="og:description" content="Webs que convierten, chatbots IA 24h y sistemas de automatización para negocios locales en Valencia. Primera auditoría completamente gratuita.">
+  <meta property="og:image" content="https://nexaflow.studio/assets/img/og-nexaflow.jpg">
+  <meta property="og:image:width" content="770">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:image:alt" content="NexaFlow Studio — Automatización, IA y diseño web para negocios locales en Valencia">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="NexaFlow Studio">
+
+  <!-- ═══════════════════════════════════════════════
+       TWITTER / X CARD
+  ═══════════════════════════════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NexaFlow Studio — Webs, IA y Automatización para Negocios Locales | Valencia">
+  <meta name="twitter:description" content="Webs que convierten, chatbots IA 24h y automatización para pymes en Valencia. Primera auditoría gratuita.">
+  <meta name="twitter:image" content="https://nexaflow.studio/assets/img/og-nexaflow.jpg">
+  <meta name="twitter:image:alt" content="NexaFlow Studio — Automatización e IA para negocios locales">
+
+  <!-- ═══════════════════════════════════════════════
+       GEO / LOCAL SEO
+       Señales de geolocalización para búsquedas locales
+  ═══════════════════════════════════════════════ -->
+  <meta name="geo.region" content="ES-VC">
+  <meta name="geo.placename" content="Valencia, España">
+  <meta name="geo.position" content="39.4699;-0.3763">
+  <meta name="ICBM" content="39.4699, -0.3763">
+
+  <!-- ═══════════════════════════════════════════════
+       MOBILE & PWA
+  ═══════════════════════════════════════════════ -->
+  <meta name="theme-color" content="#1c1b1a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="NexaFlow Studio">
+  <meta name="application-name" content="NexaFlow Studio">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- ═══════════════════════════════════════════════
+       PERFORMANCE: preconnect + dns-prefetch
+  ═══════════════════════════════════════════════ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://formspree.io">
+  <link rel="dns-prefetch" href="https://wa.me">
+
+  <!-- Critical CSS preload -->
+  <link rel="preload" href="styles.css?v=20260528c" as="style">
+  <link rel="stylesheet" href="styles.css?v=20260528c">
+
+  <!-- Fonts (display=swap garantiza no FOIT) -->
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260528b">
+
+  <!-- ═══════════════════════════════════════════════
+       SCHEMA.ORG — STRUCTURED DATA
+       LocalBusiness + WebSite para Google Knowledge Panel
+  ═══════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": "https://nexaflow.studio/#organization",
+      "name": "NexaFlow Studio",
+      "description": "Agencia digital en Valencia especializada en diseño web, automatización con IA y SEO local para negocios locales y pymes",
+      "url": "https://nexaflow.studio",
+      "logo": "https://nexaflow.studio/assets/img/og-nexaflow.jpg",
+      "image": "https://nexaflow.studio/assets/img/og-nexaflow.jpg",
+      "telephone": "+34644218863",
+      "email": "hola.nexaflow@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Valencia",
+        "addressRegion": "Comunitat Valenciana",
+        "postalCode": "46000",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.4699,
+        "longitude": -0.3763
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Valencia" },
+        { "@type": "State", "name": "Comunitat Valenciana" },
+        { "@type": "Country", "name": "España" }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+34644218863",
+        "contactType": "customer service",
+        "availableLanguage": ["Spanish"],
+        "areaServed": "ES"
+      },
+      "sameAs": [
+        "https://www.instagram.com/nexaflow.studio"
+      ],
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Transferencia bancaria, PayPal",
+      "knowsAbout": [
+        "Diseño web para negocios locales",
+        "SEO local Valencia",
+        "Automatización de marketing",
+        "Chatbots con inteligencia artificial",
+        "Google Business Profile",
+        "WhatsApp Business API"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios digitales para negocios locales",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Diseño web premium para negocios locales en Valencia",
+              "description": "Webs profesionales a medida que convierten visitas en clientes para pymes y autónomos en Valencia y España"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Chatbots con inteligencia artificial para negocios",
+              "description": "Chatbots IA integrados en WhatsApp y web para atender, cualificar leads y agendar citas 24 horas al día"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Automatización de procesos y captación de leads",
+              "description": "Sistemas de automatización que conectan formularios, CRM, email marketing y WhatsApp sin intervención manual"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "SEO local y posicionamiento en Google Maps",
+              "description": "Optimización SEO para búsquedas locales y gestión de Google Business Profile para negocios en Valencia"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://nexaflow.studio/#website",
+      "name": "NexaFlow Studio",
+      "url": "https://nexaflow.studio",
+      "inLanguage": "es-ES",
+      "description": "Diseño web, automatización con IA y SEO local para negocios locales en Valencia",
+      "publisher": { "@id": "https://nexaflow.studio/#organization" }
+    }
+  ]
+  </script>
 </head>
 <body>
+
+<!-- Skip to content (accesibilidad + SEO) -->
+<a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
 
 <!-- Grain texture overlay -->
 <canvas id="bg-canvas" aria-hidden="true"></canvas>
@@ -57,6 +237,8 @@
     <a href="#contacto" class="btn btn-primary overlay-btn">Auditoría gratis →</a>
   </nav>
 </div>
+
+<main id="contenido-principal">
 
 <!-- ===== HERO ===== -->
 <section class="hero" id="inicio" aria-label="Inicio">
@@ -502,7 +684,7 @@
                   <div class="dp-badge">
                     <span class="dp-badge-stars">★★★★★</span> 4.9 · Valencia
                   </div>
-                  <h1 class="dp-h1">Crece online,<br><em>empieza hoy.</em></h1>
+                  <p class="dp-h1">Crece online,<br><em>empieza hoy.</em></p>
                   <p class="dp-sub">Web premium, SEO local y automatización para destacar frente a tu competencia.</p>
                   <div class="dp-hero-btns">
                     <div class="dp-btn-primary">Primera reunión gratis →</div>
@@ -779,7 +961,7 @@
       <!-- Demo 1: Clínica dental -->
       <div class="demo-card" data-tilt>
         <div class="demo-visual">
-          <img src="assets/img/demo-dental.jpg" alt="Clínica dental moderna" class="demo-visual-img" loading="lazy">
+          <img src="assets/img/demo-dental.jpg" alt="Interior moderno de clínica dental en Valencia con sillón y equipamiento profesional" class="demo-visual-img" loading="lazy" width="1023" height="533" decoding="async">
           <div class="demo-visual-overlay">
             <div class="demo-visual-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M12 2C8 2 4.5 5 4.5 9c0 2.4.8 4.4 2 5.8L8 22h8l1.5-7.2c1.2-1.4 2-3.4 2-5.8C19.5 5 16 2 12 2z"/></svg>
@@ -809,7 +991,7 @@
       <!-- Demo 2: Centro estética -->
       <div class="demo-card" data-tilt>
         <div class="demo-visual">
-          <img src="assets/img/demo-estetica.jpg" alt="Centro de estética y belleza" class="demo-visual-img" loading="lazy">
+          <img src="assets/img/demo-estetica.jpg" alt="Sala de tratamientos de un centro de estética y belleza profesional" class="demo-visual-img" loading="lazy" width="1024" height="680" decoding="async">
           <div class="demo-visual-overlay">
             <div class="demo-visual-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -839,7 +1021,7 @@
       <!-- Demo 3: Negocio local -->
       <div class="demo-card" data-tilt>
         <div class="demo-visual">
-          <img src="assets/img/demo-taller.jpg" alt="Taller mecánico y negocio local" class="demo-visual-img" loading="lazy">
+          <img src="assets/img/demo-taller.jpg" alt="Mecánico trabajando en motor de un coche en taller de reparación de automóviles" class="demo-visual-img" loading="lazy" width="684" height="1024" decoding="async">
           <div class="demo-visual-overlay">
             <div class="demo-visual-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
@@ -869,7 +1051,7 @@
       <!-- Demo 4: Inmobiliaria -->
       <div class="demo-card" data-tilt>
         <div class="demo-visual">
-          <img src="assets/img/demo-inmobiliaria.jpg" alt="Apartamento moderno para inmobiliaria" class="demo-visual-img" loading="lazy">
+          <img src="assets/img/demo-inmobiliaria.jpg" alt="Apartamento moderno y luminoso disponible en agencia inmobiliaria en Valencia" class="demo-visual-img" loading="lazy" width="1024" height="596" decoding="async">
           <div class="demo-visual-overlay">
             <div class="demo-visual-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
@@ -1286,6 +1468,8 @@
   </div>
 </section>
 
+</main><!-- /main -->
+
 <!-- ===== FOOTER ===== -->
 <footer class="footer" role="contentinfo">
   <div class="container">
@@ -1295,6 +1479,11 @@
           Nexa<span class="logo-accent">Flow</span><span class="logo-dot">.</span>
         </a>
         <p class="footer-tagline">Automatización, IA y webs premium<br>para negocios locales en España.</p>
+        <address class="footer-address">
+          <span>Valencia, España</span> ·
+          <a href="tel:+34644218863" rel="nofollow">+34 644 218 863</a> ·
+          <a href="mailto:hola.nexaflow@gmail.com">hola.nexaflow@gmail.com</a>
+        </address>
         <div class="footer-social">
           <a href="https://ig.me/m/nexaflow.studio" target="_blank" rel="noopener" aria-label="Instagram @nexaflow.studio">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
@@ -1374,6 +1563,6 @@
 
 <script defer src="lib/gsap.min.js"></script>
 <script defer src="lib/ScrollTrigger.min.js"></script>
-<script defer src="main.js?v=20260528b"></script>
+<script defer src="main.js?v=20260528c"></script>
 </body>
 </html>

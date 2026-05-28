@@ -1,0 +1,12 @@
+# Robots.txt — NexaFlow Studio
+# https://nexaflow.studio
+
+User-agent: *
+Allow: /
+
+# Bloquear acceso a assets internos innecesarios para el crawl
+Disallow: /lib/
+Disallow: /assets/credits.json
+
+# Sitemap
+Sitemap: https://nexaflow.studio/sitemap.xml

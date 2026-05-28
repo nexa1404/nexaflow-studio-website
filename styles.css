@@ -3833,3 +3833,47 @@ textarea { resize: vertical; min-height: 120px; }
 @media (max-width: 767px) {
   .demos-grid { grid-template-columns: 1fr; max-width: 440px; margin-inline: auto; }
 }
+
+/* ─────────────────────────────────────────────────────────
+   SEO / ACCESIBILIDAD — v20260528c
+   ───────────────────────────────────────────────────────── */
+
+/* Skip-to-content (accesibilidad + SEO) */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 10000;
+  background: var(--lime);
+  color: #000;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0 0 8px 8px;
+  text-decoration: none;
+  transition: top 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+/* Footer address — señal NAP para SEO local */
+.footer-address {
+  font-style: normal;
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+  margin-top: 0.75rem;
+  line-height: 1.6;
+}
+.footer-address a {
+  color: var(--ink-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-address a:hover {
+  color: var(--lime);
+}
