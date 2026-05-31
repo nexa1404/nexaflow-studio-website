@@ -73,8 +73,8 @@
   <link rel="dns-prefetch" href="https://wa.me">
 
   <!-- Critical CSS preload -->
-  <link rel="preload" href="styles.css?v=20260528c" as="style">
-  <link rel="stylesheet" href="styles.css?v=20260528c">
+  <link rel="preload" href="styles.css?v=20260531" as="style">
+  <link rel="stylesheet" href="styles.css?v=20260531">
 
   <!-- Fonts (display=swap garantiza no FOIT) -->
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
@@ -360,23 +360,82 @@
       <p class="section-sub">Tu negocio es bueno. El problema es que Internet todavía no lo sabe — y tu competencia sí tiene eso resuelto.</p>
     </div>
     <div class="problem-grid stagger-grid">
+      <!-- Card 1: Web que no convierte -->
       <div class="problem-card" data-tilt>
-        <div class="problem-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <div class="pc-visual" aria-hidden="true">
+          <div class="pcv-header">
+            <div class="pcv-dots"><span></span><span></span><span></span></div>
+            <div class="pcv-url">tu-web.es</div>
+          </div>
+          <div class="pcv-body">
+            <div class="pcv-funnel">
+              <div class="pcvf-row">
+                <span class="pcvf-label">Visitas</span>
+                <div class="pcvf-track"><div class="pcvf-fill" style="width:100%"></div></div>
+                <span class="pcvf-num">4.200</span>
+              </div>
+              <div class="pcvf-row">
+                <span class="pcvf-label">Clics</span>
+                <div class="pcvf-track"><div class="pcvf-fill" style="width:38%"></div></div>
+                <span class="pcvf-num">1.600</span>
+              </div>
+              <div class="pcvf-row">
+                <span class="pcvf-label">Contactos</span>
+                <div class="pcvf-track"><div class="pcvf-fill pcvf-bad" style="width:5%"></div></div>
+                <span class="pcvf-num pcvf-bad-txt">84</span>
+              </div>
+            </div>
+            <div class="pcv-rate">Conversión: <strong class="pcv-rate-bad">2%</strong> &mdash; por debajo del estándar</div>
+          </div>
         </div>
         <h3>Web que no convierte</h3>
         <p>Una web antigua o genérica transmite desconfianza antes de que nadie te llame. El primer filtro es visual.</p>
       </div>
+
+      <!-- Card 2: Invisible en Google -->
       <div class="problem-card" data-tilt>
-        <div class="problem-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div class="pc-visual" aria-hidden="true">
+          <div class="pcv-header pcv-google-bar">
+            <div class="pcv-google-logo">
+              <span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC04">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span>
+            </div>
+            <div class="pcv-search">fontanero Valencia <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="10"><circle cx="7" cy="7" r="4"/><line x1="10" y1="10" x2="14" y2="14"/></svg></div>
+          </div>
+          <div class="pcv-body">
+            <div class="pcv-results">
+              <div class="pcvr-item pcvr-comp"><span class="pcvr-pos">#1</span> Fontanería López <span class="pcvr-stars">★★★★★</span></div>
+              <div class="pcvr-item pcvr-comp"><span class="pcvr-pos">#2</span> Urgencias 24h <span class="pcvr-stars">★★★★</span></div>
+              <div class="pcvr-item pcvr-comp"><span class="pcvr-pos">#3</span> Reparaciones Rápidas <span class="pcvr-stars">★★★★</span></div>
+            </div>
+            <div class="pcv-not-found">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="11"><circle cx="8" cy="8" r="6.5"/><line x1="5" y1="8" x2="11" y2="8"/></svg>
+              Tu negocio no aparece
+            </div>
+          </div>
         </div>
         <h3>Invisible en Maps y Google</h3>
         <p>Si no apareces entre los primeros cuando alguien busca tu servicio en la zona, ese cliente se va a otro.</p>
       </div>
+
+      <!-- Card 3: Todo en manual -->
       <div class="problem-card" data-tilt>
-        <div class="problem-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        <div class="pc-visual" aria-hidden="true">
+          <div class="pcv-header">
+            <span class="pcv-task-title">Tareas de hoy</span>
+            <span class="pcv-time-badge">3h 20min</span>
+          </div>
+          <div class="pcv-body">
+            <div class="pcv-tasks">
+              <div class="pcvt-item pcvt-done"><span class="pcvt-check">✓</span><span class="pcvt-name">Responder WhatsApp</span><span class="pcvt-time">45 min</span></div>
+              <div class="pcvt-item pcvt-done"><span class="pcvt-check">✓</span><span class="pcvt-name">Enviar presupuestos</span><span class="pcvt-time">30 min</span></div>
+              <div class="pcvt-item pcvt-pending"><span class="pcvt-check">○</span><span class="pcvt-name">Confirmar citas</span><span class="pcvt-time">25 min</span></div>
+              <div class="pcvt-item pcvt-pending"><span class="pcvt-check">○</span><span class="pcvt-name">Actualizar agenda</span><span class="pcvt-time">40 min</span></div>
+            </div>
+            <div class="pcv-auto-hint">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="11"><polygon points="13 2 3 8 8 8 7 14 13 8 8 8"/></svg>
+              Podría estar todo automatizado
+            </div>
+          </div>
         </div>
         <h3>Todo en manual, todo lento</h3>
         <p>Responder mensajes, gestionar citas, enviar presupuestos. Horas que podrían estar solas y no lo están.</p>
@@ -1561,8 +1620,35 @@
   })();
 </script>
 
+<!-- ===== FLOATING BOTTOM NAV ===== -->
+<nav class="float-nav" id="float-nav" role="navigation" aria-label="Navegación rápida por secciones">
+  <div class="float-nav-inner">
+    <a href="#inicio" class="fn-item is-active" data-section="inicio" aria-label="Ir al inicio">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Inicio</span>
+    </a>
+    <a href="#problema" class="fn-item" data-section="problema" aria-label="Ver problemas">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <span>Problemas</span>
+    </a>
+    <a href="#servicios" class="fn-item" data-section="servicios" aria-label="Ver soluciones">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      <span>Soluciones</span>
+    </a>
+    <a href="#proceso" class="fn-item" data-section="proceso" aria-label="Ver proceso">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+      <span>Proceso</span>
+    </a>
+    <a href="#planes" class="fn-item" data-section="planes" aria-label="Ver planes">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      <span>Planes</span>
+    </a>
+    <a href="#contacto" class="fn-cta">Auditoría gratis</a>
+  </div>
+</nav>
+
 <script defer src="lib/gsap.min.js"></script>
 <script defer src="lib/ScrollTrigger.min.js"></script>
-<script defer src="main.js?v=20260528c"></script>
+<script defer src="main.js?v=20260531"></script>
 </body>
 </html>

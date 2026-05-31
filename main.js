@@ -420,6 +420,66 @@
     });
   }
 
+  /* ===== FLOATING BOTTOM NAV — active section tracking ===== */
+  function initFloatNav() {
+    var floatNav = document.getElementById('float-nav');
+    if (!floatNav) return;
+
+    var items = floatNav.querySelectorAll('.fn-item[data-section]');
+    if (!items.length) return;
+
+    // Map section id → nav item
+    var sectionMap = {};
+    items.forEach(function (item) {
+      var sid = item.getAttribute('data-section');
+      sectionMap[sid] = item;
+    });
+
+    // Section order for scroll detection
+    var sectionIds = ['inicio', 'problema', 'servicios', 'proceso', 'portfolio', 'diferenciacion', 'planes', 'contacto'];
+    // Map each section to which nav item should be active
+    var sectionToNav = {
+      'inicio':       'inicio',
+      'problema':     'problema',
+      'chatbot':      'servicios',
+      'servicios':    'servicios',
+      'showcase':     'servicios',
+      'resultados':   'servicios',
+      'proceso':      'proceso',
+      'portfolio':    'proceso',
+      'integraciones':'proceso',
+      'diferenciacion':'planes',
+      'planes':       'planes',
+      'contacto':     'planes',
+    };
+
+    function setActive(navId) {
+      items.forEach(function (item) {
+        item.classList.toggle('is-active', item.getAttribute('data-section') === navId);
+      });
+    }
+
+    // Use IntersectionObserver for efficiency
+    var allSections = document.querySelectorAll('section[id]');
+    var currentActive = 'inicio';
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var sid = entry.target.id;
+          var navId = sectionToNav[sid] || sid;
+          if (sectionMap[navId]) {
+            currentActive = navId;
+            setActive(navId);
+          }
+        }
+      });
+    }, { threshold: 0.25, rootMargin: '-20% 0px -20% 0px' });
+
+    allSections.forEach(function (s) { io.observe(s); });
+    setActive('inicio');
+  }
+
   /* ===== BOOT ===== */
   function boot() {
     safe(initNav, 'initNav');
@@ -432,6 +492,7 @@
     safe(init3DBrowser, 'init3DBrowser');
     safe(initBgCanvas, 'initBgCanvas');
     safe(initContactForm, 'initContactForm');
+    safe(initFloatNav, 'initFloatNav');
     /* GSAP: runs after libs load */
     if (window.gsap && window.ScrollTrigger) {
       safe(initAnimations, 'initAnimations');
