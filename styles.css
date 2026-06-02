@@ -2250,8 +2250,9 @@ textarea { resize: vertical; min-height: 120px; }
 .whatsapp-float {
   position: fixed;
   bottom: 1.75rem;
-  right: 1.75rem;
-  z-index: 90;
+  left: 1.75rem;    /* lado izquierdo → lejos de Tidio (derecha) */
+  right: auto;
+  z-index: 9800;    /* bajo Tidio (~9999) y float-nav (9900) */
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -2677,7 +2678,15 @@ textarea { resize: vertical; min-height: 120px; }
   .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
 
   .whatsapp-float span { display: none; }
-  .whatsapp-float { padding: 0.9rem; border-radius: 50%; width: 52px; height: 52px; justify-content: center; }
+  .whatsapp-float {
+    padding: 0.9rem;
+    border-radius: 50%;
+    width: 52px; height: 52px;
+    justify-content: center;
+    /* Sube por encima de la barra flotante inferior (16px + ~67px + margen) */
+    bottom: 100px;
+    left: 1rem;
+  }
 
   .container { padding-inline: 1.25rem; }
   .problem, .solution, .services, .process, .portfolio, .comparison, .contact { padding: 5rem 0; }
@@ -2690,6 +2699,16 @@ textarea { resize: vertical; min-height: 120px; }
   .btn-lg { width: 100%; }
   .cta-actions { flex-direction: column; align-items: center; }
   .btn-xl { width: 100%; max-width: 320px; }
+}
+
+/* ===== TIDIO MÓVIL — sube por encima de la barra flotante ===== */
+@media (max-width: 640px) {
+  /* Contenedor principal del widget Tidio */
+  #tidio-chat,
+  #tidio-chat-iframe,
+  [id^="tidio-chat"] {
+    bottom: 100px !important;
+  }
 }
 
 /* ===== EMOTIONAL SECTION ===== */

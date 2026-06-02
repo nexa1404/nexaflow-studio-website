@@ -420,6 +420,32 @@
     });
   }
 
+  /* ===== TIDIO MÓVIL — reposicionar por encima de la barra flotante ===== */
+  function initTidioMobilePosition() {
+    if (window.innerWidth > 640) return; // solo móvil
+    var OFFSET = '100px';
+
+    function applyOffset() {
+      var el = document.getElementById('tidio-chat');
+      if (el && el.style.bottom !== OFFSET) { el.style.bottom = OFFSET; el.style.setProperty('bottom', OFFSET, 'important'); }
+    }
+
+    // Intentar en el momento del API ready
+    document.addEventListener('tidioChat-ready', applyOffset);
+
+    // MutationObserver por si Tidio resetea inline styles
+    var observer = new MutationObserver(applyOffset);
+    observer.observe(document.body, { childList: true, subtree: false });
+
+    // Fallback poll hasta que aparezca
+    var attempts = 0;
+    var iv = setInterval(function () {
+      var el = document.getElementById('tidio-chat');
+      if (el) { applyOffset(); clearInterval(iv); }
+      if (++attempts > 30) clearInterval(iv);
+    }, 500);
+  }
+
   /* ===== FLOATING BOTTOM NAV — active section tracking ===== */
   function initFloatNav() {
     var floatNav = document.getElementById('float-nav');
@@ -493,6 +519,7 @@
     safe(initBgCanvas, 'initBgCanvas');
     safe(initContactForm, 'initContactForm');
     safe(initFloatNav, 'initFloatNav');
+    safe(initTidioMobilePosition, 'initTidioMobilePosition');
     /* GSAP: runs after libs load */
     if (window.gsap && window.ScrollTrigger) {
       safe(initAnimations, 'initAnimations');
