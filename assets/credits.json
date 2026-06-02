@@ -1,0 +1,13 @@
+{
+  "svc-hero": {
+    "src": "assets/img/svc-hero.jpg",
+    "title": "mac image",
+    "creator": "Davmi Pics",
+    "creator_url": "https://www.flickr.com/photos/31954002@N08",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/31954002@N08/16988822232",
+    "source": "flickr"
+  }
+}

@@ -4503,3 +4503,131 @@ textarea { resize: vertical; min-height: 120px; }
   font-family: 'Space Grotesk', sans-serif;
   line-height: 1;
 }
+
+/* ── Services section — image banner ────────────────────── */
+.svc-banner-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  height: 220px;
+  border: 1px solid var(--line);
+}
+.svc-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+  filter: brightness(0.35) saturate(0.7);
+  transition: filter 0.4s;
+}
+.svc-banner-wrap:hover .svc-banner-img {
+  filter: brightness(0.45) saturate(0.8);
+}
+.svc-banner-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(
+    to top,
+    rgba(10,15,26,0.85) 0%,
+    rgba(10,15,26,0.20) 60%,
+    transparent 100%
+  );
+}
+.svc-banner-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.svc-banner-chips span {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  background: rgba(163,230,53,0.12);
+  border: 1px solid rgba(163,230,53,0.25);
+  border-radius: 20px;
+  color: var(--lime);
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(8px);
+}
+@media (max-width: 640px) {
+  .svc-banner-wrap { height: 160px; }
+  .svc-banner-overlay { padding: 1rem 1.25rem; }
+  .svc-banner-chips span { font-size: 0.65rem; padding: 0.25rem 0.6rem; }
+}
+
+/* ── Result cards — image header ────────────────────────── */
+.result-card {
+  overflow: hidden;
+  padding: 0 !important;
+}
+.rc-img-wrap {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.rc-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: brightness(0.40) saturate(0.65);
+  transition: filter 0.4s, transform 0.5s var(--ease-out);
+}
+.result-card:hover .rc-img {
+  filter: brightness(0.55) saturate(0.8);
+  transform: scale(1.04);
+}
+.rc-img-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(
+    to top,
+    rgba(10,15,26,0.90) 0%,
+    transparent 65%
+  );
+}
+.rc-img-overlay .rc-sector-tag {
+  /* override existing positioning */
+  position: static !important;
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+.rc-img-badge {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  background: rgba(163,230,53,0.15);
+  border: 1px solid rgba(163,230,53,0.3);
+  border-radius: 20px;
+  color: var(--lime);
+}
+/* Padding for the result card content below the image */
+.result-card .rc-split,
+.result-card .rc-result {
+  padding: 1.25rem 1.5rem;
+}
+.result-card .rc-result {
+  border-top: 1px solid var(--line);
+  padding-top: 1rem;
+}
+@media (max-width: 640px) {
+  .rc-img-wrap { height: 140px; }
+  .result-card .rc-split,
+  .result-card .rc-result { padding: 1rem; }
+}
