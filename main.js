@@ -434,7 +434,7 @@
       var computed = window.getComputedStyle(tidio).bottom;
       var px = parseFloat(computed);
       if (!isNaN(px) && px > 10) {          /* solo si Tidio tiene una posición real */
-        wa.style.setProperty('bottom', px + 'px', 'important');
+        wa.style.setProperty('bottom', (px + 10) + 'px', 'important');
       }
     }
 
