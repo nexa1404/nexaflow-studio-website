@@ -1,13 +1,13 @@
 {
-  "svc-hero": {
-    "src": "assets/img/svc-hero.jpg",
-    "title": "mac image",
-    "creator": "Davmi Pics",
-    "creator_url": "https://www.flickr.com/photos/31954002@N08",
+  "dental-smile": {
+    "src": "assets/img/dental-smile.jpg",
+    "title": "High Smile",
+    "creator": "YacineBaroudi",
+    "creator_url": "https://www.flickr.com/photos/41813683@N08",
     "license": "by",
     "license_version": "2.0",
     "license_url": "https://creativecommons.org/licenses/by/2.0/",
-    "foreign_landing_url": "https://www.flickr.com/photos/31954002@N08/16988822232",
+    "foreign_landing_url": "https://www.flickr.com/photos/41813683@N08/3850004204",
     "source": "flickr"
   }
 }
