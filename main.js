@@ -420,29 +420,54 @@
     });
   }
 
-  /* ===== TIDIO MÓVIL — reposicionar por encima de la barra flotante ===== */
+  /* ===== TIDIO MÓVIL — alinear con WhatsApp ===== */
   function initTidioMobilePosition() {
-    if (window.innerWidth > 640) return; // solo móvil
-    var OFFSET = window.innerWidth <= 640 ? '82px' : '130px';
+    if (window.innerWidth > 767) return;
+    var OFFSET = window.innerWidth <= 640 ? '72px' : '130px';
 
+    /* Aplica bottom a todos los elementos de Tidio */
     function applyOffset() {
-      var el = document.getElementById('tidio-chat');
-      if (el && el.style.bottom !== OFFSET) { el.style.bottom = OFFSET; el.style.setProperty('bottom', OFFSET, 'important'); }
+      /* Contenedor principal */
+      ['tidio-chat', 'tidio-chat-iframe'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.style.setProperty('bottom', OFFSET, 'important');
+      });
+      /* Cualquier iframe/div con "tidio" en el id */
+      document.querySelectorAll('[id*="tidio"]').forEach(function(el) {
+        el.style.setProperty('bottom', OFFSET, 'important');
+      });
     }
 
-    // Intentar en el momento del API ready
-    document.addEventListener('tidioChat-ready', applyOffset);
+    /* Cuando Tidio anuncia que está listo */
+    document.addEventListener('tidioChat-ready', function() {
+      applyOffset();
+      setTimeout(applyOffset, 300);
+      setTimeout(applyOffset, 1000);
+    });
 
-    // MutationObserver por si Tidio resetea inline styles
-    var observer = new MutationObserver(applyOffset);
-    observer.observe(document.body, { childList: true, subtree: false });
+    /* MutationObserver: vigila body para cuando Tidio se inyecta */
+    var bodyObserver = new MutationObserver(function(muts) {
+      muts.forEach(function(m) {
+        m.addedNodes && m.addedNodes.forEach(function(n) {
+          if (n.id && n.id.indexOf('tidio') !== -1) {
+            applyOffset();
+            /* Una vez inyectado, observar cambios de atributo en él mismo */
+            var elObserver = new MutationObserver(applyOffset);
+            elObserver.observe(n, { attributes: true, subtree: true, attributeFilter: ['style'] });
+          }
+        });
+      });
+    });
+    bodyObserver.observe(document.body, { childList: true });
 
-    // Fallback poll hasta que aparezca
+    /* Poll de seguridad */
     var attempts = 0;
-    var iv = setInterval(function () {
-      var el = document.getElementById('tidio-chat');
-      if (el) { applyOffset(); clearInterval(iv); }
-      if (++attempts > 30) clearInterval(iv);
+    var iv = setInterval(function() {
+      if (document.getElementById('tidio-chat')) {
+        applyOffset();
+        clearInterval(iv);
+      }
+      if (++attempts > 40) clearInterval(iv);
     }, 500);
   }
 

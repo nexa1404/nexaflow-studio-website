@@ -2694,10 +2694,10 @@ textarea { resize: vertical; min-height: 120px; }
   .section-title { font-size: clamp(1.75rem, 6vw, 2.4rem); }
 }
 
-/* Phones ≤640px: float-nav compacta (~45px) → botones más abajo */
+/* Phones ≤640px: float-nav compacta (~45px) → botones más cerca */
 @media (max-width: 640px) {
   .whatsapp-float {
-    bottom: 82px !important;  /* float-nav top ≈57px → gap 25px limpio */
+    bottom: 72px !important;
   }
 }
 
@@ -2721,7 +2721,7 @@ textarea { resize: vertical; min-height: 120px; }
   #tidio-chat,
   #tidio-chat-iframe,
   [id^="tidio-chat"] {
-    bottom: 82px !important;  /* igual que WhatsApp en phone */
+    bottom: 72px !important;
   }
 }
 
