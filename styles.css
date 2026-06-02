@@ -347,13 +347,27 @@ h1, h2, h3, h4 {
   padding-top: var(--nav-h);
 }
 
+/* ── Dot grid premium overlay ────────────────────────────── */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(163,230,53,0.055) 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
+  z-index: 0;
+  -webkit-mask-image: radial-gradient(ellipse 85% 85% at 50% 40%, black 30%, transparent 100%);
+  mask-image: radial-gradient(ellipse 85% 85% at 50% 40%, black 30%, transparent 100%);
+}
+
 .hero-gradient {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle 900px at var(--mx, 20%) var(--my, 35%), rgba(163,230,53,0.07) 0%, transparent 60%),
-    radial-gradient(circle 600px at calc(var(--mx, 20%) + 30%) calc(var(--my, 35%) + 25%), rgba(34,211,238,0.05) 0%, transparent 55%),
-    radial-gradient(circle 400px at 85% 20%, rgba(34,211,238,0.04) 0%, transparent 50%);
+    radial-gradient(circle 900px at var(--mx, 25%) var(--my, 40%), rgba(163,230,53,0.13) 0%, transparent 60%),
+    radial-gradient(circle 700px at calc(var(--mx, 25%) + 35%) calc(var(--my, 40%) + 30%), rgba(34,211,238,0.09) 0%, transparent 55%),
+    radial-gradient(circle 500px at 80% 15%, rgba(34,211,238,0.07) 0%, transparent 50%),
+    radial-gradient(circle 300px at 15% 80%, rgba(163,230,53,0.05) 0%, transparent 50%);
   pointer-events: none;
   transition: background 0.08s linear;
 }
@@ -362,9 +376,38 @@ h1, h2, h3, h4 {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(163,230,53,0.03) 0%, transparent 70%),
-    linear-gradient(180deg, rgba(8,8,8,0) 60%, rgba(8,8,8,1) 100%);
+    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(163,230,53,0.05) 0%, transparent 70%),
+    linear-gradient(180deg, rgba(8,8,8,0) 55%, rgba(8,8,8,1) 100%);
   pointer-events: none;
+}
+
+/* ── Animated orbs ───────────────────────────────────────── */
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(60px);
+}
+.hero-orb--lime {
+  width: 520px; height: 520px;
+  background: radial-gradient(circle, rgba(163,230,53,0.12) 0%, transparent 65%);
+  top: -80px; left: -100px;
+  animation: orbDrift 9s ease-in-out infinite;
+}
+.hero-orb--cyan {
+  width: 380px; height: 380px;
+  background: radial-gradient(circle, rgba(34,211,238,0.09) 0%, transparent 65%);
+  bottom: 60px; right: -60px;
+  animation: orbDrift 12s ease-in-out infinite reverse;
+}
+@keyframes orbDrift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(30px, -20px) scale(1.05); }
+  66%       { transform: translate(-15px, 25px) scale(0.96); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-orb { display: none; }
 }
 
 .hero-inner {
@@ -4630,4 +4673,123 @@ textarea { resize: vertical; min-height: 120px; }
   .rc-img-wrap { height: 140px; }
   .result-card .rc-split,
   .result-card .rc-result { padding: 1rem; }
+}
+
+/* ── Hero live activity pill ────────────────────────────── */
+.hero-live-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding: 0.4rem 0.9rem;
+  background: rgba(163,230,53,0.07);
+  border: 1px solid rgba(163,230,53,0.18);
+  border-radius: 100px;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  font-family: 'Space Grotesk', sans-serif;
+  animation: heroLivePillIn 0.5s var(--ease-out) 0.8s both;
+}
+.hero-live-pill strong { color: var(--lime); }
+.hlp-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--lime);
+  flex-shrink: 0;
+  box-shadow: 0 0 0 0 rgba(163,230,53,0.5);
+  animation: liveDotPulse 2s ease-in-out infinite;
+}
+@keyframes heroLivePillIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes liveDotPulse {
+  0%  { box-shadow: 0 0 0 0 rgba(163,230,53,0.5); }
+  70% { box-shadow: 0 0 0 7px rgba(163,230,53,0); }
+  100%{ box-shadow: 0 0 0 0 rgba(163,230,53,0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-live-pill { animation: none; }
+  .hlp-dot { animation: none; }
+}
+
+/* ── Hero toast notification ────────────────────────────── */
+.hero-toast {
+  position: absolute;
+  bottom: 5.5rem;
+  right: max(1.5rem, calc(50% - 580px));
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(12,12,12,0.88);
+  backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  border: 1px solid rgba(163,230,53,0.18);
+  border-radius: 14px;
+  padding: 0.75rem 1rem;
+  z-index: 10;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.55), 0 0 0 1px rgba(163,230,53,0.05);
+  animation: toastIn 0.65s var(--ease-out) 2s both;
+  max-width: 300px;
+}
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(16px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)   scale(1); }
+}
+.ht-avatar {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: rgba(37,211,102,0.15);
+  border: 1px solid rgba(37,211,102,0.3);
+  display: flex; align-items: center; justify-content: center;
+  color: #25d366;
+  flex-shrink: 0;
+}
+.ht-body { flex: 1; min-width: 0; }
+.ht-title {
+  font-size: 0.78rem;
+  color: var(--ink);
+  font-family: 'Space Grotesk', sans-serif;
+  margin: 0;
+  line-height: 1.3;
+}
+.ht-title strong { color: #fff; }
+.ht-sub {
+  font-size: 0.68rem;
+  color: var(--ink-mute);
+  margin: 0.15rem 0 0;
+  line-height: 1.3;
+}
+.ht-live {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 0.06em;
+  color: var(--lime);
+  background: rgba(163,230,53,0.1);
+  border: 1px solid rgba(163,230,53,0.2);
+  border-radius: 20px;
+  padding: 0.2rem 0.5rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.ht-live-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--lime);
+  animation: liveDotPulse 2s ease-in-out infinite;
+}
+@media (max-width: 767px) {
+  .hero-toast {
+    bottom: 8rem; /* above float-nav on mobile */
+    right: 1rem;
+    left: 1rem;
+    max-width: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-toast { animation: none; }
 }
