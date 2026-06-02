@@ -4220,3 +4220,286 @@ textarea { resize: vertical; min-height: 120px; }
 /* Problem card text area padding */
 .problem-card h3 { padding: 16px 20px 4px; margin: 0; }
 .problem-card p  { padding: 0 20px 20px; margin: 0; }
+
+/* ============================================================
+   PREMIUM VISUAL OVERHAUL — v20260602
+   ============================================================ */
+
+/* ── Gradient text hero ─────────────────────────────────── */
+.hero-gradient-text {
+  background: linear-gradient(125deg, var(--lime) 0%, #6ee7b7 40%, var(--cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-style: italic;
+}
+
+/* ── Tech stack strip ───────────────────────────────────── */
+.tech-strip {
+  padding: 0;
+  background: rgba(0,0,0,0.35);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+.tech-strip-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.875rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.ts-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  font-family: 'Space Grotesk', sans-serif;
+  white-space: nowrap;
+}
+.ts-logos {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex: 1;
+  flex-wrap: wrap;
+}
+.ts-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  color: var(--ink-mute);
+  font-size: 0.7rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  border: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  cursor: default;
+}
+.ts-item:hover {
+  color: var(--ink);
+  border-color: var(--line-2);
+  background: rgba(255,255,255,0.04);
+}
+.ts-item svg { opacity: 0.6; flex-shrink: 0; }
+.ts-item:hover svg { opacity: 1; }
+
+@media (max-width: 640px) {
+  .tech-strip-inner { gap: 0.75rem; }
+  .ts-item span { display: none; }
+  .ts-item { padding: 0.3rem 0.5rem; gap: 0; }
+}
+
+/* ── Service cards grid ─────────────────────────────────── */
+.svc-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 3.5rem;
+}
+.svc-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 1.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  transition: transform 0.28s var(--ease-out),
+              box-shadow 0.28s,
+              border-color 0.28s;
+}
+/* Top shine on hover */
+.svc-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(163,230,53,0.55) 50%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.svc-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(163,230,53,0.20);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45), 0 0 0 1px rgba(163,230,53,0.08);
+}
+.svc-card:hover::before { opacity: 1; }
+
+/* Icon container */
+.svc-card-icon {
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(163,230,53,0.08);
+  border: 1px solid rgba(163,230,53,0.18);
+  border-radius: 10px;
+  margin-bottom: 1.25rem;
+  flex-shrink: 0;
+  transition: background 0.2s, border-color 0.2s;
+}
+.svc-card-icon svg { stroke: var(--lime); width: 20px; height: 20px; }
+.svc-card-icon--cyan {
+  background: rgba(34,211,238,0.08);
+  border-color: rgba(34,211,238,0.18);
+}
+.svc-card-icon--cyan svg { stroke: var(--cyan); }
+.svc-card:hover .svc-card-icon { background: rgba(163,230,53,0.14); }
+.svc-card:hover .svc-card-icon--cyan { background: rgba(34,211,238,0.14); }
+
+/* Card number badge */
+.svc-card-num {
+  position: absolute;
+  top: 1.5rem; right: 1.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+}
+/* Title & desc */
+.svc-card-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+  transition: color 0.2s;
+}
+.svc-card:hover .svc-card-title { color: #fff; }
+.svc-card-desc {
+  font-size: 0.83rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  margin: 0 0 1rem;
+  flex: 1;
+}
+/* Tags */
+.svc-card-tags {
+  display: flex; flex-wrap: wrap; gap: 0.3rem;
+  margin-bottom: 0.75rem;
+}
+.svc-card-tags span {
+  font-size: 0.65rem;
+  padding: 0.18rem 0.55rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  color: var(--ink-mute);
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 0.02em;
+  transition: border-color 0.2s, color 0.2s;
+}
+.svc-card:hover .svc-card-tags span {
+  border-color: rgba(163,230,53,0.15);
+  color: var(--ink-soft);
+}
+/* Arrow */
+.svc-card-arrow {
+  display: inline-block;
+  color: var(--lime);
+  font-size: 1rem;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.2s, transform 0.22s var(--ease-out);
+  align-self: flex-end;
+}
+.svc-card:hover .svc-card-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Responsive grid */
+@media (max-width: 960px) {
+  .svc-cards-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 580px) {
+  .svc-cards-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .svc-card { padding: 1.25rem; }
+}
+
+/* ── Section header polish ──────────────────────────────── */
+.eyebrow {
+  font-size: 0.68rem !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+  color: var(--lime) !important;
+  font-family: 'Space Grotesk', sans-serif !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* ── Better section titles ──────────────────────────────── */
+.section-title em {
+  font-style: italic;
+  color: var(--lime);
+}
+
+/* ── Comparison table — premium badge ──────────────────── */
+.ct-col.nexaflow {
+  position: relative;
+}
+.ct-col.nexaflow::before {
+  content: '★ NexaFlow';
+  position: absolute;
+  top: -10px; left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.6rem;
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 0.06em;
+  color: #0c0c0a;
+  background: var(--lime);
+  padding: 0.15rem 0.6rem;
+  border-radius: 20px;
+  white-space: nowrap;
+  display: none; /* enable if layout allows */
+}
+
+/* ── Highlight lime on comparison ──────────────────────── */
+.ct-col.nexaflow .good {
+  color: var(--lime);
+  font-weight: 700;
+}
+
+/* ── Plans featured card glow ───────────────────────────── */
+.plan-card.is-featured {
+  border-color: rgba(163,230,53,0.25) !important;
+  box-shadow: 0 0 0 1px rgba(163,230,53,0.1),
+              0 20px 60px rgba(0,0,0,0.4),
+              0 0 80px -20px rgba(163,230,53,0.15) !important;
+}
+
+/* ── Emotional section — bigger, bolder ─────────────────── */
+.emotional-title {
+  font-size: clamp(2rem, 4.5vw, 3.5rem) !important;
+  line-height: 1.15 !important;
+}
+.emotional-question {
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem) !important;
+}
+
+/* ── Hero sub — shorter copy style ─────────────────────── */
+.hero-sub br { display: inline; }
+
+/* ── Process nodes — lime glow ──────────────────────────── */
+.ptl-node {
+  box-shadow: 0 0 0 4px rgba(163,230,53,0.08), 0 0 20px rgba(163,230,53,0.08);
+}
+
+/* ── Result cards — tighter ─────────────────────────────── */
+.rc-num {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 800;
+  font-family: 'Space Grotesk', sans-serif;
+  line-height: 1;
+}
