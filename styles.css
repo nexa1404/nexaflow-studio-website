@@ -2683,7 +2683,7 @@ textarea { resize: vertical; min-height: 120px; }
     border-radius: 50%;
     width: 52px; height: 52px;
     justify-content: center;
-    bottom: 130px !important;   /* encima de float-nav (~80px) + margen generoso */
+    bottom: 130px !important;  /* tablets 640-767px: float-nav más alta */
     left: 1rem !important;
     right: auto !important;
   }
@@ -2692,6 +2692,13 @@ textarea { resize: vertical; min-height: 120px; }
   .problem, .solution, .services, .process, .portfolio, .comparison, .contact { padding: 5rem 0; }
   .cta-section { padding: 5rem 0; }
   .section-title { font-size: clamp(1.75rem, 6vw, 2.4rem); }
+}
+
+/* Phones ≤640px: float-nav compacta (~45px) → botones más abajo */
+@media (max-width: 640px) {
+  .whatsapp-float {
+    bottom: 82px !important;  /* float-nav top ≈57px → gap 25px limpio */
+  }
 }
 
 @media (max-width: 480px) {
@@ -2708,6 +2715,13 @@ textarea { resize: vertical; min-height: 120px; }
   #tidio-chat-iframe,
   [id^="tidio-chat"] {
     bottom: 130px !important;
+  }
+}
+@media (max-width: 640px) {
+  #tidio-chat,
+  #tidio-chat-iframe,
+  [id^="tidio-chat"] {
+    bottom: 82px !important;  /* igual que WhatsApp en phone */
   }
 }
 

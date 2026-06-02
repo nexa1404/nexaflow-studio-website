@@ -423,7 +423,7 @@
   /* ===== TIDIO MÓVIL — reposicionar por encima de la barra flotante ===== */
   function initTidioMobilePosition() {
     if (window.innerWidth > 640) return; // solo móvil
-    var OFFSET = '130px';
+    var OFFSET = window.innerWidth <= 640 ? '82px' : '130px';
 
     function applyOffset() {
       var el = document.getElementById('tidio-chat');
