@@ -1,1547 +1,561 @@
 <!DOCTYPE html>
 <html lang="es-ES">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-
-  <!-- ═══════════════════════════════════════════════
-       TITLE & META DESCRIPTION
-       Target: 55-60 chars title | 150-158 chars desc
-  ═══════════════════════════════════════════════ -->
-  <title>Diseño Web y Automatización IA para Negocios Locales | NexaFlow Studio Valencia</title>
-  <meta name="description" content="Agencia digital en Valencia: webs que convierten, chatbots IA 24h y automatización para pymes. Diseño web, SEO local y Google Maps. Primera auditoría completamente gratis.">
-
-  <!-- Keywords locales Valencia -->
-  <meta name="keywords" content="diseño web Valencia, agencia digital Valencia, automatización negocios Valencia, chatbot IA Valencia, SEO local Valencia, páginas web negocios locales, agencia IA Valencia, web para pymes Valencia, automatización WhatsApp Valencia, captación leads automatizada">
-
-  <!-- Crawling & indexación -->
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <meta name="googlebot" content="index, follow">
-
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://nexaflowestudio.com/">
-
-  <!-- ═══════════════════════════════════════════════
-       OPEN GRAPH (Facebook, LinkedIn, WhatsApp…)
-  ═══════════════════════════════════════════════ -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://nexaflowestudio.com/">
-  <meta property="og:title" content="NexaFlow Studio — Diseño Web, IA y Automatización para Negocios Locales en Valencia">
-  <meta property="og:description" content="Webs que convierten, chatbots IA 24h y sistemas de automatización para negocios locales en Valencia. Primera auditoría completamente gratuita.">
-  <meta property="og:image" content="https://nexaflowestudio.com/assets/img/og-nexaflow.jpg">
-  <meta property="og:image:width" content="770">
-  <meta property="og:image:height" content="1024">
-  <meta property="og:image:alt" content="NexaFlow Studio — Automatización, IA y diseño web para negocios locales en Valencia">
-  <meta property="og:locale" content="es_ES">
-  <meta property="og:site_name" content="NexaFlow Studio">
-
-  <!-- ═══════════════════════════════════════════════
-       TWITTER / X CARD
-  ═══════════════════════════════════════════════ -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="NexaFlow Studio — Webs, IA y Automatización para Negocios Locales | Valencia">
-  <meta name="twitter:description" content="Webs que convierten, chatbots IA 24h y automatización para pymes en Valencia. Primera auditoría gratuita.">
-  <meta name="twitter:image" content="https://nexaflowestudio.com/assets/img/og-nexaflow.jpg">
-  <meta name="twitter:image:alt" content="NexaFlow Studio — Automatización e IA para negocios locales">
-
-  <!-- ═══════════════════════════════════════════════
-       GEO / LOCAL SEO
-       Señales de geolocalización para búsquedas locales
-  ═══════════════════════════════════════════════ -->
-  <meta name="geo.region" content="ES-VC">
-  <meta name="geo.placename" content="Valencia, España">
-  <meta name="geo.position" content="39.4699;-0.3763">
-  <meta name="ICBM" content="39.4699, -0.3763">
-
-  <!-- ═══════════════════════════════════════════════
-       MOBILE & PWA
-  ═══════════════════════════════════════════════ -->
-  <meta name="theme-color" content="#1c1b1a">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="NexaFlow Studio">
-  <meta name="application-name" content="NexaFlow Studio">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="mobile-web-app-capable" content="yes">
-
-  <!-- ═══════════════════════════════════════════════
-       PERFORMANCE: preconnect + dns-prefetch
-  ═══════════════════════════════════════════════ -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://formspree.io">
-  <link rel="dns-prefetch" href="https://wa.me">
-
-  <!-- Critical CSS preload -->
-  <link rel="preload" href="styles.css?v=20260531" as="style">
-  <link rel="stylesheet" href="styles.css?v=20260531">
-
-  <!-- Fonts (display=swap garantiza no FOIT) -->
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-
-  <!-- ═══════════════════════════════════════════════
-       SCHEMA.ORG — STRUCTURED DATA
-       LocalBusiness + WebSite para Google Knowledge Panel
-  ═══════════════════════════════════════════════ -->
-  <script type="application/ld+json">
-  [
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "@id": "https://nexaflowestudio.com/#organization",
-      "name": "NexaFlow Studio",
-      "description": "Agencia digital en Valencia especializada en diseño web, automatización con IA y SEO local para negocios locales y pymes",
-      "url": "https://nexaflowestudio.com",
-      "logo": "https://nexaflowestudio.com/assets/img/og-nexaflow.jpg",
-      "image": "https://nexaflowestudio.com/assets/img/og-nexaflow.jpg",
-      "telephone": "+34644218863",
-      "email": "hola.nexaflow@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Valencia",
-        "addressRegion": "Comunitat Valenciana",
-        "postalCode": "46000",
-        "addressCountry": "ES"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 39.4699,
-        "longitude": -0.3763
-      },
-      "areaServed": [
-        { "@type": "City", "name": "Valencia" },
-        { "@type": "State", "name": "Comunitat Valenciana" },
-        { "@type": "Country", "name": "España" }
-      ],
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-          "opens": "09:00",
-          "closes": "18:00"
-        }
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+34644218863",
-        "contactType": "customer service",
-        "availableLanguage": ["Spanish"],
-        "areaServed": "ES"
-      },
-      "sameAs": [
-        "https://www.instagram.com/nexaflow.studio"
-      ],
-      "priceRange": "€€",
-      "currenciesAccepted": "EUR",
-      "paymentAccepted": "Transferencia bancaria, PayPal",
-      "knowsAbout": [
-        "Diseño web para negocios locales",
-        "SEO local Valencia",
-        "Automatización de marketing",
-        "Chatbots con inteligencia artificial",
-        "Google Business Profile",
-        "WhatsApp Business API"
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Servicios digitales para negocios locales",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Diseño web premium para negocios locales en Valencia",
-              "description": "Webs profesionales a medida que convierten visitas en clientes para pymes y autónomos en Valencia y España"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Chatbots con inteligencia artificial para negocios",
-              "description": "Chatbots IA integrados en WhatsApp y web para atender, cualificar leads y agendar citas 24 horas al día"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Automatización de procesos y captación de leads",
-              "description": "Sistemas de automatización que conectan formularios, CRM, email marketing y WhatsApp sin intervención manual"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "SEO local y posicionamiento en Google Maps",
-              "description": "Optimización SEO para búsquedas locales y gestión de Google Business Profile para negocios en Valencia"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "@id": "https://nexaflowestudio.com/#website",
-      "name": "NexaFlow Studio",
-      "url": "https://nexaflowestudio.com",
-      "inLanguage": "es-ES",
-      "description": "Diseño web, automatización con IA y SEO local para negocios locales en Valencia",
-      "publisher": { "@id": "https://nexaflowestudio.com/#organization" }
-    }
-  ]
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>NexaFlow Studio | Diseño Web, SEO Local y Automatización con IA — Valencia</title>
+<meta name="description" content="Agencia digital en Valencia: webs que convierten, chatbots IA 24h y automatización para pymes. Diseño web, SEO local y Google Maps. Primera auditoría completamente gratis.">
+<meta name="keywords" content="diseño web Valencia, agencia digital Valencia, automatización negocios Valencia, chatbot IA Valencia, SEO local Valencia, páginas web negocios locales">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<link rel="canonical" href="https://nexaflowestudio.com/">
+<link rel="icon" type="image/png" href="assets/img/logo-mark.png">
+<link rel="apple-touch-icon" href="assets/img/logo-mark.png">
+<meta name="theme-color" content="#080809">
+<meta name="geo.region" content="ES-VC">
+<meta name="geo.placename" content="Valencia, España">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nexaflowestudio.com/">
+<meta property="og:title" content="NexaFlow Studio — Diseño Web, IA y Automatización para Negocios Locales">
+<meta property="og:description" content="Webs que convierten, chatbots IA 24h y sistemas de automatización para negocios locales en Valencia.">
+<meta property="og:image" content="https://nexaflowestudio.com/assets/img/logo-full.png">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="NexaFlow Studio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NexaFlow Studio — Webs, IA y Automatización | Valencia">
+<meta name="twitter:description" content="Webs que convierten, chatbots IA 24h y automatización para pymes en Valencia.">
+<meta name="twitter:image" content="https://nexaflowestudio.com/assets/img/logo-full.png">
+<script type="application/ld+json">
+[{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://nexaflowestudio.com/#organization","name":"NexaFlow Studio","description":"Agencia digital en Valencia especializada en diseño web, automatización con IA y SEO local para negocios locales y pymes","url":"https://nexaflowestudio.com","logo":"https://nexaflowestudio.com/assets/img/logo-full.png","telephone":"+34644218863","email":"hola.nexaflow@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Valencia","addressRegion":"Comunitat Valenciana","postalCode":"46000","addressCountry":"ES"},"geo":{"@type":"GeoCoordinates","latitude":39.4699,"longitude":-0.3763},"areaServed":[{"@type":"City","name":"Valencia"}],"contactPoint":{"@type":"ContactPoint","telephone":"+34644218863","contactType":"customer service","availableLanguage":["Spanish"]},"sameAs":["https://www.instagram.com/nexaflow.studio"],"priceRange":"€€"},{"@context":"https://schema.org","@type":"WebSite","@id":"https://nexaflowestudio.com/#website","name":"NexaFlow Studio","url":"https://nexaflowestudio.com","inLanguage":"es-ES"}]
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<link rel="preload" href="styles.css?v=20260606" as="style">
+<link rel="stylesheet" href="styles.css?v=20260606">
 </head>
 <body>
 
-<!-- Skip to content (accesibilidad + SEO) -->
-<a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+<!-- ===== CUSTOM CURSOR ===== -->
+<div id="cr" aria-hidden="true"></div>
+<div id="cr2" aria-hidden="true"></div>
 
-<!-- Grain texture overlay -->
-<canvas id="bg-canvas" aria-hidden="true"></canvas>
-<div class="grain-overlay" aria-hidden="true"></div>
+<!-- ===== COOKIE BANNER ===== -->
+<div class="cookie-banner" id="cookie-banner" role="alert" aria-live="polite">
+  <p>Esta web usa cookies técnicas necesarias para su funcionamiento. No usamos cookies de rastreo ni publicidad.</p>
+  <div class="cookie-actions">
+    <button class="cookie-accept" id="cookie-accept">Aceptar</button>
+    <button class="cookie-reject" id="cookie-reject">Solo necesarias</button>
+  </div>
+</div>
+<script>
+(function(){
+  if(localStorage.getItem('nf-cookies-ok')){var b=document.getElementById('cookie-banner');if(b)b.style.display='none';}
+  document.addEventListener('DOMContentLoaded',function(){
+    function dismiss(){localStorage.setItem('nf-cookies-ok','1');document.getElementById('cookie-banner').style.display='none';}
+    var a=document.getElementById('cookie-accept');if(a)a.addEventListener('click',dismiss);
+    var r=document.getElementById('cookie-reject');if(r)r.addEventListener('click',dismiss);
+  });
+})();
+</script>
 
 <!-- ===== NAV ===== -->
-<nav class="nav" id="nav" role="navigation" aria-label="Navegación principal">
-  <div class="nav-inner">
-    <a href="#inicio" class="nav-logo" aria-label="NexaFlow Studio — inicio">
-      Nexa<span class="logo-accent">Flow</span><span class="logo-dot">.</span>
+<nav id="nav" role="navigation" aria-label="Navegación principal">
+  <div class="nav-in wrap">
+    <a href="#inicio" class="logo" aria-label="NexaFlow Studio — inicio">
+      <div class="logo-mark">
+        <img src="assets/img/logo-nf.png" alt="NexaFlow" width="46" height="46">
+      </div>
+      <span class="logo-word">Nexa<span>Flow</span></span>
     </a>
     <div class="nav-links" role="list">
-      <a href="#servicios" role="listitem">Servicios</a>
-      <a href="#proceso" role="listitem">Proceso</a>
-      <a href="#portfolio" role="listitem">Casos de uso</a>
-      <a href="#diferenciacion" role="listitem">¿Por qué nosotros?</a>
-      <a href="#planes" role="listitem">Planes</a>
+      <a href="#servicios" class="nl" role="listitem">Servicios</a>
+      <a href="#porque" class="nl" role="listitem">¿Por qué nosotros?</a>
+      <a href="#transformacion" class="nl" role="listitem">Resultados</a>
+      <a href="#contacto" class="nl" role="listitem">Contacto</a>
     </div>
-    <a href="#contacto" class="btn btn-primary nav-cta">Auditoría gratis</a>
-    <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+    <a href="#contacto" class="nav-cta"><span>Auditoría gratis →</span></a>
+    <button class="hamb" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
-<!-- Mobile overlay nav -->
+<!-- Mobile overlay -->
 <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
-  <button class="overlay-close" id="overlay-close" aria-label="Cerrar menú">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-  </button>
+  <button class="overlay-close" id="overlay-close" aria-label="Cerrar menú">✕</button>
   <nav class="overlay-nav" aria-label="Menú móvil">
     <a href="#servicios">Servicios</a>
-    <a href="#proceso">Proceso</a>
-    <a href="#portfolio">Casos de uso</a>
-    <a href="#diferenciacion">¿Por qué nosotros?</a>
-    <a href="#planes">Planes</a>
-    <a href="#contacto" class="btn btn-primary overlay-btn">Auditoría gratis →</a>
+    <a href="#porque">¿Por qué nosotros?</a>
+    <a href="#transformacion">Resultados</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#contacto" class="overlay-cta">Auditoría gratis →</a>
   </nav>
 </div>
 
-<main id="contenido-principal">
+<main id="inicio">
 
 <!-- ===== HERO ===== -->
-<section class="hero" id="inicio" aria-label="Inicio">
-  <div class="hero-gradient" aria-hidden="true"></div>
-  <div class="hero-ambient" aria-hidden="true"></div>
-  <!-- Orb glow animado -->
-  <div class="hero-orb hero-orb--lime" aria-hidden="true"></div>
-  <div class="hero-orb hero-orb--cyan" aria-hidden="true"></div>
-  <div class="hero-inner container">
-    <div class="hero-text">
-      <div class="hero-kicker">
-        <span class="kicker-dot" aria-hidden="true"></span>
-        Webs · IA · Automatización para negocios locales en España
+<section id="hero" aria-label="Inicio">
+  <!-- Video background -->
+  <div class="hero-bg" aria-hidden="true">
+    <video id="heroVid" data-src="assets/video/hero.mp4" autoplay muted loop playsinline preload="metadata" poster="assets/img/premium-ascent.jpg"></video>
+    <div class="ovl"></div>
+  </div>
+
+  <div class="wrap hero-wrap">
+    <div class="hero-grid">
+      <!-- Pill -->
+      <div class="hero-pill">
+        <span class="dot" aria-hidden="true"></span>
+        Disponible para nuevos proyectos en Valencia
       </div>
-      <h1 class="hero-title">
-        Tu negocio merece<br>
-        clientes que<br>
-        <em class="hero-em hero-gradient-text">llegan solos.</em>
+
+      <!-- H1 con máscara por línea -->
+      <h1>
+        <span class="line"><i>Tu negocio merece</i></span>
+        <span class="line"><i>clientes que</i></span>
+        <span class="line"><i>llegan <em>solos.</em></i></span>
       </h1>
-      <p class="hero-sub">
-        Webs que convierten · Chatbots 24h · Automatización IA.<br>
-        Sin tecnicismos. Con resultados medibles.
-      </p>
-      <div class="hero-actions">
-        <a href="#contacto" class="btn btn-primary btn-lg">Solicitar auditoría gratuita</a>
-        <a href="#servicios" class="btn btn-ghost btn-lg">Ver cómo funciona →</a>
-      </div>
-      <div class="hero-trust">
-        <div class="trust-item">
-          <span class="trust-num lime">&lt;3</span><span class="trust-num-suffix">sem</span>
-          <span class="trust-label">tiempo de entrega</span>
-        </div>
-        <div class="trust-divider" aria-hidden="true"></div>
-        <div class="trust-item">
-          <span class="trust-num" data-target="72">0</span><span class="trust-num-suffix">h</span>
-          <span class="trust-label">primeros resultados</span>
-        </div>
-        <div class="trust-divider" aria-hidden="true"></div>
-        <div class="trust-item">
-          <span class="trust-num cyan" data-target="100">0</span><span class="trust-num-suffix">%</span>
-          <span class="trust-label">proyectos a medida</span>
-        </div>
-      </div>
-      <!-- Live activity pill -->
-      <div class="hero-live-pill" aria-label="Sistema activo">
-        <span class="hlp-dot" aria-hidden="true"></span>
-        <span class="hlp-text">Sistema activo · <strong>3 leads</strong> captados hoy</span>
-      </div>
-    </div>
 
-    <!-- CSS Dashboard Mockup -->
-    <div class="hero-visual" aria-hidden="true">
-      <div class="dash">
-        <div class="dash-bar">
-          <div class="dash-dots">
-            <span class="dot-red"></span>
-            <span class="dot-yellow"></span>
-            <span class="dot-green"></span>
-          </div>
-          <div class="dash-url">nexaflow.studio / dashboard</div>
+      <p class="hero-sub">Diseñamos webs que convierten, chatbots que atienden 24h y sistemas que automatizan lo que hoy haces a mano. Sin tecnicismos, con resultados medibles.</p>
+
+      <div class="hero-ctas">
+        <a href="#contacto" class="btn btn-main"><span>Solicitar auditoría gratuita →</span></a>
+        <a href="#servicios" class="btn btn-ghost"><span>Ver servicios</span></a>
+      </div>
+
+      <div class="hero-meta" aria-label="Datos clave">
+        <div>
+          <b>24/7</b>
+          <span>Captación automática</span>
         </div>
-        <div class="dash-body">
-          <div class="dash-metrics">
-            <div class="dash-metric">
-              <div class="dm-label">Leads captados</div>
-              <div class="dm-value lime" data-target="247">0</div>
-              <div class="dm-delta up">↑ 23% este mes</div>
-            </div>
-            <div class="dash-metric">
-              <div class="dm-label">Citas</div>
-              <div class="dm-value" data-target="89">0</div>
-              <div class="dm-delta up">↑ 18%</div>
-            </div>
-            <div class="dash-metric">
-              <div class="dm-label">Conversión</div>
-              <div class="dm-value cyan">36%</div>
-              <div class="dm-delta up">↑ 8pt</div>
-            </div>
-          </div>
-
-          <div class="dash-chart">
-            <div class="dash-chart-label">Visitas mensuales</div>
-            <div class="dash-bars">
-              <div class="db" style="--h:42%"></div>
-              <div class="db" style="--h:58%"></div>
-              <div class="db" style="--h:51%"></div>
-              <div class="db" style="--h:74%"></div>
-              <div class="db" style="--h:68%"></div>
-              <div class="db" style="--h:87%"></div>
-              <div class="db is-active" style="--h:82%"></div>
-            </div>
-          </div>
-
-          <div class="dash-chat">
-            <div class="dash-chat-header">
-              <div class="chat-live">
-                <span class="chat-dot"></span>
-                Chatbot activo
-              </div>
-              <span class="chat-tag">IA</span>
-            </div>
-            <div class="dash-messages">
-              <div class="dmsg bot">¿En qué puedo ayudarte hoy?</div>
-              <div class="dmsg user">Quiero pedir una cita</div>
-              <div class="dmsg bot">Perfecto, ¿qué día te viene mejor?</div>
-              <div class="dmsg typing" aria-label="escribiendo">
-                <span></span><span></span><span></span>
-              </div>
-            </div>
-          </div>
+        <div>
+          <b>&lt;24h</b>
+          <span>Tiempo de respuesta</span>
+        </div>
+        <div>
+          <b>+3 sem</b>
+          <span>Web lista y activa</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Toast flotante — notificación de lead -->
-  <div class="hero-toast" aria-hidden="true">
-    <div class="ht-avatar">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    </div>
-    <div class="ht-body">
-      <p class="ht-title">Nuevo lead · <strong>María G.</strong></p>
-      <p class="ht-sub">Solicita presupuesto web · hace 2 min</p>
-    </div>
-    <span class="ht-live">
-      <span class="ht-live-dot"></span>IA
-    </span>
-  </div>
-
-  <div class="hero-scroll-hint" aria-hidden="true">
-    <div class="scroll-line"></div>
-    <span>Scroll</span>
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="bar"></div>
+    <span>scroll</span>
   </div>
 </section>
 
-<!-- ===== TECH STACK STRIP ===== -->
-<div class="tech-strip" aria-label="Tecnologías y herramientas">
-  <div class="tech-strip-inner">
-    <span class="ts-label">Integrado con</span>
-    <div class="ts-logos">
-      <!-- WhatsApp -->
-      <div class="ts-item" title="WhatsApp Business">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        <span>WhatsApp</span>
-      </div>
-      <!-- Google -->
-      <div class="ts-item" title="Google Business">
-        <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-        <span>Google</span>
-      </div>
-      <!-- Make -->
-      <div class="ts-item" title="Make.com">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
-        <span>Make</span>
-      </div>
-      <!-- Calendly -->
-      <div class="ts-item" title="Calendly">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        <span>Calendly</span>
-      </div>
-      <!-- Sheets -->
-      <div class="ts-item" title="Google Sheets / CRM">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
-        <span>Sheets</span>
-      </div>
-      <!-- Telegram -->
-      <div class="ts-item" title="Notificaciones Telegram">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.16 13.947l-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.99.612z"/></svg>
-        <span>Telegram</span>
-      </div>
-      <!-- Email -->
-      <div class="ts-item" title="Email automático">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        <span>Email</span>
-      </div>
+<!-- ===== MARQUEE ===== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span class="mi">Diseño web premium <b class="st">✦</b></span>
+      <span class="mi">SEO Local <b class="st">✦</b></span>
+      <span class="mi">Chatbots con IA <b class="st">✦</b></span>
+      <span class="mi">Automatizaciones <b class="st">✦</b></span>
+      <span class="mi">Google Business <b class="st">✦</b></span>
+      <span class="mi">WhatsApp Business <b class="st">✦</b></span>
+      <span class="mi">Branding digital <b class="st">✦</b></span>
+      <span class="mi">CRM & Captación <b class="st">✦</b></span>
     </div>
-    <span class="ts-label">y más</span>
+    <div class="marquee-track" aria-hidden="true">
+      <span class="mi">Diseño web premium <b class="st">✦</b></span>
+      <span class="mi">SEO Local <b class="st">✦</b></span>
+      <span class="mi">Chatbots con IA <b class="st">✦</b></span>
+      <span class="mi">Automatizaciones <b class="st">✦</b></span>
+      <span class="mi">Google Business <b class="st">✦</b></span>
+      <span class="mi">WhatsApp Business <b class="st">✦</b></span>
+      <span class="mi">Branding digital <b class="st">✦</b></span>
+      <span class="mi">CRM & Captación <b class="st">✦</b></span>
+    </div>
   </div>
 </div>
 
-<!-- ===== PROBLEMA ===== -->
-<section class="problem" id="problema" aria-label="El problema">
-  <div class="container">
-    <div class="section-header" data-reveal>
-      <p class="eyebrow">El problema real</p>
-      <h2 class="section-title">Cada día sin presencia<br>digital optimizada es un cliente<br>que no llega.</h2>
-      <p class="section-sub">Tu negocio es bueno. El problema es que Internet todavía no lo sabe — y tu competencia sí tiene eso resuelto.</p>
+<!-- ===== SERVICIOS ===== -->
+<section class="block" id="servicios" aria-label="Servicios">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="label">Servicios</p>
+      <h2>Lo que construimos<br>para que tu negocio <em>crezca.</em></h2>
+      <p>Cada servicio está pensado para generar resultados reales, no para quedar bien en una presentación.</p>
     </div>
-    <div class="problem-grid stagger-grid">
-      <!-- Card 1: Web que no convierte -->
-      <div class="problem-card" data-tilt>
-        <div class="pc-visual" aria-hidden="true">
-          <div class="pcv-header">
-            <div class="pcv-dots"><span></span><span></span><span></span></div>
-            <div class="pcv-url">tu-web.es</div>
-          </div>
-          <div class="pcv-body">
-            <div class="pcv-funnel">
-              <div class="pcvf-row">
-                <span class="pcvf-label">Visitas</span>
-                <div class="pcvf-track"><div class="pcvf-fill" style="width:100%"></div></div>
-                <span class="pcvf-num">4.200</span>
-              </div>
-              <div class="pcvf-row">
-                <span class="pcvf-label">Clics</span>
-                <div class="pcvf-track"><div class="pcvf-fill" style="width:38%"></div></div>
-                <span class="pcvf-num">1.600</span>
-              </div>
-              <div class="pcvf-row">
-                <span class="pcvf-label">Contactos</span>
-                <div class="pcvf-track"><div class="pcvf-fill pcvf-bad" style="width:5%"></div></div>
-                <span class="pcvf-num pcvf-bad-txt">84</span>
-              </div>
-            </div>
-            <div class="pcv-rate">Conversión: <strong class="pcv-rate-bad">2%</strong> &mdash; por debajo del estándar</div>
-          </div>
-        </div>
-        <h3>Web que no convierte</h3>
-        <p>Una web antigua o genérica transmite desconfianza antes de que nadie te llame. El primer filtro es visual.</p>
-      </div>
 
-      <!-- Card 2: Invisible en Google -->
-      <div class="problem-card" data-tilt>
-        <div class="pc-visual" aria-hidden="true">
-          <div class="pcv-header pcv-google-bar">
-            <div class="pcv-google-logo">
-              <span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC04">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span>
-            </div>
-            <div class="pcv-search">fontanero Valencia <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="10"><circle cx="7" cy="7" r="4"/><line x1="10" y1="10" x2="14" y2="14"/></svg></div>
-          </div>
-          <div class="pcv-body">
-            <div class="pcv-results">
-              <div class="pcvr-item pcvr-comp"><span class="pcvr-pos">#1</span> Fontanería López <span class="pcvr-stars">★★★★★</span></div>
-              <div class="pcvr-item pcvr-comp"><span class="pcvr-pos">#2</span> Urgencias 24h <span class="pcvr-stars">★★★★</span></div>
-              <div class="pcvr-item pcvr-comp"><span class="pcvr-pos">#3</span> Reparaciones Rápidas <span class="pcvr-stars">★★★★</span></div>
-            </div>
-            <div class="pcv-not-found">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="11"><circle cx="8" cy="8" r="6.5"/><line x1="5" y1="8" x2="11" y2="8"/></svg>
-              Tu negocio no aparece
-            </div>
+    <div class="svc-grid">
+      <!-- Card 1 -->
+      <article class="svc-card rv">
+        <div class="glow" aria-hidden="true"></div>
+        <div class="svc-img">
+          <img src="assets/img/svc-web.jpg" alt="Diseño web premium para negocios locales" loading="lazy" width="800" height="500">
+        </div>
+        <div class="svc-arrow" aria-hidden="true">→</div>
+        <div class="svc-body">
+          <div class="svc-num">01</div>
+          <h3>Diseño web premium</h3>
+          <p>Construido desde cero para tu negocio, no desde una plantilla. Rápido, responsive y enfocado en convertir.</p>
+          <div class="svc-tags">
+            <span>Responsive</span><span>SEO técnico</span><span>Velocidad A+</span><span>CRO</span>
           </div>
         </div>
-        <h3>Invisible en Maps y Google</h3>
-        <p>Si no apareces entre los primeros cuando alguien busca tu servicio en la zona, ese cliente se va a otro.</p>
-      </div>
+      </article>
 
-      <!-- Card 3: Todo en manual -->
-      <div class="problem-card" data-tilt>
-        <div class="pc-visual" aria-hidden="true">
-          <div class="pcv-header">
-            <span class="pcv-task-title">Tareas de hoy</span>
-            <span class="pcv-time-badge">3h 20min</span>
-          </div>
-          <div class="pcv-body">
-            <div class="pcv-tasks">
-              <div class="pcvt-item pcvt-done"><span class="pcvt-check">✓</span><span class="pcvt-name">Responder WhatsApp</span><span class="pcvt-time">45 min</span></div>
-              <div class="pcvt-item pcvt-done"><span class="pcvt-check">✓</span><span class="pcvt-name">Enviar presupuestos</span><span class="pcvt-time">30 min</span></div>
-              <div class="pcvt-item pcvt-pending"><span class="pcvt-check">○</span><span class="pcvt-name">Confirmar citas</span><span class="pcvt-time">25 min</span></div>
-              <div class="pcvt-item pcvt-pending"><span class="pcvt-check">○</span><span class="pcvt-name">Actualizar agenda</span><span class="pcvt-time">40 min</span></div>
-            </div>
-            <div class="pcv-auto-hint">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="11"><polygon points="13 2 3 8 8 8 7 14 13 8 8 8"/></svg>
-              Podría estar todo automatizado
-            </div>
+      <!-- Card 2 -->
+      <article class="svc-card rv">
+        <div class="glow" aria-hidden="true"></div>
+        <div class="svc-img">
+          <img src="assets/img/svc-branding.jpg" alt="Branding digital y automatización con IA" loading="lazy" width="800" height="500">
+        </div>
+        <div class="svc-arrow" aria-hidden="true">→</div>
+        <div class="svc-body">
+          <div class="svc-num">02</div>
+          <h3>Chatbots con IA</h3>
+          <p>Tu negocio atiende, cualifica y agenda mientras duermes. Integrado en web, WhatsApp y tu calendario.</p>
+          <div class="svc-tags">
+            <span>24/7</span><span>WhatsApp Business</span><span>Captación</span><span>IA</span>
           </div>
         </div>
-        <h3>Todo en manual, todo lento</h3>
-        <p>Responder mensajes, gestionar citas, enviar presupuestos. Horas que podrían estar solas y no lo están.</p>
-      </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="svc-card rv">
+        <div class="glow" aria-hidden="true"></div>
+        <div class="svc-img">
+          <img src="assets/img/svc-landing.jpg" alt="Automatizaciones y SEO local para negocios" loading="lazy" width="800" height="500">
+        </div>
+        <div class="svc-arrow" aria-hidden="true">→</div>
+        <div class="svc-body">
+          <div class="svc-num">03</div>
+          <h3>SEO local & Google Maps</h3>
+          <p>Posición #1 cuando alguien busca tu servicio en la zona. Perfil de empresa optimizado y reseñas estratégicas.</p>
+          <div class="svc-tags">
+            <span>Google Business</span><span>Reseñas</span><span>Visibilidad local</span><span>Maps</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="svc-card svc-wip rv">
+        <div class="glow" aria-hidden="true"></div>
+        <div class="svc-img">
+          <img src="assets/img/svc-wip.jpg" alt="Automatizaciones CRM y captación de leads" loading="lazy" width="800" height="500">
+        </div>
+        <div class="svc-arrow" aria-hidden="true">→</div>
+        <div class="svc-body">
+          <div class="wip-badge">Más solicitado</div>
+          <div class="svc-num">04</div>
+          <h3>Automatizaciones & CRM</h3>
+          <p>Formularios, CRM, emails y recordatorios que se activan solos. Recupera horas cada semana.</p>
+          <div class="svc-tags">
+            <span>Make</span><span>n8n</span><span>CRM</span><span>Email automático</span>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ===== CHATBOT IA FEATURE ===== -->
-<section class="chatbot-feature" id="chatbot" aria-label="Chatbots con inteligencia artificial">
-  <div class="container">
-    <div class="chatbot-grid">
-      <div class="chatbot-text" data-reveal>
-        <p class="eyebrow">Chatbots con IA</p>
-        <h2 class="section-title">Atención instantánea.<br><em class="lime">Clientes captados. Las 24 horas.</em></h2>
-        <p class="section-sub">Mientras duermes, tu chatbot responde consultas, cualifica leads y agenda citas directamente en tu calendario. Sin que tengas que coger el teléfono.</p>
-        <div class="chatbot-stats">
-          <div class="cs-stat">
-            <div class="cs-num lime">+35%</div>
-            <div class="cs-label">más citas reservadas</div>
-          </div>
-          <div class="cs-stat">
-            <div class="cs-num">24/7</div>
-            <div class="cs-label">disponibilidad real</div>
-          </div>
-          <div class="cs-stat">
-            <div class="cs-num cyan">&lt;30s</div>
-            <div class="cs-label">tiempo de respuesta</div>
-          </div>
-        </div>
-        <div class="chatbot-actions">
-          <a href="#contacto" class="btn btn-primary">Quiero un chatbot así →</a>
-          <a href="#servicios" class="btn btn-ghost">Ver todos los servicios</a>
-        </div>
-      </div>
-
-      <!-- WhatsApp Chatbot Mockup -->
-      <div class="chatbot-visual" aria-hidden="true">
-        <div class="wa-phone-wrap">
-          <div class="wa-phone">
-            <div class="wa-header">
-              <div class="wa-back">←</div>
-              <div class="wa-avatar">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              </div>
-              <div class="wa-info">
-                <div class="wa-name">Clínica García · IA</div>
-                <div class="wa-online">● En línea ahora</div>
-              </div>
-            </div>
-            <div class="wa-msgs">
-              <div class="wa-time-label">Hoy, 23:14</div>
-              <div class="wa-msg bot">Hola 👋 Soy el asistente de Clínica García. ¿En qué puedo ayudarte?</div>
-              <div class="wa-msg user">Quiero pedir cita para una revisión</div>
-              <div class="wa-msg bot">Perfecto. Tengo disponible mañana a las 10h o el jueves a las 17h. ¿Cuál te viene mejor?</div>
-              <div class="wa-msg user">El jueves mejor</div>
-              <div class="wa-msg bot">✅ Cita confirmada para el jueves a las 17:00. Te envío confirmación por email ahora mismo.</div>
-              <div class="wa-msg typing-msg">
-                <span></span><span></span><span></span>
-              </div>
-            </div>
-            <div class="wa-ia-badge">
-              <span class="wa-ia-dot"></span>
-              Respondido por IA · Sin intervención humana
-            </div>
-          </div>
-          <div class="wa-stat-chips">
-            <div class="wa-chip">⚡ Responde en &lt;30s</div>
-            <div class="wa-chip">🔒 GDPR compliant</div>
-            <div class="wa-chip">📅 Integra con Google Calendar</div>
-          </div>
-        </div>
-      </div>
-    </div>
+<!-- ===== MICRO-CTA BAND ===== -->
+<div class="micro-cta-band">
+  <div class="wrap micro-cta-in">
+    <a href="https://wa.me/34644218863?text=Hola%2C%20quiero%20saber%20más" class="mcta-chip" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp directo
+    </a>
+    <a href="#contacto" class="mcta-chip mcta-chip--main">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+      Auditoría gratuita
+    </a>
+    <a href="https://calendly.com/hola-nexaflow/30min" class="mcta-chip" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Reservar llamada
+    </a>
   </div>
-</section>
+</div>
 
-<!-- ===== SERVICIOS DETALLADOS ===== -->
-<section class="services" id="servicios" aria-label="Servicios detallados">
-  <div class="container">
-    <div class="section-header" data-reveal>
-      <p class="eyebrow">Servicios</p>
-      <h2 class="section-title">Lo que construimos<br>para que tu negocio crezca.</h2>
-      <p class="section-sub">Resultados reales. No presentaciones bonitas.</p>
-    </div>
-    <!-- Visual banner — workspace con overlay -->
-    <div class="svc-banner-wrap" data-reveal>
-      <img src="assets/img/svc-hero.jpg" alt="Diseño web y automatización digital para negocios" class="svc-banner-img" loading="lazy" width="1200" height="360">
-      <div class="svc-banner-overlay">
-        <div class="svc-banner-chips">
-          <span>⚡ Entrega en &lt;3 semanas</span>
-          <span>🤖 IA integrada</span>
-          <span>📈 Resultados medibles</span>
-          <span>🔒 Sin permanencia</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- 6 service cards — 3×2 grid -->
-    <div class="svc-cards-grid stagger-grid" data-reveal>
-
-      <a href="#contacto" class="svc-card" data-tilt>
-        <div class="svc-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-        </div>
-        <span class="svc-card-num">01</span>
-        <h3 class="svc-card-title">Diseño web premium</h3>
-        <p class="svc-card-desc">A medida, sin plantillas. Entregamos en menos de 3 semanas.</p>
-        <div class="svc-card-tags"><span>Responsive</span><span>SEO técnico</span><span>CRO</span></div>
-        <span class="svc-card-arrow" aria-hidden="true">→</span>
-      </a>
-
-      <a href="#contacto" class="svc-card" data-tilt>
-        <div class="svc-card-icon svc-card-icon--cyan">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 2 4.5 5.5 4.5 9.5c0 2.5.9 4.6 2.3 6.1L8.5 22h7l1.7-6.4c1.4-1.5 2.3-3.6 2.3-6.1C19.5 5.5 16 2 12 2z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-        </div>
-        <span class="svc-card-num">02</span>
-        <h3 class="svc-card-title">Chatbots con IA</h3>
-        <p class="svc-card-desc">Atiende, cualifica y agenda 24/7. Web + WhatsApp integrado.</p>
-        <div class="svc-card-tags"><span>24/7</span><span>WhatsApp Business</span><span>IA</span></div>
-        <span class="svc-card-arrow" aria-hidden="true">→</span>
-      </a>
-
-      <a href="#contacto" class="svc-card" data-tilt>
-        <div class="svc-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-        </div>
-        <span class="svc-card-num">03</span>
-        <h3 class="svc-card-title">Automatizaciones</h3>
-        <p class="svc-card-desc">CRM, emails y recordatorios que se activan solos. Recupera horas.</p>
-        <div class="svc-card-tags"><span>Make</span><span>n8n</span><span>CRM</span></div>
-        <span class="svc-card-arrow" aria-hidden="true">→</span>
-      </a>
-
-      <a href="#contacto" class="svc-card" data-tilt>
-        <div class="svc-card-icon svc-card-icon--cyan">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <span class="svc-card-num">04</span>
-        <h3 class="svc-card-title">Google Business &amp; Maps</h3>
-        <p class="svc-card-desc">Posición #1 cuando alguien busca tu servicio en la zona.</p>
-        <div class="svc-card-tags"><span>Google Business</span><span>Reseñas</span><span>Maps</span></div>
-        <span class="svc-card-arrow" aria-hidden="true">→</span>
-      </a>
-
-      <a href="#contacto" class="svc-card" data-tilt>
-        <div class="svc-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        </div>
-        <span class="svc-card-num">05</span>
-        <h3 class="svc-card-title">SEO local</h3>
-        <p class="svc-card-desc">Schema, contenido localizado y Core Web Vitals para aparecer primero.</p>
-        <div class="svc-card-tags"><span>On-page</span><span>Local SEO</span><span>Schema</span></div>
-        <span class="svc-card-arrow" aria-hidden="true">→</span>
-      </a>
-
-      <a href="#contacto" class="svc-card" data-tilt>
-        <div class="svc-card-icon svc-card-icon--cyan">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
-        </div>
-        <span class="svc-card-num">06</span>
-        <h3 class="svc-card-title">Branding digital</h3>
-        <p class="svc-card-desc">Paleta, tipografía y guía de marca. Identidad que diferencia.</p>
-        <div class="svc-card-tags"><span>Identidad visual</span><span>Guía de marca</span><span>RRSS</span></div>
-        <span class="svc-card-arrow" aria-hidden="true">→</span>
-      </a>
-
-    </div>
+<!-- ===== ¿POR QUÉ NEXAFLOW? ===== -->
+<section class="block" id="porque" aria-label="Por qué NexaFlow">
+  <!-- Decorative background -->
+  <div class="why-bg-img" aria-hidden="true">
+    <img src="assets/img/premium-rays.jpg" alt="" loading="lazy" width="1600" height="854">
   </div>
-</section>
+  <div class="why-line" aria-hidden="true"></div>
 
-<!-- ===== 3D SHOWCASE ===== -->
-<section class="showcase3d" id="showcase" aria-label="Ejemplo de web premium">
-  <div class="container">
-    <div class="sc3d-grid">
-      <div class="sc3d-text" data-reveal>
-        <p class="eyebrow">En acción</p>
-        <h2 class="section-title">Así se ve una web<br>que <em class="lime">realmente</em> convierte.</h2>
-        <p class="section-sub">Diseño profesional a medida para negocios locales. Rápida, moderna y construida para convertir visitas en llamadas, citas y clientes reales.</p>
-        <ul class="sc3d-features">
-          <li><span class="lime">→</span> Diseño 100% a medida, sin plantillas</li>
-          <li><span class="lime">→</span> CTA siempre visible para captar citas</li>
-          <li><span class="lime">→</span> Velocidad A en PageSpeed</li>
-          <li><span class="lime">→</span> SEO local integrado desde el primer día</li>
-          <li><span class="lime">→</span> Perfecta en móvil, tablet y escritorio</li>
-        </ul>
-        <a href="#contacto" class="btn btn-primary">Quiero una web así →</a>
-      </div>
-
-      <div class="sc3d-stage">
-        <div class="sc3d-browser" id="sc3d-browser">
-          <!-- Browser chrome -->
-          <div class="sc3d-chrome">
-            <div class="sc3d-dots">
-              <span class="dot-red"></span>
-              <span class="dot-yellow"></span>
-              <span class="dot-green"></span>
-            </div>
-            <div class="sc3d-url">
-              <svg width="9" height="9" viewBox="0 0 24 24" fill="#10b981"><path d="M12 2L4 6v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V6l-8-4z"/></svg>
-              dentalgarcia.es
-            </div>
-            <div class="sc3d-chrome-icons"><span></span><span></span></div>
-          </div>
-
-          <!-- Scrolling website mockup -->
-          <div class="sc3d-viewport">
-            <div class="dental-page" id="dental-page">
-
-              <!-- Nav — Clínica Dental -->
-              <nav class="dp-nav dp-nav--dental">
-                <div class="dp-logo">
-                  <span class="dp-logo-icon">🦷</span>
-                  <strong>Dental</strong><span class="dp-logo-sub">García</span>
-                </div>
-                <div class="dp-navlinks">
-                  <span>Tratamientos</span><span>Equipo</span><span>Urgencias</span>
-                </div>
-                <div class="dp-nav-cta dp-nav-cta--dental">Pedir cita</div>
-              </nav>
-
-              <!-- Hero — Clínica dental, dark premium -->
-              <div class="dp-hero dp-hero--dark dp-hero--dental">
-                <div class="dp-hero-bg-img" aria-hidden="true">
-                  <img src="assets/img/result-dental.jpg" alt="" loading="lazy">
-                </div>
-                <div class="dp-hero-left">
-                  <div class="dp-badge dp-badge--light">
-                    <span class="dp-badge-stars">★★★★★</span> 4.9 · 312 reseñas · Valencia
-                  </div>
-                  <p class="dp-h1 dp-h1--light">Tu sonrisa perfecta,<br><em class="dp-em--dental">en manos expertas.</em></p>
-                  <p class="dp-sub dp-sub--light">Clínica dental de referencia en Valencia. Tecnología de vanguardia y trato cercano desde 2009.</p>
-                  <div class="dp-hero-btns">
-                    <div class="dp-btn-primary dp-btn--dental">Reservar cita →</div>
-                    <div class="dp-btn-ghost dp-btn-ghost--light">Ver tratamientos</div>
-                  </div>
-                </div>
-                <div class="dp-hero-visual">
-                  <div class="dp-photo-blob dp-photo-blob--img dp-photo-blob--dental">
-                    <img src="assets/img/dental-smile.jpg" alt="Sonrisa clínica dental García" class="dp-blob-photo" loading="lazy">
-                    <div class="dp-trust-chip dp-trust-chip--dental">
-                      <div class="dp-trust-dot dp-trust-dot--dental"></div>
-                      <span>+2.000 pacientes</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Tratamientos dentales -->
-              <div class="dp-services dp-services--dental">
-                <div class="dp-section-label">Nuestros tratamientos</div>
-                <div class="dp-srv-grid">
-                  <div class="dp-srv-card dp-srv-card--dental">
-                    <div class="dp-srv-icon-wrap dp-srv-icon-wrap--dental"><span class="dp-dental-icon">🦷</span></div>
-                    <div class="dp-srv-title">Blanqueamiento</div>
-                    <div class="dp-srv-desc">Sonrisa radiante en una sola sesión con tecnología LED.</div>
-                  </div>
-                  <div class="dp-srv-card dp-srv-card--dental">
-                    <div class="dp-srv-icon-wrap dp-srv-icon-wrap--dental"><span class="dp-dental-icon">😁</span></div>
-                    <div class="dp-srv-title">Ortodoncia invisible</div>
-                    <div class="dp-srv-desc">Alineadores transparentes Invisalign sin brackets visibles.</div>
-                  </div>
-                  <div class="dp-srv-card dp-srv-card--dental">
-                    <div class="dp-srv-icon-wrap dp-srv-icon-wrap--dental"><span class="dp-dental-icon">⚕️</span></div>
-                    <div class="dp-srv-title">Implantes dentales</div>
-                    <div class="dp-srv-desc">Solución permanente con garantía de por vida incluida.</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Stats clínica -->
-              <div class="dp-stats-row dp-stats-row--dental">
-                <div class="dp-stat">
-                  <div class="dp-stat-n dp-stat-n--dental">15+</div>
-                  <div class="dp-stat-l">Años experiencia</div>
-                </div>
-                <div class="dp-stat">
-                  <div class="dp-stat-n dp-stat-n--dental">2.000+</div>
-                  <div class="dp-stat-l">Pacientes</div>
-                </div>
-                <div class="dp-stat">
-                  <div class="dp-stat-n dp-stat-n--dental">4.9 ★</div>
-                  <div class="dp-stat-l">Google Maps</div>
-                </div>
-                <div class="dp-stat">
-                  <div class="dp-stat-n dp-stat-n--dental">24h</div>
-                  <div class="dp-stat-l">Para tu cita</div>
-                </div>
-              </div>
-
-              <!-- CTA bottom clínica -->
-              <div class="dp-cta-block dp-cta-block--dental">
-                <p class="dp-cta-tag">Sin esperas · Sin compromiso · Sin dolor</p>
-                <h2 class="dp-cta-h dp-cta-h--dental">Primera visita<br><em>completamente gratuita.</em></h2>
-                <div class="dp-cta-btn dp-cta-btn--dental">Reservar ahora →</div>
-              </div>
-
-            </div><!-- /page -->
-          </div><!-- /sc3d-viewport -->
-        </div><!-- /sc3d-browser -->
-
-        <!-- Reflection glow -->
-        <div class="sc3d-shadow" aria-hidden="true"></div>
-      </div><!-- /sc3d-stage -->
-    </div>
-  </div>
-</section>
-
-<!-- ===== RESULTADOS REALES ===== -->
-<section class="results-section" id="resultados" aria-label="Resultados reales">
-  <div class="container">
-    <div class="section-header" data-reveal>
-      <p class="eyebrow">Resultados reales</p>
-      <h2 class="section-title">Lo que ocurre cuando<br>tu presencia digital <em class="lime">trabaja bien.</em></h2>
-      <p class="section-sub">Estos son los tipos de resultados que vemos cuando implementamos el sistema completo. Negocios locales, sectores reales.</p>
-    </div>
-    <div class="results-grid stagger-grid">
-
-      <div class="result-card" data-tilt>
-        <div class="rc-img-wrap">
-          <img src="assets/img/result-dental.jpg" alt="Clínica dental moderna en Valencia" class="rc-img" loading="lazy" width="560" height="220">
-          <div class="rc-img-overlay">
-            <span class="rc-sector-tag">Clínica Dental · Valencia</span>
-            <span class="rc-img-badge">Salud &amp; Bienestar</span>
-          </div>
-        </div>
-        <div class="rc-split">
-          <div class="rc-col rc-before">
-            <div class="rc-phase before">Antes</div>
-            <ul class="rc-list">
-              <li>Web de 2017 sin versión móvil</li>
-              <li>Sin citas online ni chatbot</li>
-              <li>Invisible en Google Maps</li>
-              <li>Todo por teléfono o boca a boca</li>
-            </ul>
-          </div>
-          <div class="rc-divider" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </div>
-          <div class="rc-col rc-after">
-            <div class="rc-phase after">Después</div>
-            <ul class="rc-list">
-              <li>Web nueva con reservas online</li>
-              <li>Chatbot IA en web y WhatsApp</li>
-              <li>Posición #1 en Google Maps local</li>
-              <li>Leads automáticos al CRM</li>
-            </ul>
-          </div>
-        </div>
-        <div class="rc-result">
-          <div class="rc-big">
-            <span class="rc-num lime">+66%</span>
-            <span class="rc-label">nuevos pacientes en 4 meses</span>
-          </div>
-          <div class="rc-time">Resultado en 4 meses</div>
-        </div>
-      </div>
-
-      <div class="result-card" data-tilt>
-        <div class="rc-img-wrap">
-          <img src="assets/img/result-beauty.jpg" alt="Centro de estética y spa profesional" class="rc-img" loading="lazy" width="560" height="220">
-          <div class="rc-img-overlay">
-            <span class="rc-sector-tag">Centro de Estética · Paiporta</span>
-            <span class="rc-img-badge">Belleza &amp; Estética</span>
-          </div>
-        </div>
-        <div class="rc-split">
-          <div class="rc-col rc-before">
-            <div class="rc-phase before">Antes</div>
-            <ul class="rc-list">
-              <li>Agenda manual por WhatsApp</li>
-              <li>Sin web propia, solo Instagram</li>
-              <li>Sin reseñas activas en Maps</li>
-              <li>Cancelaciones sin aviso frecuentes</li>
-            </ul>
-          </div>
-          <div class="rc-divider" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </div>
-          <div class="rc-col rc-after">
-            <div class="rc-phase after">Después</div>
-            <ul class="rc-list">
-              <li>Booking online 24h integrado</li>
-              <li>Web con SEO local y reseñas</li>
-              <li>Recordatorios automáticos</li>
-              <li>Captación pasiva de nuevos clientes</li>
-            </ul>
-          </div>
-        </div>
-        <div class="rc-result">
-          <div class="rc-big">
-            <span class="rc-num lime">+42%</span>
-            <span class="rc-label">reservas online en 6 semanas</span>
-          </div>
-          <div class="rc-time">Resultado en 6 semanas</div>
-        </div>
-      </div>
-
-      <div class="result-card" data-tilt>
-        <div class="rc-img-wrap">
-          <img src="assets/img/result-local.jpg" alt="Taller mecánico local en Valencia" class="rc-img" loading="lazy" width="560" height="220">
-          <div class="rc-img-overlay">
-            <span class="rc-sector-tag">Taller Mecánico · Valencia</span>
-            <span class="rc-img-badge">Negocios Locales</span>
-          </div>
-        </div>
-        <div class="rc-split">
-          <div class="rc-col rc-before">
-            <div class="rc-phase before">Antes</div>
-            <ul class="rc-list">
-              <li>Sin web ni Google Business</li>
-              <li>Presupuestos por WhatsApp a mano</li>
-              <li>Clientes perdidos sin seguimiento</li>
-              <li>2-3h diarias en gestión básica</li>
-            </ul>
-          </div>
-          <div class="rc-divider" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </div>
-          <div class="rc-col rc-after">
-            <div class="rc-phase after">Después</div>
-            <ul class="rc-list">
-              <li>Web + Google Maps #1 zona</li>
-              <li>Presupuestos automáticos por email</li>
-              <li>CRM con seguimiento automático</li>
-              <li>20min/día en lugar de 2h</li>
-            </ul>
-          </div>
-        </div>
-        <div class="rc-result">
-          <div class="rc-big">
-            <span class="rc-num cyan">-80%</span>
-            <span class="rc-label">tiempo en gestión manual</span>
-          </div>
-          <div class="rc-time">Resultado en 3 semanas</div>
-        </div>
-      </div>
-
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="label">¿Por qué nosotros?</p>
+      <h2>Lo que NexaFlow<br>hace <em>diferente.</em></h2>
+      <p>Velocidad real, tecnología que la mayoría de agencias todavía no usa y enfoque 100% en que tus clientes lleguen.</p>
     </div>
 
-    <div class="results-cta" data-reveal>
-      <p>¿Tu sector no aparece? Hemos trabajado con restaurantes, inmobiliarias, clínicas y talleres. <strong>El sistema se adapta.</strong></p>
-      <a href="#contacto" class="btn btn-primary">Analizar mi negocio gratis →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PROCESO ===== -->
-<section class="process" id="proceso" aria-label="Proceso de trabajo">
-  <div class="container">
-    <div class="section-header" data-reveal>
-      <p class="eyebrow">Proceso</p>
-      <h2 class="section-title">Un sistema claro,<br>rápido y sin sorpresas.</h2>
-      <p class="section-sub">Cada fase, definida para entregarte resultados reales en el menor tiempo posible. Sin reuniones innecesarias.</p>
-    </div>
-    <div class="process-timeline">
-      <div class="ptl-track" aria-hidden="true"></div>
-
-      <div class="ptl-step" data-reveal style="--ptl-delay:0.0s">
-        <div class="ptl-node"><span>01</span></div>
-        <div class="ptl-body">
-          <h3>Auditoría gratuita</h3>
-          <p>Analizamos tu web, presencia local y competencia. Te decimos exactamente qué está fallando y qué tiene más impacto.</p>
+    <div class="why-grid">
+      <div class="why-card rv">
+        <div class="wc-num">01</div>
+        <div class="wc-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
+        <h3>Captación de clientes</h3>
+        <p>Te encuentran justo cuando te buscan en tu zona. Aparecer primero en Google y Maps no es suerte, es sistema.</p>
+        <div class="wc-tags"><span>Diseño web</span><span>SEO local</span><span>Google Maps</span></div>
       </div>
 
-      <div class="ptl-step" data-reveal style="--ptl-delay:0.1s">
-        <div class="ptl-node"><span>02</span></div>
-        <div class="ptl-body">
-          <h3>Propuesta a medida</h3>
-          <p>Plan concreto: qué activar, en qué orden y con qué objetivo real de captación. Sin letra pequeña.</p>
-        </div>
-      </div>
-
-      <div class="ptl-step" data-reveal style="--ptl-delay:0.2s">
-        <div class="ptl-node"><span>03</span></div>
-        <div class="ptl-body">
-          <h3>Diseño y construcción</h3>
-          <p>Construimos tu web o sistema desde cero. Revisión conjunta en cada fase hasta que esté perfecto.</p>
-        </div>
-      </div>
-
-      <div class="ptl-step" data-reveal style="--ptl-delay:0.3s">
-        <div class="ptl-node"><span>04</span></div>
-        <div class="ptl-body">
-          <h3>Automatización</h3>
-          <p>Conectamos formularios, chatbot, CRM, email y WhatsApp en un flujo que trabaja solo desde el primer día.</p>
-        </div>
-      </div>
-
-      <div class="ptl-step" data-reveal style="--ptl-delay:0.4s">
-        <div class="ptl-node"><span>05</span></div>
-        <div class="ptl-body">
-          <h3>Lanzamiento</h3>
-          <p>Deploy con verificación completa: velocidad, SEO, mobile, analytics y tracking de leads activo.</p>
-        </div>
-      </div>
-
-      <div class="ptl-step" data-reveal style="--ptl-delay:0.5s">
-        <div class="ptl-node"><span>06</span></div>
-        <div class="ptl-body">
-          <h3>Seguimiento</h3>
-          <p>Revisamos resultados y mejoramos. Tu sistema digital evoluciona con tu negocio, no se queda congelado.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== DEMOS ===== -->
-<section class="portfolio" id="portfolio" aria-label="Casos de uso por sector">
-  <div class="container">
-    <div class="section-header" data-reveal>
-      <p class="eyebrow">Casos de uso</p>
-      <h2 class="section-title">¿Tu sector? Tenemos<br>una propuesta concreta.</h2>
-      <p class="section-sub">Ejemplos reales de lo que construiríamos para tu tipo de negocio y los resultados que esperaríamos.</p>
-    </div>
-    <div class="demos-grid stagger-grid">
-
-      <!-- Demo 1: Clínica dental -->
-      <div class="demo-card" data-tilt>
-        <div class="demo-visual">
-          <img src="assets/img/demo-dental.jpg" alt="Interior moderno de clínica dental en Valencia con sillón y equipamiento profesional" class="demo-visual-img" loading="lazy" width="1023" height="533" decoding="async">
-          <div class="demo-visual-overlay">
-            <div class="demo-visual-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M12 2C8 2 4.5 5 4.5 9c0 2.4.8 4.4 2 5.8L8 22h8l1.5-7.2c1.2-1.4 2-3.4 2-5.8C19.5 5 16 2 12 2z"/></svg>
-            </div>
-            <div class="demo-visual-label">Clínica Dental Premium</div>
-            <div class="demo-result-chip">+66% nuevos pacientes</div>
-          </div>
-        </div>
-        <div class="demo-body">
-          <span class="demo-sector-tag">Salud &amp; Bienestar</span>
-          <h3 class="demo-title">Web + chatbot + Google Maps para clínica dental</h3>
-          <div class="demo-row">
-            <div class="demo-row-label">Problema detectado</div>
-            <div class="demo-row-text">Sin citas online, invisible en Maps, respondiendo leads con horas de retraso.</div>
-          </div>
-          <div class="demo-row">
-            <div class="demo-row-label">Solución propuesta</div>
-            <div class="demo-row-text solution">Web con reserva integrada, chatbot 24/7 cualificando y posición #1 en Maps.</div>
-          </div>
-          <div class="demo-cta">
-            <a href="#contacto" class="demo-cta-link">Ver propuesta →</a>
-            <span class="demo-cta-badge">+66% pacientes</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Demo 2: Centro estética -->
-      <div class="demo-card" data-tilt>
-        <div class="demo-visual">
-          <img src="assets/img/demo-estetica.jpg" alt="Sala de tratamientos de un centro de estética y belleza profesional" class="demo-visual-img" loading="lazy" width="1024" height="680" decoding="async">
-          <div class="demo-visual-overlay">
-            <div class="demo-visual-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <div class="demo-visual-label">Centro de Estética</div>
-            <div class="demo-result-chip">+42% reservas</div>
-          </div>
-        </div>
-        <div class="demo-body">
-          <span class="demo-sector-tag">Belleza &amp; Estética</span>
-          <h3 class="demo-title">Sistema de captación para centro de belleza</h3>
-          <div class="demo-row">
-            <div class="demo-row-label">Problema detectado</div>
-            <div class="demo-row-text">Agenda manual por WhatsApp, sin web propia, cancelaciones frecuentes sin aviso.</div>
-          </div>
-          <div class="demo-row">
-            <div class="demo-row-label">Solución propuesta</div>
-            <div class="demo-row-text solution">Booking online 24h, recordatorios automáticos y SEO local activo.</div>
-          </div>
-          <div class="demo-cta">
-            <a href="#contacto" class="demo-cta-link">Ver propuesta →</a>
-            <span class="demo-cta-badge">+42% reservas</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Demo 3: Negocio local -->
-      <div class="demo-card" data-tilt>
-        <div class="demo-visual">
-          <img src="assets/img/demo-taller.jpg" alt="Mecánico trabajando en motor de un coche en taller de reparación de automóviles" class="demo-visual-img" loading="lazy" width="684" height="1024" decoding="async">
-          <div class="demo-visual-overlay">
-            <div class="demo-visual-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            </div>
-            <div class="demo-visual-label">Negocio Local / Taller</div>
-            <div class="demo-result-chip">-80% gestión manual</div>
-          </div>
-        </div>
-        <div class="demo-body">
-          <span class="demo-sector-tag">Negocios Locales</span>
-          <h3 class="demo-title">Presencia digital completa para pyme local</h3>
-          <div class="demo-row">
-            <div class="demo-row-label">Problema detectado</div>
-            <div class="demo-row-text">Sin web ni Google Business, presupuestos a mano, clientes perdidos sin seguimiento.</div>
-          </div>
-          <div class="demo-row">
-            <div class="demo-row-label">Solución propuesta</div>
-            <div class="demo-row-text solution">Web nueva, CRM automático y Maps #1 en búsquedas de la zona.</div>
-          </div>
-          <div class="demo-cta">
-            <a href="#contacto" class="demo-cta-link">Ver propuesta →</a>
-            <span class="demo-cta-badge">-80% gestión</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Demo 4: Inmobiliaria -->
-      <div class="demo-card" data-tilt>
-        <div class="demo-visual">
-          <img src="assets/img/demo-inmobiliaria.jpg" alt="Apartamento moderno y luminoso disponible en agencia inmobiliaria en Valencia" class="demo-visual-img" loading="lazy" width="1024" height="596" decoding="async">
-          <div class="demo-visual-overlay">
-            <div class="demo-visual-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
-            </div>
-            <div class="demo-visual-label">Agencia Inmobiliaria</div>
-            <div class="demo-result-chip">+89% leads captados</div>
-          </div>
-        </div>
-        <div class="demo-body">
-          <span class="demo-sector-tag">Inmobiliaria</span>
-          <h3 class="demo-title">Captación automática de compradores e inversores</h3>
-          <div class="demo-row">
-            <div class="demo-row-label">Problema detectado</div>
-            <div class="demo-row-text">Web estática, sin captación activa de compradores, sin cualificación de leads.</div>
-          </div>
-          <div class="demo-row">
-            <div class="demo-row-label">Solución propuesta</div>
-            <div class="demo-row-text solution">Chatbot cualificador, CRM automático y funnel de nurturing por email y WhatsApp.</div>
-          </div>
-          <div class="demo-cta">
-            <a href="#contacto" class="demo-cta-link">Ver propuesta →</a>
-            <span class="demo-cta-badge">+89% leads</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== INTEGRACIONES ===== -->
-<section class="integrations-section" id="integraciones" aria-label="Integraciones disponibles">
-  <div class="container">
-    <div class="intg-inner" data-reveal>
-      <div class="intg-header">
-        <p class="eyebrow">Integraciones</p>
-        <h2 class="section-title">Todo integrado.<br><em class="lime">Todo automatizado.</em></h2>
-        <p class="section-sub">Conectamos las herramientas que ya usas o las que tu negocio necesita. Sin código, sin complicaciones, sin que tengas que aprender nada nuevo.</p>
-      </div>
-      <div class="intg-grid">
-        <div class="intg-item featured">
-          <div class="intg-icon-wrap wa">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          </div>
-          <div class="intg-name">WhatsApp Business</div>
-        </div>
-        <div class="intg-item featured">
-          <div class="intg-icon-wrap google">
-            <svg viewBox="0 0 24 24" fill="none" width="24" height="24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-          </div>
-          <div class="intg-name">Google Business</div>
-        </div>
-        <div class="intg-item">
-          <div class="intg-icon-wrap make">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
-          </div>
-          <div class="intg-name">Make.com</div>
-        </div>
-        <div class="intg-item">
-          <div class="intg-icon-wrap cal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          </div>
-          <div class="intg-name">Calendly</div>
-        </div>
-        <div class="intg-item">
-          <div class="intg-icon-wrap crm">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <div class="intg-name">CRM</div>
-        </div>
-        <div class="intg-item">
-          <div class="intg-icon-wrap email">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div class="intg-name">Email automático</div>
-        </div>
-        <div class="intg-item">
-          <div class="intg-icon-wrap sheets">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
-          </div>
-          <div class="intg-name">Google Sheets</div>
-        </div>
-        <div class="intg-item">
-          <div class="intg-icon-wrap analytics">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <div class="intg-name">Analytics</div>
-        </div>
-      </div>
-      <div class="intg-flow" aria-hidden="true">
-        <div class="if-node source">Formulario</div>
-        <div class="if-arrow">→</div>
-        <div class="if-node process">IA Cualifica</div>
-        <div class="if-arrow">→</div>
-        <div class="if-node process">WhatsApp</div>
-        <div class="if-arrow">→</div>
-        <div class="if-node process">CRM</div>
-        <div class="if-arrow">→</div>
-        <div class="if-node output">Email + Cita</div>
-      </div>
-      <div class="intg-cta">
-        <a href="#contacto" class="btn btn-primary">Ver cómo funciona para mi negocio →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== COMPARATIVA ===== -->
-<section class="comparison" id="diferenciacion" aria-label="Por qué NexaFlow">
-  <div class="container">
-    <div class="section-header" data-reveal>
-      <p class="eyebrow">¿Por qué nosotros?</p>
-      <h2 class="section-title">Lo que NexaFlow<br>hace diferente.</h2>
-      <p class="section-sub">Velocidad real, tecnología que la mayoría de agencias todavía no usa y enfoque 100% en que tus clientes lleguen.</p>
-    </div>
-    <div class="comparison-table" data-reveal>
-      <div class="ct-header">
-        <div class="ct-feature">Aspecto</div>
-        <div class="ct-col traditional">Agencia tradicional</div>
-        <div class="ct-col nexaflow">NexaFlow Studio</div>
-      </div>
-      <div class="ct-body">
-        <div class="ct-row">
-          <div class="ct-feature">Diseño web</div>
-          <div class="ct-col traditional"><span class="bad">✗</span> Plantillas genéricas</div>
-          <div class="ct-col nexaflow"><span class="good">✓</span> A medida, premium</div>
-        </div>
-        <div class="ct-row">
-          <div class="ct-feature">Automatización</div>
-          <div class="ct-col traditional"><span class="bad">✗</span> Procesos manuales</div>
-          <div class="ct-col nexaflow"><span class="good">✓</span> Flujos automáticos</div>
-        </div>
-        <div class="ct-row">
-          <div class="ct-feature">Inteligencia Artificial</div>
-          <div class="ct-col traditional"><span class="bad">✗</span> No incluyen IA</div>
-          <div class="ct-col nexaflow"><span class="good">✓</span> IA conversacional integrada</div>
-        </div>
-        <div class="ct-row">
-          <div class="ct-feature">Tiempo de entrega</div>
-          <div class="ct-col traditional"><span class="bad">✗</span> 2–3 meses</div>
-          <div class="ct-col nexaflow"><span class="good">✓</span> 2–4 semanas</div>
-        </div>
-        <div class="ct-row">
-          <div class="ct-feature">Enfoque</div>
-          <div class="ct-col traditional"><span class="bad">✗</span> Solo diseño estético</div>
-          <div class="ct-col nexaflow"><span class="good">✓</span> 100% conversión y captación</div>
-        </div>
-        <div class="ct-row">
-          <div class="ct-feature">Transparencia</div>
-          <div class="ct-col traditional"><span class="bad">✗</span> Presupuestos opacos</div>
-          <div class="ct-col nexaflow"><span class="good">✓</span> Propuesta detallada y clara</div>
-        </div>
-        <div class="ct-row">
-          <div class="ct-feature">Escalabilidad</div>
-          <div class="ct-col traditional"><span class="bad">✗</span> Sistema rígido</div>
-          <div class="ct-col nexaflow"><span class="good">✓</span> Sistemas que crecen contigo</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PLANES ===== -->
-<section class="plans-section" id="planes" aria-label="Planes y servicios">
-  <div class="container">
-    <div class="section-header" data-reveal>
-      <p class="eyebrow">Planes</p>
-      <h2 class="section-title">Sin precios fijos.<br>Sin letra pequeña.</h2>
-      <p class="section-sub">Cada negocio es diferente. Tras la auditoría gratuita, te enviamos una propuesta detallada y sin compromiso. Solo pagas si decides avanzar.</p>
-    </div>
-    <div class="plans-grid stagger-grid">
-
-      <!-- Plan 1: Presencia -->
-      <div class="plan-card" data-tilt>
-        <div class="plan-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-        </div>
-        <div class="plan-name">Presencia</div>
-        <p class="plan-desc">Para negocios que necesitan una base digital sólida y profesional desde la que crecer.</p>
-        <ul class="plan-features">
-          <li>
-            <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><polyline points="3 8 6.5 11.5 13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            Web premium a medida
-          </li>
-          <li>
-            <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><polyline points="3 8 6.5 11.5 13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            Google Maps optimizado
-          </li>
-          <li>
-            <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><polyline points="3 8 6.5 11.5 13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            Branding básico (logo, colores, tipografía)
-          </li>
-          <li>
-            <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><polyline points="3 8 6.5 11.5 13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            Estrategia de primeras reseñas
-          </li>
-          <li>
-            <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><polyline points="3 8 6.5 11.5 13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            Hosting y dominio 1 año incluido
-          </li>
-        </ul>
-        <div class="plan-cta-wrap">
-          <a href="#contacto" class="btn btn-ghost plan-cta">Solicitar propuesta →</a>
-          <p class="plan-note">Presupuesto gratuito en 24h</p>
-        </div>
-      </div>
-
-      <!-- Plan 2: Captación (featured) -->
-      <div class="plan-card is-featured" data-tilt>
-        <div class="plan-popular">Más solicitado</div>
-        <div class="plan-icon" aria-hidden="true">
+      <div class="why-card rv">
+        <div class="wc-num">02</div>
+        <div class="wc-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
         </div>
-        <div class="plan-name">Captación</div>
-        <p class="plan-desc">Para negocios que quieren captar clientes activamente con IA y automatización integradas.</p>
-        <ul class="plan-features">
-          <li>
-            <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><polyline points="3 8 6.5 11.5 13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            Todo lo del plan Presencia
-          </li>
-          <li>
-            <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><polyline points="3 8 6.5 11.5 13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            SEO local (búsquedas cercanas)
-          </li>
-          <li>
-            <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><polyline points="3 8 6.5 11.5 13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            Chatbot IA (web + WhatsApp)
-          </li>
-          <li>
-            <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><polyline points="3 8 6.5 11.5 13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            Captación y cualificación automática
-          </li>
-          <li>
-            <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><polyline points="3 8 6.5 11.5 13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            Informe mensual de resultados
-          </li>
-          <li>
-            <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><polyline points="3 8 6.5 11.5 13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            Soporte prioritario
-          </li>
-        </ul>
-        <div class="plan-cta-wrap">
-          <a href="#contacto" class="btn btn-primary plan-cta">Solicitar propuesta →</a>
-          <p class="plan-note">Presupuesto gratuito en 24h</p>
-        </div>
+        <h3>Automatización inteligente</h3>
+        <p>Capta, responde y hace seguimiento las 24 horas, solo. Sin que tengas que coger el teléfono ni abrir el email.</p>
+        <div class="wc-tags"><span>Chatbots</span><span>IA aplicada</span><span>WhatsApp</span></div>
       </div>
 
-      <!-- Plan 3: Sistema Total -->
-      <div class="plan-card" data-tilt>
-        <div class="plan-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M6.34 17.66l-1.41 1.41M2 12h2M20 12h2M19.07 19.07l-1.41-1.41M6.34 6.34L4.93 4.93"/></svg>
+      <div class="why-card rv">
+        <div class="wc-num">03</div>
+        <div class="wc-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <div class="plan-name">Sistema Total</div>
-        <p class="plan-desc">Para negocios que quieren funcionar en piloto automático. Captación, gestión y seguimiento completo.</p>
-        <ul class="plan-features">
-          <li>
-            <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><polyline points="3 8 6.5 11.5 13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            Todo lo del plan Captación
-          </li>
-          <li>
-            <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><polyline points="3 8 6.5 11.5 13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            CRM y seguimiento automático
-          </li>
-          <li>
-            <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><polyline points="3 8 6.5 11.5 13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            Emails y WhatsApp automatizados
-          </li>
-          <li>
-            <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><polyline points="3 8 6.5 11.5 13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            Dashboard de métricas en tiempo real
-          </li>
-          <li>
-            <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><polyline points="3 8 6.5 11.5 13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            Consultoría mensual 1:1 incluida
-          </li>
-          <li>
-            <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><polyline points="3 8 6.5 11.5 13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            Mejoras continuas incluidas
-          </li>
-        </ul>
-        <div class="plan-cta-wrap">
-          <a href="#contacto" class="btn btn-ghost plan-cta">Solicitar propuesta →</a>
-          <p class="plan-note">Presupuesto gratuito en 24h</p>
-        </div>
+        <h3>Experiencia premium</h3>
+        <p>Una imagen que transmite autoridad desde el primer segundo. Diseño a medida, no plantillas genéricas de Wix.</p>
+        <div class="wc-tags"><span>Diseño</span><span>Mobile-first</span><span>Branding</span></div>
       </div>
 
+      <div class="why-card rv">
+        <div class="wc-num">04</div>
+        <div class="wc-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Resultados medibles</h3>
+        <p>Medimos lo que de verdad importa: llamadas, formularios, reservas y ventas. No visitas ni impresiones vacías.</p>
+        <div class="wc-tags"><span>Llamadas</span><span>Formularios</span><span>Reservas</span><span>Ventas</span></div>
+      </div>
     </div>
-    <p class="plans-note" data-reveal>
-      <svg viewBox="0 0 16 16" fill="none" width="13" height="13" stroke="currentColor"><circle cx="8" cy="8" r="7"/><path d="M8 7v5M8 5v.5" stroke-width="1.5" stroke-linecap="round"/></svg>
-      Todos los proyectos incluyen auditoría inicial gratuita. El precio final depende del tamaño y complejidad de tu negocio — siempre te lo decimos antes de empezar.
-    </p>
   </div>
 </section>
 
-<!-- ===== SECCIÓN EMOCIONAL ===== -->
-<section class="emotional" aria-label="Reflexión estratégica">
-  <div class="emotional-inner" data-reveal>
-    <p class="emotional-label">Una reflexión honesta</p>
-    <h2 class="emotional-title">
-      ¿Cuántos clientes han buscado<br>un negocio como el tuyo esta semana?
-    </h2>
-    <p class="emotional-question">
-      ¿Y cuántos<br><em>te han encontrado?</em>
-    </p>
-    <a href="#contacto" class="btn btn-primary btn-xl">Solicitar auditoría gratuita</a>
+<!-- ===== BANDA CINEMATOGRÁFICA ===== -->
+<section class="cine" id="transformacion" aria-label="De invisible a referente local">
+  <img src="assets/img/premium-ascent.jpg" alt="Sendero luminoso ascendente — de invisible a referente" class="cine-img" loading="lazy" width="1600" height="852">
+  <div class="cine-ovl" aria-hidden="true"></div>
+  <div class="wrap cine-content rv">
+    <p class="label">Transformación</p>
+    <h2 class="cine-h2">De invisible a<br><em>referente local.</em></h2>
+    <p class="cine-sub">Lo que cambia cuando tu negocio deja de competir por precio y empieza a elegirse por confianza.</p>
+    <a href="#contacto" class="btn btn-main cine-cta"><span>Quiero ser referente →</span></a>
+  </div>
+</section>
+
+<!-- ===== ANTES / DESPUÉS ===== -->
+<section class="block ba-section" aria-label="Resultados antes y después">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="label">Resultados reales</p>
+      <h2>Resultados visibles.<br><em>Procesos invisibles.</em></h2>
+      <p>Así queda la presencia digital de un negocio antes y después de trabajar con NexaFlow.</p>
+    </div>
+
+    <div class="ba rv" id="baSlider" role="img" aria-label="Comparativa antes y después de optimización digital">
+      <!-- BEFORE -->
+      <div class="ba-pane ba-before" id="baBefore">
+        <div class="mk mk-old">
+          <div class="mk-old-nav">
+            <span class="mk-old-logo">Dental García</span>
+            <span class="mk-old-cta">Contactar</span>
+          </div>
+          <div class="mk-old-hero">
+            <h4>Clínica Dental García</h4>
+            <p>Servicios dentales en Valencia desde 1998</p>
+          </div>
+          <div class="mk-old-body">
+            <div class="mk-old-card">
+              <div class="mk-old-em">🦷</div>
+              <div>Limpieza dental</div>
+            </div>
+            <div class="mk-old-card">
+              <div class="mk-old-em">😬</div>
+              <div>Ortodoncia</div>
+            </div>
+            <div class="mk-old-card">
+              <div class="mk-old-em">⚕️</div>
+              <div>Implantes</div>
+            </div>
+          </div>
+          <div class="mk-old-footer">Tel: 963 XXX XXX · C/ Mayor 14 · Valencia</div>
+        </div>
+        <span class="ba-tag bf">Antes</span>
+      </div>
+
+      <!-- AFTER -->
+      <div class="ba-pane ba-after">
+        <div class="mk mk-new">
+          <div class="mk-new-nav">
+            <span class="mk-new-logo">🦷 Dental<b>García</b></span>
+            <span class="mk-new-cta">Reservar cita →</span>
+          </div>
+          <div class="mk-new-hero">
+            <img src="assets/img/proof-after.jpg" alt="" loading="lazy" width="600" height="200">
+            <div class="mk-new-ov"></div>
+            <div class="mk-new-htxt">
+              <h4>Tu sonrisa perfecta,<br>en manos expertas.</h4>
+              <p>★★★★★ 4.9 · 312 reseñas</p>
+            </div>
+          </div>
+          <div class="mk-new-treats">
+            <div class="mk-new-chip">🦷 Blanqueamiento LED</div>
+            <div class="mk-new-chip">😁 Invisalign</div>
+            <div class="mk-new-chip">⚕️ Implantes</div>
+          </div>
+          <div class="mk-new-stats">
+            <span><b>15+ años</b><br>experiencia</span>
+            <span><b>2.000+</b><br>pacientes</span>
+            <span><b>4.9 ★</b><br>Google Maps</span>
+          </div>
+        </div>
+        <span class="ba-tag af">Después</span>
+      </div>
+
+      <!-- HANDLE -->
+      <div class="ba-handle" id="baHandle" role="slider" aria-label="Arrastrar para comparar" aria-valuemin="10" aria-valuemax="90" aria-valuenow="50" tabindex="0">
+        <div class="ba-grip">⇄</div>
+      </div>
+    </div>
+
+    <!-- Stats row -->
+    <div class="ba-stats rv">
+      <div class="ba-stat">
+        <span class="bas-n">+66%</span>
+        <span class="bas-l">nuevos pacientes</span>
+      </div>
+      <div class="ba-stat">
+        <span class="bas-n">+42%</span>
+        <span class="bas-l">reservas online</span>
+      </div>
+      <div class="ba-stat">
+        <span class="bas-n">-80%</span>
+        <span class="bas-l">gestión manual</span>
+      </div>
+      <div class="ba-stat">
+        <span class="bas-n">&lt;3 sem</span>
+        <span class="bas-l">tiempo de entrega</span>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ===== CONTACTO ===== -->
-<section class="contact" id="contacto" aria-label="Formulario de contacto">
-  <div class="container">
-    <div class="section-header" data-reveal>
-      <p class="eyebrow">Hablemos</p>
-      <h2 class="section-title">Cuéntanos tu caso.<br>La primera valoración es gratis.</h2>
-    </div>
+<section class="block" id="contacto" aria-label="Contacto — auditoría gratuita">
+  <div class="contact-bg" aria-hidden="true">
+    <img src="assets/img/cta-bg.jpg" alt="" loading="lazy" width="1400" height="700">
+  </div>
+  <div class="wrap">
     <div class="contact-grid">
-      <div class="contact-info" data-reveal>
-        <p class="contact-intro">No necesitas saber exactamente qué quieres. Cuéntanos cómo está tu negocio hoy y qué querrías mejorar. Nos adaptamos y te decimos qué tiene más sentido para tu caso concreto.</p>
+
+      <!-- Left: copy + links -->
+      <div class="contact-left rv">
+        <p class="label">Hablemos</p>
+        <h2 class="contact-h2">Cuéntanos tu caso.<br>La primera valoración<br>es <em>gratis.</em></h2>
+        <p class="contact-sub">No necesitas saber exactamente qué quieres. Cuéntanos cómo está tu negocio hoy y qué querrías mejorar.</p>
+
         <div class="contact-channels">
-          <a href="https://wa.me/34644218863?text=Hola%2C%20os%20escribo%20desde%20vuestra%20web.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20vuestros%20servicios%20para%20mi%20negocio." class="contact-channel whatsapp" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
-            <div class="channel-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <a href="https://wa.me/34644218863?text=Hola%2C%20os%20escribo%20desde%20vuestra%20web.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20vuestros%20servicios%20para%20mi%20negocio." class="ch-link" target="_blank" rel="noopener">
+            <div class="ch-icon ch-wa">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             </div>
-            <div class="channel-text">
+            <div>
               <strong>WhatsApp</strong>
               <span>Respuesta inmediata</span>
             </div>
           </a>
-          <a href="https://ig.me/m/nexaflow.studio" class="contact-channel instagram" target="_blank" rel="noopener" aria-label="Contactar por Instagram">
-            <div class="channel-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          <a href="https://ig.me/m/nexaflow.studio" class="ch-link" target="_blank" rel="noopener">
+            <div class="ch-icon ch-ig">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
             </div>
-            <div class="channel-text">
+            <div>
               <strong>@nexaflow.studio</strong>
               <span>Instagram</span>
             </div>
           </a>
-          <a href="mailto:hola.nexaflow@gmail.com?subject=Consulta%20desde%20la%20web&body=Hola%2C%0A%0AOs%20escribo%20desde%20vuestra%20web.%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20vuestros%20servicios%20digitales%20para%20mi%20negocio.%0A%0AGracias." class="contact-channel email" aria-label="Enviar email">
-            <div class="channel-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:hola.nexaflow@gmail.com?subject=Consulta%20desde%20la%20web" class="ch-link">
+            <div class="ch-icon ch-em">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
-            <div class="channel-text">
+            <div>
               <strong>hola.nexaflow@gmail.com</strong>
               <span>Email</span>
             </div>
           </a>
         </div>
-        <div class="trust-badges">
-          <div class="trust-badge">
-            <svg viewBox="0 0 16 16" fill="none" width="11" height="11"><polyline points="3 8 6.5 11.5 13 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            Sin compromiso
-          </div>
-          <div class="trust-badge">
-            <svg viewBox="0 0 16 16" fill="none" width="11" height="11"><polyline points="3 8 6.5 11.5 13 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            Respuesta en menos de 24h
-          </div>
-          <div class="trust-badge">
-            <svg viewBox="0 0 16 16" fill="none" width="11" height="11"><polyline points="3 8 6.5 11.5 13 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            Primera valoración gratuita
-          </div>
-          <div class="trust-badge">
-            <svg viewBox="0 0 16 16" fill="none" width="11" height="11"><polyline points="3 8 6.5 11.5 13 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            Especialistas en negocios locales
-          </div>
+
+        <div class="contact-trust">
+          <div class="ct-item">✓ Sin compromiso</div>
+          <div class="ct-item">✓ Respuesta en &lt;24h</div>
+          <div class="ct-item">✓ Primera valoración gratuita</div>
+          <div class="ct-item">✓ Especialistas en negocios locales</div>
         </div>
       </div>
 
-      <form class="contact-form" id="contact-form" data-reveal aria-label="Formulario de contacto"
-            action="https://formspree.io/f/mlgvlraj" method="POST">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="f-name">Tu nombre</label>
-            <input type="text" id="f-name" name="name" placeholder="María García" required autocomplete="name">
+      <!-- Right: form (Formspree — no tocar) -->
+      <div class="contact-right rv">
+        <form class="contact-form" id="contact-form" aria-label="Formulario de contacto"
+              action="https://formspree.io/f/mlgvlraj" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-name">Tu nombre</label>
+              <input type="text" id="f-name" name="name" placeholder="María García" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="f-business">Tu negocio</label>
+              <input type="text" id="f-business" name="business" placeholder="Clínica García, Taller López…" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-email">Email</label>
+              <input type="email" id="f-email" name="contact" placeholder="email@ejemplo.com" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="f-phone">Teléfono (opcional)</label>
+              <input type="tel" id="f-phone" name="phone" placeholder="612 345 678" autocomplete="tel">
+            </div>
           </div>
           <div class="form-group">
-            <label for="f-business">Tu negocio</label>
-            <input type="text" id="f-business" name="business" placeholder="Clínica García, Taller López…" required>
+            <label for="f-message">¿Qué querrías mejorar?</label>
+            <textarea id="f-message" name="message" rows="4" placeholder="Más clientes, menos gestión manual, más visibilidad en Google…" required></textarea>
           </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="f-email">Email</label>
-            <input type="text" id="f-email" name="contact" placeholder="email@ejemplo.com" required autocomplete="email">
+          <div class="form-group form-rgpd">
+            <label class="rgpd-label">
+              <input type="checkbox" id="f-rgpd" name="rgpd" required>
+              <span>He leído y acepto el tratamiento de mis datos. <a href="politica-privacidad.html" target="_blank">Política de Privacidad</a>.</span>
+            </label>
           </div>
-          <div class="form-group">
-            <label for="f-phone">Teléfono (opcional)</label>
-            <input type="tel" id="f-phone" name="phone" placeholder="612 345 678" autocomplete="tel">
+          <button type="submit" class="btn btn-main btn-full" id="form-submit">
+            <span class="btn-text">Solicitar valoración gratuita →</span>
+            <span class="btn-loading" aria-hidden="true">Enviando…</span>
+          </button>
+          <div class="form-trust-row">
+            <svg viewBox="0 0 16 16" fill="none" width="12" height="12"><path d="M8 1L9.5 5.5H14.5L10.5 8.5L12 13L8 10L4 13L5.5 8.5L1.5 5.5H6.5L8 1Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            <span>Respondemos en menos de 24h · Sin spam · Sin compromiso</span>
           </div>
-        </div>
-        <div class="form-group">
-          <label for="f-message">¿Qué querrías mejorar?</label>
-          <textarea id="f-message" name="message" rows="4" placeholder="Más clientes, menos gestión manual, más visibilidad en Google, una web que convierta… cuéntanos." required></textarea>
-        </div>
-        <div class="form-group form-rgpd">
-          <label class="rgpd-label">
-            <input type="checkbox" id="f-rgpd" name="rgpd" required>
-            <span>He leído y acepto el tratamiento de mis datos para gestionar mi consulta. <a href="politica-privacidad.html" target="_blank">Política de Privacidad</a>.</span>
-          </label>
-        </div>
-        <button type="submit" class="btn btn-primary btn-full" id="form-submit">
-          <span class="btn-text">Solicitar valoración gratuita</span>
-          <span class="btn-loading" aria-hidden="true">Enviando…</span>
-        </button>
-        <div class="form-trust-row">
-          <svg viewBox="0 0 16 16" fill="none" width="12" height="12"><path d="M8 1L9.5 5.5H14.5L10.5 8.5L12 13L8 10L4 13L5.5 8.5L1.5 5.5H6.5L8 1Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
-          <span>Respondemos en menos de 24h · Sin spam · Sin compromiso</span>
-        </div>
-        <div class="form-success" id="form-success" role="status" aria-live="polite">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><polyline points="20 6 9 17 4 12"/></svg>
-          Recibido. Te enviamos una valoración inicial en menos de 24h.
-        </div>
-      </form>
+          <div class="form-success" id="form-success" role="status" aria-live="polite">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><polyline points="20 6 9 17 4 12"/></svg>
+            Recibido. Te enviamos una valoración inicial en menos de 24h.
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </section>
 
-</main><!-- /main -->
+</main>
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer" role="contentinfo">
-  <div class="container">
+  <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="#inicio" class="nav-logo footer-logo" aria-label="NexaFlow Studio">
-          Nexa<span class="logo-accent">Flow</span><span class="logo-dot">.</span>
+        <a href="#inicio" class="footer-logo" aria-label="NexaFlow Studio">
+          <img src="assets/img/logo-nf.png" alt="NexaFlow Studio" width="36" height="36" loading="lazy">
+          <span class="logo-word">Nexa<span>Flow</span></span>
         </a>
         <p class="footer-tagline">Automatización, IA y webs premium<br>para negocios locales en España.</p>
         <address class="footer-address">
@@ -1550,13 +564,13 @@
           <a href="mailto:hola.nexaflow@gmail.com">hola.nexaflow@gmail.com</a>
         </address>
         <div class="footer-social">
-          <a href="https://ig.me/m/nexaflow.studio" target="_blank" rel="noopener" aria-label="Instagram @nexaflow.studio">
+          <a href="https://ig.me/m/nexaflow.studio" target="_blank" rel="noopener" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
           </a>
-          <a href="https://wa.me/34644218863?text=Hola%2C%20os%20escribo%20desde%20vuestra%20web.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20vuestros%20servicios%20para%20mi%20negocio." target="_blank" rel="noopener" aria-label="WhatsApp">
+          <a href="https://wa.me/34644218863" target="_blank" rel="noopener" aria-label="WhatsApp">
             <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           </a>
-          <a href="mailto:hola.nexaflow@gmail.com?subject=Consulta%20desde%20la%20web&body=Hola%2C%0A%0AOs%20escribo%20desde%20vuestra%20web.%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20vuestros%20servicios%20digitales%20para%20mi%20negocio.%0A%0AGracias." aria-label="Email">
+          <a href="mailto:hola.nexaflow@gmail.com" aria-label="Email">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </a>
         </div>
@@ -1565,98 +579,68 @@
         <div class="footer-col">
           <h4>Servicios</h4>
           <a href="#servicios">Diseño web premium</a>
-          <a href="#chatbot">Chatbots con IA</a>
+          <a href="#servicios">Chatbots con IA</a>
+          <a href="#servicios">SEO local & Maps</a>
           <a href="#servicios">Automatizaciones</a>
-          <a href="#servicios">Google Maps</a>
-          <a href="#servicios">SEO local</a>
-          <a href="#servicios">Branding digital</a>
         </div>
         <div class="footer-col">
-          <h4>Empresa</h4>
-          <a href="#proceso">Proceso</a>
-          <a href="#portfolio">Casos de uso</a>
-          <a href="#resultados">Resultados</a>
-          <a href="#diferenciacion">¿Por qué nosotros?</a>
-          <a href="#planes">Planes</a>
+          <h4>NexaFlow</h4>
+          <a href="#porque">¿Por qué nosotros?</a>
+          <a href="#transformacion">Resultados</a>
           <a href="#contacto">Contacto</a>
+          <a href="politica-privacidad.html">Privacidad</a>
         </div>
         <div class="footer-col">
           <h4>Contacto directo</h4>
-          <a href="mailto:hola.nexaflow@gmail.com?subject=Consulta%20desde%20la%20web&body=Hola%2C%0A%0AOs%20escribo%20desde%20vuestra%20web.%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20vuestros%20servicios%20digitales%20para%20mi%20negocio.%0A%0AGracias.">hola.nexaflow@gmail.com</a>
+          <a href="mailto:hola.nexaflow@gmail.com">hola.nexaflow@gmail.com</a>
           <a href="https://ig.me/m/nexaflow.studio" target="_blank" rel="noopener">@nexaflow.studio</a>
-          <a href="https://wa.me/34644218863?text=Hola%2C%20os%20escribo%20desde%20vuestra%20web.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20vuestros%20servicios%20para%20mi%20negocio." target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://wa.me/34644218863" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://calendly.com/hola-nexaflow/30min" target="_blank" rel="noopener">Reservar llamada</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 NexaFlow Studio. Todos los derechos reservados.</p>
-      <p class="footer-legal-note">
-        Aviso Legal en elaboración &middot;
-        Consultas sobre privacidad: <a href="mailto:hola.nexaflow@gmail.com">hola.nexaflow@gmail.com</a>
-      </p>
-      <p class="footer-tagline-sm">Diseñado con precisión. Construido para convertir. &middot; <a href="creditos.html" style="color:rgba(240,237,232,0.3);text-decoration:none;">Créditos y licencias</a></p>
+      <p><a href="politica-privacidad.html">Política de privacidad</a></p>
+      <p class="footer-tagline-sm">Diseñado con precisión. Construido para convertir.</p>
     </div>
   </div>
 </footer>
 
-<!-- Floating WhatsApp button -->
-<a href="https://wa.me/34644218863?text=Hola%2C%20os%20escribo%20desde%20vuestra%20web.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20vuestros%20servicios%20para%20mi%20negocio." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  <span>WhatsApp</span>
-</a>
-
-<!-- Banner de cookies -->
-<div class="cookie-banner" id="cookie-banner" role="alert" aria-live="polite">
-  <p>Esta web usa cookies técnicas necesarias para su funcionamiento. No usamos cookies de rastreo ni publicidad.</p>
-  <button class="cookie-accept" id="cookie-accept">Entendido</button>
-</div>
-<script>
-  (function(){
-    if(localStorage.getItem('nf-cookies-ok')){
-      var b=document.getElementById('cookie-banner');
-      if(b) b.style.display='none';
-    }
-    document.addEventListener('DOMContentLoaded',function(){
-      var btn=document.getElementById('cookie-accept');
-      if(btn) btn.addEventListener('click',function(){
-        localStorage.setItem('nf-cookies-ok','1');
-        document.getElementById('cookie-banner').style.display='none';
-      });
-    });
-  })();
-</script>
-
 <!-- ===== FLOATING BOTTOM NAV ===== -->
-<nav class="float-nav" id="float-nav" role="navigation" aria-label="Navegación rápida por secciones">
+<nav class="float-nav" id="float-nav" role="navigation" aria-label="Navegación rápida">
   <div class="float-nav-inner">
-    <a href="#inicio" class="fn-item is-active" data-section="inicio" aria-label="Ir al inicio">
+    <a href="#inicio" class="fn-item is-active" data-section="inicio" aria-label="Inicio">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
       <span>Inicio</span>
     </a>
-    <a href="#problema" class="fn-item" data-section="problema" aria-label="Ver problemas">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-      <span>Problemas</span>
-    </a>
-    <a href="#servicios" class="fn-item" data-section="servicios" aria-label="Ver soluciones">
+    <a href="#servicios" class="fn-item" data-section="servicios" aria-label="Servicios">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-      <span>Soluciones</span>
+      <span>Servicios</span>
     </a>
-    <a href="#proceso" class="fn-item" data-section="proceso" aria-label="Ver proceso">
+    <a href="#porque" class="fn-item" data-section="porque" aria-label="Por qué nosotros">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <span>¿Por qué?</span>
+    </a>
+    <a href="#transformacion" class="fn-item" data-section="transformacion" aria-label="Resultados">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-      <span>Proceso</span>
-    </a>
-    <a href="#planes" class="fn-item" data-section="planes" aria-label="Ver planes">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-      <span>Planes</span>
+      <span>Resultados</span>
     </a>
     <a href="#contacto" class="fn-cta">Auditoría gratis</a>
   </div>
 </nav>
 
-<script defer src="lib/gsap.min.js"></script>
-<script defer src="lib/ScrollTrigger.min.js"></script>
-<script defer src="main.js?v=20260531"></script>
-<!-- Tidio Live Chat -->
+<!-- WhatsApp float (izquierda) -->
+<a href="https://wa.me/34644218863?text=Hola%2C%20os%20escribo%20desde%20vuestra%20web." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<!-- Skip to content -->
+<a class="skip-link" href="#inicio">Saltar al contenido principal</a>
+
+<!-- Tidio (no tocar key) -->
 <script src="//code.tidio.co/npa4iyqdswrcycnbatl3pwppv74ilosv.js" async></script>
+<script defer src="main.js?v=20260606"></script>
 </body>
 </html>
