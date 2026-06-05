@@ -145,7 +145,7 @@
     });
   }
 
-  /* ===== BEFORE / AFTER SLIDER ===== */
+  /* ===== BEFORE / AFTER SLIDER — clip-path (no resize) ===== */
   function initBASlider() {
     var slider = document.getElementById('baSlider');
     var handle = document.getElementById('baHandle');
@@ -153,30 +153,40 @@
     if (!slider || !handle || !before) return;
 
     var dragging = false;
+    var currentPct = 50;
 
+    /* clip-path: inset(0 X% 0 0) — X = how much to clip from the right
+       At 50%: shows left half.  At 10%: shows almost everything. At 90%: shows little. */
     function setPos(clientX) {
       var rect = slider.getBoundingClientRect();
       var pct = Math.min(90, Math.max(10, ((clientX - rect.left) / rect.width) * 100));
-      before.style.width = pct + '%';
+      currentPct = pct;
+      var clipRight = (100 - pct).toFixed(2);
+      before.style.clipPath = 'inset(0 ' + clipRight + '% 0 0)';
       handle.style.left = pct + '%';
       handle.setAttribute('aria-valuenow', Math.round(pct));
     }
 
-    handle.addEventListener('mousedown', function () { dragging = true; });
-    document.addEventListener('mouseup', function () { dragging = false; });
+    /* Init at 50% */
+    setPos(slider.getBoundingClientRect().left + slider.getBoundingClientRect().width * 0.5);
+
+    /* Mouse */
+    handle.addEventListener('mousedown', function (e) { dragging = true; e.preventDefault(); });
+    document.addEventListener('mouseup',  function ()  { dragging = false; });
     document.addEventListener('mousemove', function (e) { if (dragging) setPos(e.clientX); });
 
+    /* Touch */
     handle.addEventListener('touchstart', function (e) { dragging = true; e.preventDefault(); }, { passive: false });
-    document.addEventListener('touchend', function () { dragging = false; });
+    document.addEventListener('touchend',  function ()  { dragging = false; });
     document.addEventListener('touchmove', function (e) {
       if (dragging) setPos(e.touches[0].clientX);
     }, { passive: true });
 
+    /* Keyboard */
     handle.addEventListener('keydown', function (e) {
       var rect = slider.getBoundingClientRect();
-      var curr = parseFloat(before.style.width) || 50;
-      if (e.key === 'ArrowLeft') setPos(rect.left + (curr - 5) / 100 * rect.width);
-      if (e.key === 'ArrowRight') setPos(rect.left + (curr + 5) / 100 * rect.width);
+      if (e.key === 'ArrowLeft')  setPos(rect.left + (currentPct - 5) / 100 * rect.width);
+      if (e.key === 'ArrowRight') setPos(rect.left + (currentPct + 5) / 100 * rect.width);
     });
   }
 
