@@ -236,7 +236,7 @@ body.cursor-on .cursor-xl #cr2{width:60px;height:60px;border-color:var(--lime)}
 
 /* ===== BEFORE / AFTER ===== */
 .ba-section{}
-.ba{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--border);aspect-ratio:16/8;user-select:none;background:var(--surface);box-shadow:0 40px 100px rgba(0,0,0,.5)}
+.ba{position:relative;border-radius:22px;overflow:hidden;border:1px solid rgba(200,255,65,.14);aspect-ratio:16/8;user-select:none;background:var(--surface);box-shadow:0 0 0 1px rgba(200,255,65,.05),0 40px 120px rgba(0,0,0,.7),0 0 80px rgba(200,255,65,.04)}
 
 /* CLIP-PATH approach — content never resizes, only visibility changes */
 .ba-pane{position:absolute;inset:0}
@@ -260,9 +260,16 @@ body.cursor-on .cursor-xl #cr2{width:60px;height:60px;border-color:var(--lime)}
 /* Full-bleed image for both panes */
 .ba-full-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center}
 
+/* DESPUÉS — cinematic dark overlay + lime edge para integrar con brand */
+.ba-after::before{content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(135deg,rgba(8,8,9,.38) 0%,rgba(8,8,9,.12) 45%,transparent 75%),linear-gradient(0deg,rgba(8,8,9,.45) 0%,transparent 40%);pointer-events:none}
+.ba-after::after{content:'';position:absolute;top:0;right:0;bottom:0;width:2px;background:linear-gradient(180deg,transparent 8%,rgba(200,255,65,.55) 50%,transparent 92%);z-index:3;pointer-events:none}
+
 /* ===== BEFORE/AFTER OLD MOCKUP (web dental 2005-era) ===== */
 .mk{position:absolute;inset:0;font-family:Arial,Helvetica,sans-serif;overflow:hidden;display:flex;flex-direction:column}
-.mk-old{background:#e8e6df;color:#3a4a63;font-size:clamp(8px,1.1vw,13px)}
+/* Desaturar + oscurecer + sepia leve → integra el "antes" en el dark aesthetic del sitio */
+.mk-old{background:#e8e6df;color:#3a4a63;font-size:clamp(8px,1.1vw,13px);filter:grayscale(35%) saturate(0.55) brightness(0.7) sepia(0.12)}
+/* Velo oscuro encima del mockup → lo convierte en "captura archivada" */
+.mk-old::before{content:'';position:absolute;inset:0;z-index:50;background:rgba(6,6,8,.28);pointer-events:none}
 
 /* Barra del navegador falsa */
 .mk-browser-bar{background:#d4d2cc;border-bottom:1px solid #bbb;padding:5px 10px;display:flex;align-items:center;gap:8px;flex-shrink:0}
