@@ -419,6 +419,8 @@ body.cursor-on .cursor-xl #cr2{width:60px;height:60px;border-color:var(--lime)}
   .block{padding:90px 0}
   .sec-head{margin-bottom:40px}
   .svc-card{min-height:340px}
+  /* Reducir padding horizontal del body para que los títulos largos no se corten */
+  .svc-body{padding:24px}
   .form-row{grid-template-columns:1fr}
   .footer-nav{grid-template-columns:1fr 1fr}
   .footer-bottom{flex-direction:column;gap:.5rem;text-align:center}
@@ -439,6 +441,7 @@ body.cursor-on .cursor-xl #cr2{width:60px;height:60px;border-color:var(--lime)}
   .hero-meta{gap:20px}
   .hero-meta b{font-size:20px}
   .why-grid{grid-template-columns:1fr}
+  .svc-body{padding:20px 16px}
   .ba{aspect-ratio:4/3}
   .ba-stats{grid-template-columns:repeat(2,1fr)}
   .contact-form{padding:24px 18px}
