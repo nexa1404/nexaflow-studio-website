@@ -68,9 +68,8 @@
     if (!src) return;
     vid.src = src;
     vid.load();
-    vid.addEventListener('canplay', function () {
-      vid.style.opacity = '.38';
-    });
+    // Opacity gestionada por CSS (.hero-bg video { opacity:.62 })
+    // Eliminado el override .38 del canplay que oscurecía el vídeo al cargar
   }
 
   /* ===== HERO ENTRANCE ANIMATION ===== */

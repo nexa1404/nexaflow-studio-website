@@ -43,6 +43,8 @@ h1,h2,h3,h4{font-family:'Syne',sans-serif;font-weight:800;line-height:1.02;lette
 .wrap{max-width:1280px;margin:0 auto;padding:0 40px}
 .block{padding:130px 0;position:relative}
 .sec-head{max-width:680px;margin-bottom:64px}
+/* Offset para que el nav fijo no tape las secciones al hacer scroll con ancla */
+#servicios,#porque,#transformacion,#contacto{scroll-margin-top:calc(var(--nav-h) + 16px)}
 .sec-head h2{font-size:clamp(36px,4.5vw,62px);margin:18px 0 16px}
 .sec-head h2 em{font-style:normal;color:var(--lime)}
 .sec-head p{font-size:17px;color:var(--muted);max-width:540px}
@@ -218,7 +220,7 @@ body.cursor-on .cursor-xl #cr2{width:60px;height:60px;border-color:var(--lime)}
 .wc-icon{width:56px;height:56px;border-radius:16px;background:var(--lime-dim);border:1px solid var(--lime-border);display:flex;align-items:center;justify-content:center;color:var(--lime);margin-bottom:20px;transition:background .3s,color .3s}
 .why-card:hover .wc-icon{background:var(--lime);color:#080809}
 .why-card h3{font-size:20px;margin-bottom:10px}
-.why-card p{font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:18px}
+.why-card p{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:18px}
 .wc-tags{display:flex;flex-wrap:wrap;gap:6px}
 .wc-tags span{font-size:10.5px;color:var(--muted-2);border:1px solid var(--border);padding:4px 10px;border-radius:100px;white-space:nowrap}
 
@@ -427,6 +429,8 @@ body.cursor-on .cursor-xl #cr2{width:60px;height:60px;border-color:var(--lime)}
 @media(max-width:640px){
   .wrap{padding:0 18px}
   .block{padding:72px 0}
+  /* Hero: reducir padding superior en móvil (nav fijo = 72px, dejamos margen holgado) */
+  #hero{padding:110px 0 68px}
   .float-nav{bottom:16px}
   .fn-item span{display:none}
   .fn-item{padding:9px 12px;gap:0}
@@ -441,11 +445,14 @@ body.cursor-on .cursor-xl #cr2{width:60px;height:60px;border-color:var(--lime)}
   .footer-nav{grid-template-columns:1fr 1fr}
   .whatsapp-float{bottom:82px !important;left:1rem !important;right:auto !important}
   footer,.contact{padding-bottom:96px}
+  /* Micro-CTA band: centrar chips en móvil */
+  .micro-cta-in{justify-content:center}
 }
 @media(max-width:480px){
   .hero-ctas{flex-direction:column}
   .hero-ctas .btn{width:100%;justify-content:center}
-  .micro-cta-in{justify-content:center}
+  /* Micro-CTA: ya cubierto en 640px, aquí añadimos stretch en móvil XS */
+  .mcta-chip{flex:1;justify-content:center;text-align:center}
 }
 
 /* ===== TIDIO MOBILE ===== */
