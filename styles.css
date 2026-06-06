@@ -177,7 +177,7 @@ body.cursor-on .cursor-xl #cr2{width:60px;height:60px;border-color:var(--lime)}
 .svc-card:hover .svc-img::after{background:linear-gradient(180deg,rgba(8,8,9,.15) 0%,rgba(8,8,9,.45) 45%,rgba(8,8,9,.9) 100%)}
 .svc-body{position:relative;z-index:3;padding:32px}
 .svc-num{font-family:'Syne';font-weight:700;font-size:13px;color:var(--lime);letter-spacing:.1em;margin-bottom:12px}
-.svc-body h3{font-size:28px;margin-bottom:10px}
+.svc-body h3{font-size:clamp(20px,5.2vw,28px);margin-bottom:10px;overflow-wrap:break-word}
 .svc-body p{font-size:14.5px;color:var(--muted);max-width:400px;margin-bottom:16px}
 .svc-tags{display:flex;flex-wrap:wrap;gap:7px}
 .svc-tags span{font-size:11px;letter-spacing:.04em;color:var(--muted);border:1px solid var(--border-2);padding:5px 11px;border-radius:100px;background:rgba(255,255,255,.02)}
