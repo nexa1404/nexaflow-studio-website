@@ -51,4 +51,4 @@ Después de editar archivos, cambia la versión en `index.html`:
 
 ---
 
-**Contacto:** hola.nexaflow@gmail.com
+**Contacto:** hola@nexaflowestudio.com
