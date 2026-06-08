@@ -244,14 +244,14 @@
           } else {
             res.json().then(function (data) {
               var msg = (data.errors || []).map(function (e) { return e.message; }).join(', ');
-              alert('Error al enviar' + (msg ? ': ' + msg : '') + '. Escríbenos a hola.nexaflow@gmail.com');
+              alert('Error al enviar' + (msg ? ': ' + msg : '') + '. Escríbenos a hola@nexaflowestudio.com');
             }).catch(function () {
-              alert('Error al enviar. Escríbenos a hola.nexaflow@gmail.com');
+              alert('Error al enviar. Escríbenos a hola@nexaflowestudio.com');
             });
           }
         })
         .catch(function () {
-          alert('Error de conexión. Escríbenos a hola.nexaflow@gmail.com');
+          alert('Error de conexión. Escríbenos a hola@nexaflowestudio.com');
         })
         .finally(function () {
           if (submitBtn) submitBtn.classList.remove('is-loading');
