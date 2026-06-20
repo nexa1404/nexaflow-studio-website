@@ -17,3 +17,6 @@ nohup.out
 # Editor
 .vscode/
 .idea/
+
+.vercel
+.env*
