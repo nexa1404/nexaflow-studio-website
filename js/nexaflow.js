@@ -6,7 +6,7 @@
   var RM = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* === CONFIG INTEGRACIONES (mismas que la home) === */
-  var MAKE_WEBHOOK = "https://hook.eu1.make.com/2c3rb8rs9urpi7zl1h0d217dmdn15x29";
+  var MAKE_WEBHOOK = "";
   var TIDIO_KEY    = "ci_81677dce11fd4d569827be734385ad9d";
 
   /* ===== MODAL ===== */
@@ -53,7 +53,7 @@
                  "%0ATel\u00e9fono: "+encodeURIComponent(d.telefono||"-")+
                  "%0AP\u00e1gina: "+encodeURIComponent(d.pagina||"-")+
                  "%0A%0AMensaje:%0A"+encodeURIComponent(d.mensaje||"-");
-      window.location.href = "mailto:hola.nexaflow@gmail.com?subject="+
+      window.location.href = "mailto:hola@nexaflowestudio.com?subject="+
         encodeURIComponent("Nueva valoraci\u00f3n web \u2014 "+d.negocio)+"&body="+body;
     }
     function success(){ if(fields) fields.style.display="none"; if(ok) ok.classList.add("show"); }
