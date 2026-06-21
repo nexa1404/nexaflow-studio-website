@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cómo montar un chatbot de WhatsApp que cierra reservas las 24h | Blog NexaFlow</title>
+<meta name="description" content="Stack, copywriting, flujos y handoff humano. La arquitectura que usamos en NexaFlow para que el bot venda mientras tú duermes — sin sonar a robot." />
+<link rel="canonical" href="https://www.nexaflowestudio.com/blog/chatbot-whatsapp-reservas-24h" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+<meta name="author" content="David Ferrando — NexaFlow Studio" />
+<link rel="icon" type="image/png" href="assets/logo-mark.png" />
+<link rel="apple-touch-icon" href="assets/logo-mark.png" />
+<meta name="theme-color" content="#080809" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="NexaFlow Studio" />
+<meta property="og:title" content="Cómo montar un chatbot de WhatsApp que cierra reservas las 24h" />
+<meta property="og:description" content="Stack, copywriting, flujos y handoff humano para que el bot venda mientras tú duermes." />
+<meta property="og:url" content="https://www.nexaflowestudio.com/blog/chatbot-whatsapp-reservas-24h" />
+<meta property="og:image" content="https://www.nexaflowestudio.com/assets/logo.png" />
+<meta property="article:author" content="David Ferrando" />
+<meta property="article:published_time" content="2026-05-14" />
+<meta property="article:section" content="Chatbots" />
+<meta property="og:locale" content="es_ES" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Chatbot de WhatsApp que cierra reservas 24h" />
+<meta name="twitter:description" content="Stack, copywriting, flujos y handoff humano para que el bot venda mientras tú duermes." />
+<meta name="twitter:image" content="https://www.nexaflowestudio.com/assets/logo.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet" />
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://www.nexaflowestudio.com/blog/chatbot-whatsapp-reservas-24h#article",
+      "headline": "Cómo montar un chatbot de WhatsApp que cierra reservas las 24h",
+      "description": "Stack, copywriting, flujos y handoff humano para que el bot venda mientras tú duermes.",
+      "image": "https://www.nexaflowestudio.com/assets/logo.png",
+      "datePublished": "2026-05-14",
+      "dateModified": "2026-05-14",
+      "author": {
+        "@type": "Person",
+        "name": "David Ferrando",
+        "jobTitle": "Fundador de NexaFlow Studio",
+        "url": "https://www.nexaflowestudio.com/",
+        "sameAs": ["https://www.linkedin.com/in/davidferrando"]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "NexaFlow Studio",
+        "logo": {"@type":"ImageObject","url":"https://www.nexaflowestudio.com/assets/logo.png"}
+      },
+      "mainEntityOfPage": "https://www.nexaflowestudio.com/blog/chatbot-whatsapp-reservas-24h",
+      "articleSection": "Chatbots",
+      "inLanguage": "es-ES"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.nexaflowestudio.com/"},
+        {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.nexaflowestudio.com/blog.html"},
+        {"@type":"ListItem","position":3,"name":"Chatbot de WhatsApp que cierra reservas 24h","item":"https://www.nexaflowestudio.com/blog/chatbot-whatsapp-reservas-24h"}
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="css/blog-article.css">
+</head>
+<body>
+
+<!-- READING PROGRESS -->
+<div id="progress"><div class="bar"></div></div>
+
+<!-- NAV -->
+<nav class="main" id="nav">
+  <div class="wrap nav-in">
+    <a href="index.html" class="logo" aria-label="NexaFlow Studio — inicio">
+      <span class="logo-mark"><img src="assets/logo-nf.png" alt="NexaFlow" width="46" height="46" /></span>
+      <span class="logo-word">Nexa<span>Flow</span></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="servicios.html" class="nl">Servicios</a>
+      <a href="clinicas-dentales.html" class="nl">Negocios locales</a>
+      <a href="blog.html" class="nl active">Blog</a>
+      <a href="index.html#contacto" class="nl">Contacto</a>
+      <a href="https://analytics.nexaflowestudio.com" class="nl" target="_blank" rel="noopener">Analytics ↗</a>
+      <button class="nav-cta" onclick="location.href='index.html#contacto'"><span>Auditoría gratis</span> →</button>
+    </div>
+    <button class="hamb" aria-label="Menú" onclick="document.getElementById('navLinks').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO ARTÍCULO -->
+<header class="art-hero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Inicio</a>
+      <span class="sep">/</span>
+      <a href="blog.html">Blog</a>
+      <span class="sep">/</span>
+      <span class="cur">Chatbot de WhatsApp que cierra reservas 24h</span>
+    </nav>
+
+    <span class="art-cat">Chatbots · WhatsApp</span>
+    <h1 class="art-title">Cómo montar un chatbot de WhatsApp que cierra reservas las 24h.</h1>
+    <p class="art-lede">Stack, copywriting, flujos y handoff humano. La arquitectura completa que usamos en NexaFlow para que el bot venda mientras tu equipo duerme — sin sonar a robot y sin perder al cliente caliente.</p>
+
+    <div class="art-meta">
+      <div class="author">
+        <div class="avatar" aria-hidden="true">DF</div>
+        <div class="au-info">
+          <b>David Ferrando</b>
+          <small>Fundador · NexaFlow Studio</small>
+        </div>
+      </div>
+      <span class="dot-sep" aria-hidden="true"></span>
+      <span class="mi">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="17" rx="2.5"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
+        14 may 2026
+      </span>
+      <span class="dot-sep" aria-hidden="true"></span>
+      <span class="mi">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        10 min de lectura
+      </span>
+      <div class="share" aria-label="Compartir artículo">
+        <span class="sh-lbl">// compartir</span>
+        <button class="share-btn" onclick="shareTo('x')" aria-label="Compartir en X">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2H21.5l-7.59 8.67L23 22h-6.84l-5.36-7.02L4.6 22H1.34l8.12-9.28L1 2h7l4.84 6.4L18.244 2zm-1.2 18h1.9L7.04 4H5.04l11.99 16z"/></svg>
+        </button>
+        <button class="share-btn" onclick="shareTo('linkedin')" aria-label="Compartir en LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v15H.22V8zm7.7 0h4.37v2.05h.06c.61-1.16 2.1-2.38 4.32-2.38 4.62 0 5.48 3.04 5.48 7v8.33h-4.56v-7.39c0-1.76-.03-4.03-2.46-4.03-2.46 0-2.84 1.92-2.84 3.9V23H7.92V8z"/></svg>
+        </button>
+        <button class="share-btn" onclick="shareTo('whatsapp')" aria-label="Compartir en WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2z"/></svg>
+        </button>
+        <button class="share-btn" onclick="copyLink()" aria-label="Copiar enlace">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07L11 5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07L13 19"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- COVER PLACEHOLDER (sustituye este bloque por tu <img>) -->
+    <figure class="art-cover" aria-label="Portada del artículo (placeholder)">
+      <div class="cover-ph">
+        <span class="ph-tag">// portada del artículo · <b>aquí va tu imagen</b></span>
+        <span class="ph-meta"><span class="dim"></span> 1920 × 960 · 16:8 · JPG/WebP · optimizada &lt; 200kb</span>
+      </div>
+    </figure>
+  </div>
+</header>
+
+<!-- BODY -->
+<section class="art-body">
+  <div class="wrap">
+    <div class="art-grid">
+
+      <!-- TOC -->
+      <aside class="toc" aria-label="Índice del artículo">
+        <h6>Índice</h6>
+        <ol id="tocList">
+          <li><a href="#por-que">Por qué WhatsApp es donde está el dinero</a></li>
+          <li><a href="#stack">El stack: API oficial + Make + LLM</a></li>
+          <li><a href="#arquitectura">La arquitectura del bot en 4 pasos</a></li>
+          <li><a href="#calificacion">Calificación: 3 preguntas que ordenan</a></li>
+          <li><a href="#copy">Pre-reserva: el copy que cierra</a></li>
+          <li><a href="#handoff">Handoff humano: la regla del 70%</a></li>
+          <li><a href="#errores">Errores que matan la conversión</a></li>
+          <li><a href="#metricas">Métricas que mirar cada lunes</a></li>
+          <li><a href="#plantilla">Plantilla de inicio (copy listo)</a></li>
+        </ol>
+      </aside>
+
+      <!-- PROSE -->
+      <article class="prose" id="proseRoot">
+
+        <p>El 71% de los mensajes a un negocio local llegan fuera de horario. La mayoría se pierden — o se contestan tarde, cuando el cliente ya ha hablado con otro. Aquí entra el chatbot bien hecho: no para sustituir al humano, sino para <strong>tapar el agujero de la noche</strong> y cerrar reservas mientras tu equipo duerme.</p>
+
+<p>Este es el manual exacto que usamos en NexaFlow para montar chatbots de WhatsApp que de verdad venden. Sin sonar a robot. Sin caídas. Con métricas reales.</p>
+
+<div class="callout">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+  <div><b>Antes de empezar</b>Un chatbot mal hecho espanta más clientes que los que capta. Si no puedes invertir 2 semanas en afinar copy y flujos, no lo montes. Pon respuestas automáticas estándar y ya.</div>
+</div>
+
+<h2 id="por-que" data-num="// 01 — Punto de partida">Por qué WhatsApp es donde está el dinero</h2>
+
+<p>En España, el <strong>92% de los negocios locales</strong> recibe más consultas por WhatsApp que por cualquier otro canal — web, teléfono, Instagram DM. Es donde la gente realmente decide. Y donde la mayoría de negocios se mueren: WhatsApp lleno de mensajes sin contestar, con respuestas tipo "buenas, ¿en qué te ayudo?".</p>
+
+<h2 id="stack" data-num="// 02 — Stack">El stack: API oficial + Make + LLM</h2>
+
+<p>Lo que NO debes usar: WhatsApp Web automatizado (te banean en 2 semanas). Lo que sí:</p>
+
+<ul>
+  <li><strong>WhatsApp Business API oficial</strong> a través de un BSP: 360dialog, Whapi, Twilio. Coste real: ~25–40€/mes.</li>
+  <li><strong>Make.com o n8n</strong> como orquestador de flujos. ~16€/mes.</li>
+  <li><strong>OpenAI API (gpt-4o)</strong> o Claude para la conversación. ~10–40€/mes según volumen.</li>
+  <li><strong>Calendly o Cal.com</strong> para las reservas.</li>
+  <li><strong>Una hoja de cálculo o CRM</strong> para el log.</li>
+</ul>
+
+<p>Total: <strong>55–100€/mes</strong>. Vs. una persona haciendo lo mismo: 1.800€/mes.</p>
+
+<h2 id="arquitectura" data-num="// 03 — Arquitectura">La arquitectura del bot en 4 pasos</h2>
+
+<ol>
+  <li><strong>Recibir</strong>: webhook capta el mensaje de WhatsApp.</li>
+  <li><strong>Clasificar</strong>: LLM determina intent (precio, horarios, reserva, queja, otro).</li>
+  <li><strong>Responder</strong>: según intent, el bot ejecuta el flujo correspondiente.</li>
+  <li><strong>Handoff</strong>: si el intent es ambiguo o el lead es caliente, lo pasa a humano con resumen.</li>
+</ol>
+
+<h2 id="calificacion" data-num="// 04 — Calificación">Calificación: 3 preguntas que ordenan</h2>
+
+<p>El bot bien hecho hace solo 3 preguntas de calificación antes de cerrar — más cansa. Las tres deben ser:</p>
+
+<ol>
+  <li><strong>Qué quieres</strong> (servicio/tratamiento).</li>
+  <li><strong>Cuándo</strong> (urgencia: hoy, esta semana, este mes, sin prisa).</li>
+  <li><strong>Dónde estás</strong> (si el negocio tiene varias zonas).</li>
+</ol>
+
+<p>Con esas 3 respuestas, el bot ya sabe si vale la pena cerrar la cita o pasarlo a humano para ofrecer financiación / un paquete.</p>
+
+<h2 id="copy" data-num="// 05 — Copy">Pre-reserva: el copy que cierra</h2>
+
+<p>El error más común: el bot pregunta "¿Cuándo quieres venir?" y deja al cliente que invente una hora. El 60% no contesta. Lo que sí funciona:</p>
+
+<blockquote>
+  Tengo huecos esta semana: <em>jueves 17:30, viernes 11:00, sábado 10:15</em>. ¿Cuál te encaja?
+  <cite>— plantilla NexaFlow</cite>
+</blockquote>
+
+<p>Ofrecer 3 opciones cerradas convierte ~3× más que pregunta abierta. Y deja menos margen al cliente para procrastinar.</p>
+
+<h2 id="handoff" data-num="// 06 — Handoff">Handoff humano: la regla del 70%</h2>
+
+<p>El bot debe cerrar el <strong>~70% de las consultas estándar</strong>. El otro 30% se pasa a humano. Las señales que disparan el handoff:</p>
+
+<ul>
+  <li>Pregunta sobre tratamiento complejo o caro.</li>
+  <li>Queja o reclamación.</li>
+  <li>Petición de hablar con persona.</li>
+  <li>Lenguaje emocional (preocupación, urgencia médica).</li>
+  <li>Tres intentos del bot sin entender.</li>
+</ul>
+
+<p>El handoff debe llegar al humano con: <strong>resumen, intent detectado, urgencia, sugerencia de próximo paso</strong>. Si llega solo "tienes un mensaje", el handoff falla.</p>
+
+<h2 id="errores" data-num="// 07 — Errores">Errores que matan la conversión</h2>
+
+<ol>
+  <li><strong>Saludo robótico</strong>: "¡Hola! Soy el asistente virtual de XYZ". Mata. Mejor: una respuesta directa al mensaje.</li>
+  <li><strong>No avisar de que es un bot</strong>: pierdes confianza cuando lo descubren.</li>
+  <li><strong>Respuestas largas</strong>: en WhatsApp, máximo 3 líneas por mensaje.</li>
+  <li><strong>Bot vendedor de tickets caros</strong>: la IA cierra tickets pequeños y medios. Los grandes los cierra humano.</li>
+</ol>
+
+<h2 id="metricas" data-num="// 08 — Métricas">Métricas que mirar cada lunes</h2>
+
+<ul>
+  <li><strong>% mensajes contestados &lt; 1 min</strong> (objetivo: 100%).</li>
+  <li><strong>% citas cerradas por bot vs handoff</strong> (objetivo: 70/30).</li>
+  <li><strong>Coste por cita captada</strong> (objetivo: &lt; 4€).</li>
+  <li><strong>Satisfacción del cliente post-cita</strong> (escala 1–5).</li>
+</ul>
+
+<p>Si la tasa de handoff sube del 40%, el bot está mal calibrado. Si las citas atendidas bajan, hay un problema con el copy de pre-reserva.</p>
+
+<h2 id="plantilla" data-num="// 09 — Plantilla">Plantilla de inicio (copy listo)</h2>
+
+<pre><code>// Mensaje 0 (auto-respuesta inmediata)
+"Hola! Soy IA, te ayudo a reservar mientras
+nuestro equipo no está disponible. Si prefieres
+hablar con una persona, escribe HOLA y te
+respondemos por la mañana 👍"
+
+// Mensaje 1 (después de detectar intent)
+"Para encajar tu cita necesito 3 cositas:
+  1. ¿Qué tratamiento te interesa?
+  2. ¿Para cuándo?
+  3. ¿Tu zona?"
+
+// Mensaje cierre
+"Tengo libre: [opción A], [opción B], [opción C].
+¿Cuál te viene mejor?"</code></pre>
+
+<p>Copia, adapta a tu marca y lánzalo. En NexaFlow llevamos 18+ chatbots de WhatsApp activos. Si quieres que montemos el tuyo, <a href="index.html#contacto">escríbenos</a>.</p>
+
+        <!-- CTA INLINE -->
+        <div class="inline-cta">
+          <div class="glow"></div>
+          <h3>¿Quieres <em>aplicar esto</em> en tu empresa?</h3>
+          <p>Auditamos tu negocio gratis y te decimos cómo aplicar esto a tu caso concreto — con resultados medibles en los próximos 90 días.</p>
+          <div class="ctas">
+            <button class="btn btn-main" onclick="location.href='index.html#contacto'"><span>Solicitar auditoría gratuita</span> →</button>
+            <a class="btn btn-ghost" href="https://wa.me/34644218863" target="_blank" rel="noopener"><span>Hablar por WhatsApp</span></a>
+          </div>
+        </div>
+
+        <!-- AUTHOR -->
+        <div class="author-box">
+          <div class="av-big" aria-hidden="true">DF</div>
+          <div>
+            <div class="au-name">David Ferrando</div>
+            <span class="au-role">Fundador de NexaFlow Studio</span>
+            <p class="au-bio">Especialista en automatización, IA y crecimiento de negocios locales. Llevo 6+ años montando sistemas de captación para clínicas, peluquerías, centros estéticos y hostelería en España. Escribo aquí cada semana sobre lo que está funcionando de verdad — sin humo.</p>
+            <div class="au-links">
+              <a href="https://www.linkedin.com/in/davidferrando" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v15H.22V8zm7.7 0h4.37v2.05h.06c.61-1.16 2.1-2.38 4.32-2.38 4.62 0 5.48 3.04 5.48 7v8.33h-4.56v-7.39c0-1.76-.03-4.03-2.46-4.03-2.46 0-2.84 1.92-2.84 3.9V23H7.92V8z"/></svg>
+                LinkedIn
+              </a>
+              <a href="index.html">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+                NexaFlow Studio
+              </a>
+              <a href="mailto:hola.nexaflow@gmail.com">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 6l9 6.5L21 6"/></svg>
+                Email
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PREV / NEXT -->
+        <div class="pn">
+          <a href="blog-seo-local-2026.html" class="prev">
+            <span class="lab">← Artículo anterior</span>
+            <span class="ti">SEO Local en 2026: guía definitiva</span>
+          </a>
+          <a href="blog-ia-clientes-2026.html" class="next">
+            <span class="lab">Siguiente artículo →</span>
+            <span class="ti">Cómo conseguir más clientes con IA en 2026</span>
+          </a>
+        </div>
+
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section id="related">
+  <div class="wrap">
+    <h2>Artículos <em>relacionados.</em></h2>
+    <div class="rel-grid">
+      <article class="rel-card">
+        <a href="blog-ia-clientes-2026.html" class="rel-cover">
+          <div class="cover-ph">
+            <span class="ph-tag">// portada · <b>ia-mas-clientes-2026</b></span>
+            <span class="ph-meta">IA · 9 min</span>
+          </div>
+        </a>
+        <div class="rel-body">
+          <span class="cat">IA</span>
+          <h4><a href="blog-ia-clientes-2026.html">Cómo conseguir más clientes con IA en 2026</a></h4>
+          <div class="meta">12 jun 2026 · 9 min</div>
+        </div>
+      </article>
+      <article class="rel-card">
+        <a href="blog-automatizaciones-dentales.html" class="rel-cover">
+          <div class="cover-ph">
+            <span class="ph-tag">// portada · <b>automatizaciones-clinicas-dentales</b></span>
+            <span class="ph-meta">Automatizaciones · 11 min</span>
+          </div>
+        </a>
+        <div class="rel-body">
+          <span class="cat">Automatizaciones</span>
+          <h4><a href="blog-automatizaciones-dentales.html">7 automatizaciones para clínicas dentales</a></h4>
+          <div class="meta">5 jun 2026 · 11 min</div>
+        </div>
+      </article>
+      <article class="rel-card">
+        <a href="blog-seo-local-2026.html" class="rel-cover">
+          <div class="cover-ph">
+            <span class="ph-tag">// portada · <b>seo-local-guia-2026</b></span>
+            <span class="ph-meta">SEO Local · 14 min</span>
+          </div>
+        </a>
+        <div class="rel-body">
+          <span class="cat">SEO Local</span>
+          <h4><a href="blog-seo-local-2026.html">SEO Local en 2026: guía definitiva</a></h4>
+          <div class="meta">28 may 2026 · 14 min</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-glow"></div>
+  <div class="wrap">
+    <span class="cta-badge"><span class="dot"></span> Auditoría gratuita · sin compromiso</span>
+    <h2>¿Quieres que <em>hagamos esto</em><br />por tu negocio?</h2>
+    <p class="ct-sub">Te leemos. Te diseñamos un plan a medida de IA, automatización y SEO local. Sin tecnicismos, sin compromiso. Solo si te encaja.</p>
+    <div class="cta-ctas">
+      <button class="btn btn-main" onclick="location.href='index.html#contacto'"><span>Solicitar auditoría gratuita</span> →</button>
+      <a class="btn btn-ghost" href="https://wa.me/34644218863" target="_blank" rel="noopener"><span>Hablar por WhatsApp</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="logo">
+          <span class="logo-mark" style="width:56px;height:56px"><img src="assets/logo-nf.png" alt="NexaFlow" width="56" height="56" /></span>
+          <span class="logo-word" style="font-size:22px;display:inline">Nexa<span>Flow</span></span>
+        </div>
+        <p class="foot-tag">Automatización, IA y webs premium para negocios locales en España. Construido para convertir.</p>
+        <div class="foot-soc">
+          <a href="https://www.instagram.com/nexaflow.studio" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://wa.me/34644218863" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2z"/></svg></a>
+          <a href="mailto:hola.nexaflow@gmail.com" aria-label="Email"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 6l9 6.5L21 6"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h5>Estudio</h5>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="clinicas-dentales.html">Negocios locales</a>
+        <a href="blog.html">Blog</a>
+      </div>
+      <div class="foot-col">
+        <h5>Blog</h5>
+        <a href="blog.html">Todos los artículos</a>
+        <a href="blog.html">Inteligencia Artificial</a>
+        <a href="blog.html">Automatizaciones</a>
+        <a href="blog.html">SEO Local</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contacto</h5>
+        <a href="https://wa.me/34644218863" target="_blank" rel="noopener">WhatsApp · +34 644 218 863</a>
+        <a href="https://www.instagram.com/nexaflow.studio" target="_blank" rel="noopener">@nexaflow.studio</a>
+        <a href="mailto:hola.nexaflow@gmail.com">hola.nexaflow@gmail.com</a>
+        <p>Valencia, España</p>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2026 NexaFlow Studio · Valencia, España</span>
+      <div class="foot-legal">
+        <a href="#">Política de privacidad</a>
+        <a href="#">Política de cookies</a>
+        <a href="#">Aviso legal</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast"><em>✓</em> Enlace copiado al portapapeles</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // Reading progress
+  var bar = document.querySelector("#progress .bar");
+  function onScroll(){
+    var h = document.documentElement;
+    var st = h.scrollTop || document.body.scrollTop;
+    var sh = h.scrollHeight - h.clientHeight;
+    var p = sh > 0 ? (st/sh)*100 : 0;
+    bar.style.width = p + "%";
+    var nav = document.getElementById("nav");
+    if(st > 30) nav.classList.add("solid"); else nav.classList.remove("solid");
+  }
+  onScroll();
+  document.addEventListener("scroll", onScroll, { passive:true });
+
+  // TOC active state via IntersectionObserver
+  var sections = document.querySelectorAll(".prose h2[id]");
+  var tocLinks = document.querySelectorAll(".toc ol li a");
+  var tocItems = document.querySelectorAll(".toc ol li");
+  var sectMap = {};
+  tocLinks.forEach(function(a,i){
+    var href = a.getAttribute("href").slice(1);
+    sectMap[href] = i;
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){
+        var id = en.target.id;
+        var idx = sectMap[id];
+        if(idx !== undefined){
+          tocItems.forEach(function(li){ li.classList.remove("active"); });
+          if(tocItems[idx]) tocItems[idx].classList.add("active");
+        }
+      }
+    });
+  }, { rootMargin: "-30% 0px -60% 0px", threshold: 0 });
+  sections.forEach(function(s){ io.observe(s); });
+
+  // Share
+  window.shareTo = function(net){
+    var u = encodeURIComponent(location.href);
+    var t = encodeURIComponent(document.title);
+    var url = "";
+    if(net === "x") url = "https://twitter.com/intent/tweet?url="+u+"&text="+t;
+    else if(net === "linkedin") url = "https://www.linkedin.com/sharing/share-offsite/?url="+u;
+    else if(net === "whatsapp") url = "https://wa.me/?text="+t+"%20"+u;
+    if(url) window.open(url, "_blank", "noopener,width=620,height=560");
+  };
+  window.copyLink = function(){
+    var url = location.href;
+    if(navigator.clipboard){
+      navigator.clipboard.writeText(url).then(showToast).catch(function(){ fallback(url); });
+    } else {
+      fallback(url);
+    }
+  };
+  function fallback(url){
+    var t = document.createElement("textarea");
+    t.value = url; document.body.appendChild(t); t.select();
+    try{ document.execCommand("copy"); } catch(e){}
+    document.body.removeChild(t);
+    showToast();
+  }
+  function showToast(){
+    var el = document.getElementById("toast");
+    el.classList.add("show");
+    setTimeout(function(){ el.classList.remove("show"); }, 2200);
+  }
+
+})();
+</script>
+
+</body>
+</html>
