@@ -22,7 +22,7 @@ h1,h2,h3,h4{font-family:'Syne',sans-serif;font-weight:800;line-height:1.06;lette
 
 /* NAV */
 nav.main{position:fixed;top:0;left:0;right:0;z-index:200;padding:22px 0;transition:padding .4s var(--ease),background .4s,border-color .4s;border-bottom:1px solid transparent}
-nav.main.solid{padding:14px 0;background:rgba(8,8,9,.78);backdrop-filter:blur(18px) saturate(1.4);border-bottom:1px solid var(--border)}
+nav.main.solid{padding:14px 0;background:rgba(8,8,9,.92);border-bottom:1px solid var(--border)}
 .nav-in{display:flex;align-items:center;justify-content:space-between}
 .logo{display:flex;align-items:center;gap:12px}
 .logo-mark{width:46px;height:46px;flex-shrink:0;display:grid;place-items:center;transition:width .4s var(--ease),height .4s var(--ease)}

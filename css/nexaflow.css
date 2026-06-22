@@ -45,7 +45,7 @@ body.cursor-on a,body.cursor-on button{cursor:none}
 
 /* ====== NAV ====== */
 nav#nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:22px 0;transition:padding .4s var(--ease),background .4s,border-color .4s;border-bottom:1px solid transparent}
-nav#nav.solid{padding:14px 0;background:rgba(8,8,9,.72);backdrop-filter:blur(18px) saturate(1.4);border-bottom:1px solid var(--border)}
+nav#nav.solid{padding:14px 0;background:rgba(8,8,9,.92);border-bottom:1px solid var(--border)}
 .nav-in{display:flex;align-items:center;justify-content:space-between}
 .nav-backdrop{position:fixed;inset:0;background:rgba(4,4,6,.62);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);opacity:0;visibility:hidden;transition:opacity .35s var(--ease),visibility .35s;z-index:199;pointer-events:none}
 .nav-backdrop.show{opacity:1;visibility:visible;pointer-events:auto}
