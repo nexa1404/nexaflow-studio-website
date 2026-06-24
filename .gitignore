@@ -20,3 +20,6 @@ nohup.out
 
 .vercel
 .env*
+
+# Exportaciones/backups comprimidos: la fuente real es este repo, no los .zip
+*.zip
