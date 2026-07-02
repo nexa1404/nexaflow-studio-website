@@ -313,8 +313,10 @@
   .cf-grid{grid-template-columns:1fr;gap:50px}
 }
 @media (max-width:560px){
+  #hero h1{font-size:clamp(29px,8.6vw,42px);overflow-wrap:break-word;word-break:break-word}
   #hero h1 .line{overflow:visible}
   #hero h1 .line i{transform:none}
+  .hero-sub{overflow-wrap:break-word}
   .hero-prompt-tag{display:none}
   .hero-ctas .btn{width:100%}
   .about-stats{grid-template-columns:1fr;gap:18px}
