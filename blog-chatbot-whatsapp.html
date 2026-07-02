@@ -10,7 +10,7 @@
 <meta name="author" content="David Ferrando — NexaFlow Studio" />
 <link rel="icon" type="image/png" href="assets/logo-mark.png" />
 <link rel="apple-touch-icon" href="assets/logo-mark.png" />
-<meta name="theme-color" content="#080809" />
+<meta name="theme-color" content="#f5f5f1" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="article" />
@@ -73,7 +73,8 @@
 }
 </script>
 
-<link rel="stylesheet" href="css/blog-article.css">
+<style id="nf-crit">html,body{background:#f5f5f1}</style>
+<link rel="stylesheet" href="css/nf.css?v=3">
 </head>
 <body>
 
@@ -81,23 +82,28 @@
 <div id="progress"><div class="bar"></div></div>
 
 <!-- NAV -->
-<nav class="main" id="nav">
-  <div class="wrap nav-in">
+<nav id="nav">
+  <div class="nav-in">
     <a href="index.html" class="logo" aria-label="NexaFlow Studio — inicio">
-      <span class="logo-mark"><img src="assets/logo-nf.png" alt="NexaFlow" width="46" height="46" /></span>
+      <img src="assets/logo-mark.png" alt="NexaFlow Studio" />
       <span class="logo-word">Nexa<span>Flow</span></span>
     </a>
-    <div class="nav-links" id="navLinks">
-      <a href="servicios.html" class="nl">Servicios</a>
-      <a href="clinicas-dentales.html" class="nl">Negocios locales</a>
-      <a href="blog.html" class="nl active">Blog</a>
-      <a href="index.html#contacto" class="nl">Contacto</a>
-      <a href="https://analytics.nexaflowestudio.com" class="nl" target="_blank" rel="noopener">Analytics ↗</a>
-      <button class="nav-cta" onclick="location.href='index.html#contacto'"><span>Auditoría gratis</span> →</button>
+    <div class="nav-links">
+      <a class="nl" href="index.html">Inicio</a>
+      <a class="nl" href="sistema.html">El sistema</a>
+      <a class="nl active" href="blog.html">Blog</a>
+      <a class="nav-cta" href="index.html#contacto">Auditoría gratuita →</a>
     </div>
-    <button class="hamb" aria-label="Menú" onclick="document.getElementById('navLinks').classList.toggle('open')"><span></span><span></span><span></span></button>
+    <button class="hamb" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
+<div class="nav-overlay" id="navOverlay" aria-hidden="true">
+  <button class="close" aria-label="Cerrar">✕</button>
+  <a href="index.html">Inicio</a>
+  <a href="sistema.html">El sistema</a>
+  <a href="blog.html">Blog</a>
+  <a href="index.html#contacto">Auditoría gratuita</a>
+</div>
 
 <!-- HERO ARTÍCULO -->
 <header class="art-hero">
@@ -150,12 +156,7 @@
     </div>
 
     <!-- COVER PLACEHOLDER (sustituye este bloque por tu <img>) -->
-    <figure class="art-cover" aria-label="Portada del artículo (placeholder)">
-      <div class="cover-ph">
-        <span class="ph-tag">// portada del artículo · <b>aquí va tu imagen</b></span>
-        <span class="ph-meta"><span class="dim"></span> 1920 × 960 · 16:8 · JPG/WebP · optimizada &lt; 200kb</span>
-      </div>
-    </figure>
+    <figure class="art-cover"><img src="assets/img/blog-whatsapp.jpg" alt="Portada del artículo" loading="eager" /></figure>
   </div>
 </header>
 
@@ -355,12 +356,7 @@ respondemos por la mañana 👍"
     <h2>Artículos <em>relacionados.</em></h2>
     <div class="rel-grid">
       <article class="rel-card">
-        <a href="blog-ia-clientes-2026.html" class="rel-cover">
-          <div class="cover-ph">
-            <span class="ph-tag">// portada · <b>ia-mas-clientes-2026</b></span>
-            <span class="ph-meta">IA · 9 min</span>
-          </div>
-        </a>
+        <a href="blog-ia-clientes-2026.html" class="rel-cover"><img src="assets/img/blog-feat.jpg" alt="Portada del artículo" loading="lazy" /></a>
         <div class="rel-body">
           <span class="cat">IA</span>
           <h4><a href="blog-ia-clientes-2026.html">Cómo conseguir más clientes con IA en 2026</a></h4>
@@ -368,12 +364,7 @@ respondemos por la mañana 👍"
         </div>
       </article>
       <article class="rel-card">
-        <a href="blog-automatizaciones-dentales.html" class="rel-cover">
-          <div class="cover-ph">
-            <span class="ph-tag">// portada · <b>automatizaciones-clinicas-dentales</b></span>
-            <span class="ph-meta">Automatizaciones · 11 min</span>
-          </div>
-        </a>
+        <a href="blog-automatizaciones-dentales.html" class="rel-cover"><img src="assets/img/blog-dental.jpg" alt="Portada del artículo" loading="lazy" /></a>
         <div class="rel-body">
           <span class="cat">Automatizaciones</span>
           <h4><a href="blog-automatizaciones-dentales.html">7 automatizaciones para clínicas dentales</a></h4>
@@ -381,12 +372,7 @@ respondemos por la mañana 👍"
         </div>
       </article>
       <article class="rel-card">
-        <a href="blog-seo-local-2026.html" class="rel-cover">
-          <div class="cover-ph">
-            <span class="ph-tag">// portada · <b>seo-local-guia-2026</b></span>
-            <span class="ph-meta">SEO Local · 14 min</span>
-          </div>
-        </a>
+        <a href="blog-seo-local-2026.html" class="rel-cover"><img src="assets/img/blog-seo.jpg" alt="Portada del artículo" loading="lazy" /></a>
         <div class="rel-body">
           <span class="cat">SEO Local</span>
           <h4><a href="blog-seo-local-2026.html">SEO Local en 2026: guía definitiva</a></h4>
@@ -398,7 +384,7 @@ respondemos por la mañana 👍"
 </section>
 
 <!-- CTA -->
-<section id="cta">
+<section id="cta" class="art-cta">
   <div class="cta-glow"></div>
   <div class="wrap">
     <span class="cta-badge"><span class="dot"></span> Auditoría gratuita · sin compromiso</span>
@@ -412,50 +398,42 @@ respondemos por la mañana 👍"
 </section>
 
 <!-- FOOTER -->
-<footer>
+<footer class="foot">
   <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-col">
-        <div class="logo">
-          <span class="logo-mark" style="width:56px;height:56px"><img src="assets/logo-nf.png" alt="NexaFlow" width="56" height="56" /></span>
-          <span class="logo-word" style="font-size:22px;display:inline">Nexa<span>Flow</span></span>
-        </div>
-        <p class="foot-tag">Automatización, IA y webs premium para negocios locales en España. Construido para convertir.</p>
-        <div class="foot-soc">
-          <a href="https://www.instagram.com/nexaflow.studio" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
-          <a href="https://wa.me/34644218863" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2z"/></svg></a>
-          <a href="mailto:hola@nexaflowestudio.com" aria-label="Email"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 6l9 6.5L21 6"/></svg></a>
-        </div>
-      </div>
-      <div class="foot-col">
-        <h5>Estudio</h5>
-        <a href="index.html">Inicio</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="clinicas-dentales.html">Negocios locales</a>
-        <a href="blog.html">Blog</a>
-      </div>
-      <div class="foot-col">
-        <h5>Blog</h5>
-        <a href="blog.html">Todos los artículos</a>
-        <a href="blog.html">Inteligencia Artificial</a>
-        <a href="blog.html">Automatizaciones</a>
-        <a href="blog.html">SEO Local</a>
-      </div>
-      <div class="foot-col">
-        <h5>Contacto</h5>
-        <a href="https://wa.me/34644218863" target="_blank" rel="noopener">WhatsApp · +34 644 218 863</a>
-        <a href="https://www.instagram.com/nexaflow.studio" target="_blank" rel="noopener">@nexaflow.studio</a>
-        <a href="mailto:hola@nexaflowestudio.com">hola@nexaflowestudio.com</a>
-        <p>Valencia, España</p>
+    <div class="foot-brand">
+      <span class="logo-word">Nexa<span>Flow</span> Studio</span>
+      <p>Estudio de IA y sistemas digitales en Valencia. Conectamos web, SEO, IA, CRM y WhatsApp para negocios locales.</p>
+      <div class="foot-soc">
+        <a href="https://www.instagram.com/nexaflow.studio" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
+        <a href="https://wa.me/34644218863" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2z"/></svg></a>
+        <a href="mailto:hola@nexaflowestudio.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 6l9 6.5L21 6"/></svg></a>
       </div>
     </div>
+    <div class="foot-col">
+      <h5>Estudio</h5>
+      <a href="index.html">Inicio</a>
+      <a href="sistema.html">El sistema</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#contacto">Contacto</a>
+    </div>
+    <div class="foot-col">
+      <h5>Contacto directo</h5>
+      <a href="https://wa.me/34644218863" target="_blank" rel="noopener">WhatsApp · +34 644 218 863</a>
+      <a href="https://ig.me/m/nexaflow.studio" target="_blank" rel="noopener">@nexaflow.studio</a>
+      <a href="mailto:hola@nexaflowestudio.com">hola@nexaflowestudio.com</a>
+      <p>Valencia, España</p>
+    </div>
+    <div class="foot-col">
+      <h5>Legal</h5>
+      <a href="politica-privacidad.html">Política de privacidad</a>
+      <a href="creditos.html">Créditos</a>
+      <a href="index.html#contacto">Auditoría gratuita</a>
+    </div>
+  </div>
+  <div class="wrap">
     <div class="foot-bot">
-      <span>© 2026 NexaFlow Studio · Valencia, España</span>
-      <div class="foot-legal">
-        <a href="#">Política de privacidad</a>
-        <a href="#">Política de cookies</a>
-        <a href="#">Aviso legal</a>
-      </div>
+      <div>© 2026 NexaFlow Studio · Valencia, España</div>
+      <div>Estudio de IA y sistemas digitales</div>
     </div>
   </div>
 </footer>
@@ -552,5 +530,6 @@ body.nav-open .fab-wa{opacity:0;visibility:hidden;pointer-events:none}
 <a class="fab-wa" href="https://wa.me/34644218863?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20para%20mi%20negocio%20local." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.3-3.8-4.4-4-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2 0 .4 0 .5l-.4.5c-.2.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3 0 .2 0 .8-.2 1.4z"/></svg>
 </a>
+<script src="js/nf.js?v=3"></script>
 </body>
 </html>

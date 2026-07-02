@@ -1,236 +1,171 @@
 <!DOCTYPE html>
 <html lang="es-ES">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Créditos y Licencias | NexaFlow Studio</title>
-  <meta name="description" content="Créditos, licencias y atribución de recursos visuales utilizados en NexaFlow Studio.">
-  <meta name="robots" content="noindex, follow">
-  <link rel="canonical" href="https://nexaflowestudio.com/creditos.html">
-  <link rel="preload" href="styles.css?v=20260602" as="style">
-  <link rel="stylesheet" href="styles.css?v=20260602">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-  <style>
-    .credits-page { max-width: 860px; margin: 0 auto; padding: 7rem 2rem 6rem; }
-    .credits-page h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.8rem,4vw,2.8rem); font-weight: 700; margin-bottom: 0.5rem; color: #f0ede8; }
-    .credits-page .sub { color: rgba(240,237,232,0.55); font-size: 0.95rem; margin-bottom: 3rem; line-height: 1.6; }
-    .credits-section { margin-bottom: 3rem; }
-    .credits-section h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1rem; font-weight: 600; color: #a3e635; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; }
-    .credits-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
-    .credits-table th { text-align: left; padding: 0.6rem 1rem; background: rgba(255,255,255,0.04); color: rgba(240,237,232,0.5); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid rgba(255,255,255,0.07); font-weight: 600; }
-    .credits-table td { padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); color: rgba(240,237,232,0.75); vertical-align: top; line-height: 1.5; }
-    .credits-table tr:last-child td { border-bottom: none; }
-    .credits-table a { color: #a3e635; text-decoration: none; }
-    .credits-table a:hover { text-decoration: underline; }
-    .badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.65rem; font-weight: 600; font-family: 'Space Grotesk', sans-serif; letter-spacing: 0.04em; }
-    .badge-free { background: rgba(163,230,53,0.12); color: #a3e635; border: 1px solid rgba(163,230,53,0.2); }
-    .badge-mit { background: rgba(34,211,238,0.10); color: #22d3ee; border: 1px solid rgba(34,211,238,0.2); }
-    .badge-cc0 { background: rgba(255,255,255,0.06); color: rgba(240,237,232,0.7); border: 1px solid rgba(255,255,255,0.1); }
-    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: rgba(240,237,232,0.45); font-size: 0.85rem; text-decoration: none; margin-bottom: 2.5rem; transition: color 0.2s; }
-    .back-link:hover { color: #a3e635; }
-    .note { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 1.25rem 1.5rem; font-size: 0.85rem; color: rgba(240,237,232,0.55); line-height: 1.6; margin-top: 1rem; }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Créditos y Licencias | NexaFlow Studio</title>
+<meta name="description" content="Créditos, licencias y atribución de recursos visuales utilizados en NexaFlow Studio." />
+<meta name="robots" content="noindex, follow" />
+<link rel="canonical" href="https://www.nexaflowestudio.com/creditos.html" />
+<link rel="icon" type="image/png" href="assets/logo-mark.png" />
+<meta name="theme-color" content="#f5f5f1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+<style id="nf-crit">html,body{background:#f5f5f1}</style>
+<link rel="stylesheet" href="css/nf.css?v=3" />
+<style>
+.legal{padding:150px 0 110px;background:var(--paper);position:relative;overflow:hidden}
+.legal::before{content:'';position:absolute;top:0;right:-8%;width:44%;height:60%;background:radial-gradient(ellipse at 70% 30%,rgba(200,255,71,.12),transparent 60%);pointer-events:none}
+.legal .wrap{max-width:900px;position:relative;z-index:2}
+.legal h1{font-size:clamp(34px,5vw,58px);letter-spacing:-.03em;margin-bottom:10px}
+.legal .sub{font-size:16px;color:var(--muted);margin-bottom:40px;max-width:60ch;line-height:1.6}
+.cr-sec{margin-bottom:44px}
+.cr-sec h2{font-family:'Syne';font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#5f8f14;margin-bottom:16px}
+.cr-table{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.cr-table th{text-align:left;padding:12px 16px;background:var(--paper-2);color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:600;border-bottom:1px solid var(--line)}
+.cr-table td{padding:14px 16px;border-bottom:1px solid var(--line);color:var(--muted);vertical-align:top;line-height:1.5}
+.cr-table tr:last-child td{border-bottom:none}
+.cr-table td strong{color:var(--ink);font-weight:600}
+.cr-table a{color:#4c8a0a;text-decoration:none;font-weight:500}
+.cr-table a:hover{text-decoration:underline}
+.badge{display:inline-block;padding:3px 9px;border-radius:100px;font-size:11px;font-weight:600;font-family:'Syne'}
+.badge-free{background:var(--lime-soft);color:#4c8a0a;border:1px solid var(--lime-line)}
+.badge-mit{background:rgba(14,15,16,.06);color:var(--ink);border:1px solid var(--line-2)}
+.badge-cc0{background:rgba(14,15,16,.04);color:var(--muted);border:1px solid var(--line)}
+.note{background:var(--card);border:1px solid var(--line-2);border-left:3px solid var(--lime);border-radius:14px;padding:18px 20px;font-size:14.5px;color:var(--muted);line-height:1.65;margin-top:16px}
+.note a{color:#4c8a0a}
+@media (max-width:640px){.cr-table{font-size:13px}.cr-table th,.cr-table td{padding:10px 12px}}
+</style>
 </head>
 <body>
 
-<nav class="nav" id="nav" role="navigation" aria-label="Navegación principal">
-  <div class="nav-inner">
-    <a href="/" class="nav-logo" aria-label="NexaFlow Studio — inicio">
-      Nexa<span class="logo-accent">Flow</span><span class="logo-dot">.</span>
+<nav id="nav">
+  <div class="nav-in">
+    <a href="index.html" class="logo" aria-label="NexaFlow Studio — inicio">
+      <img src="assets/logo-mark.png" alt="NexaFlow Studio" />
+      <span class="logo-word">Nexa<span>Flow</span></span>
     </a>
-    <a href="/" class="btn btn-ghost" style="font-size:0.85rem;">← Volver al inicio</a>
+    <div class="nav-links">
+      <a class="nl" href="index.html">Inicio</a>
+      <a class="nl" href="sistema.html">El sistema</a>
+      <a class="nl" href="blog.html">Blog</a>
+      <a class="nav-cta" href="index.html#contacto">Auditoría gratuita →</a>
+    </div>
+    <button class="hamb" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
+<div class="nav-overlay" id="navOverlay" aria-hidden="true">
+  <button class="close" aria-label="Cerrar">✕</button>
+  <a href="index.html">Inicio</a>
+  <a href="sistema.html">El sistema</a>
+  <a href="blog.html">Blog</a>
+  <a href="index.html#contacto">Auditoría gratuita</a>
+</div>
 
-<main class="credits-page">
-  <a href="/" class="back-link">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-    Volver a NexaFlow Studio
-  </a>
+<section class="legal">
+  <div class="wrap">
+    <span class="eyebrow">Legal</span>
+    <h1>Créditos y Licencias</h1>
+    <p class="sub">Atribución de los recursos visuales, tipografías y herramientas de terceros utilizados en este sitio web. Última actualización: julio 2026.</p>
 
-  <h1>Créditos y Licencias</h1>
-  <p class="sub">Atribución de todos los recursos visuales, librerías y herramientas de terceros utilizados en este sitio web. Última actualización: junio 2026.</p>
+    <div class="cr-sec">
+      <h2>Tipografía</h2>
+      <table class="cr-table">
+        <thead><tr><th>Fuente</th><th>Autor</th><th>Licencia</th><th>Origen</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Syne</strong></td><td>Bonjour Monde / Lucas Descroix</td><td><span class="badge badge-mit">SIL Open Font License 1.1</span></td><td><a href="https://fonts.google.com/specimen/Syne" target="_blank" rel="noopener">Google Fonts</a></td></tr>
+          <tr><td><strong>DM Sans</strong></td><td>Colophon Foundry</td><td><span class="badge badge-mit">SIL Open Font License 1.1</span></td><td><a href="https://fonts.google.com/specimen/DM+Sans" target="_blank" rel="noopener">Google Fonts</a></td></tr>
+          <tr><td><strong>JetBrains Mono</strong></td><td>JetBrains</td><td><span class="badge badge-mit">SIL Open Font License 1.1</span></td><td><a href="https://fonts.google.com/specimen/JetBrains+Mono" target="_blank" rel="noopener">Google Fonts</a></td></tr>
+        </tbody>
+      </table>
+    </div>
 
-  <!-- LIBRERÍAS JS -->
-  <div class="credits-section">
-    <h2>Librerías JavaScript</h2>
-    <table class="credits-table">
-      <thead>
-        <tr>
-          <th>Librería</th>
-          <th>Versión</th>
-          <th>Licencia</th>
-          <th>Fuente</th>
-          <th>Uso</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>GSAP (GreenSock)</strong></td>
-          <td>3.x</td>
-          <td><span class="badge badge-free">GSAP Standard</span></td>
-          <td><a href="https://greensock.com/licensing/" target="_blank" rel="noopener">greensock.com</a></td>
-          <td>Animaciones de scroll y revelaciones</td>
-        </tr>
-        <tr>
-          <td><strong>ScrollTrigger (GSAP Plugin)</strong></td>
-          <td>3.x</td>
-          <td><span class="badge badge-free">GSAP Standard</span></td>
-          <td><a href="https://greensock.com/scrolltrigger/" target="_blank" rel="noopener">greensock.com</a></td>
-          <td>Animaciones activadas por scroll</td>
-        </tr>
-        <tr>
-          <td><strong>Tidio Live Chat</strong></td>
-          <td>—</td>
-          <td><span class="badge badge-free">Freemium SaaS</span></td>
-          <td><a href="https://www.tidio.com" target="_blank" rel="noopener">tidio.com</a></td>
-          <td>Widget de chat en tiempo real</td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="note">GSAP se usa bajo la licencia estándar gratuita, que permite uso en producción para sitios web sin sublicenciar la librería. Ver <a href="https://greensock.com/licensing/" target="_blank" rel="noopener">términos completos</a>.</div>
-  </div>
+    <div class="cr-sec">
+      <h2>Herramientas y servicios</h2>
+      <table class="cr-table">
+        <thead><tr><th>Servicio</th><th>Licencia</th><th>Origen</th><th>Uso</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Tidio Live Chat</strong></td><td><span class="badge badge-free">Freemium SaaS</span></td><td><a href="https://www.tidio.com" target="_blank" rel="noopener">tidio.com</a></td><td>Widget de chat en tiempo real</td></tr>
+          <tr><td><strong>Make (Integromat)</strong></td><td><span class="badge badge-free">SaaS</span></td><td><a href="https://www.make.com" target="_blank" rel="noopener">make.com</a></td><td>Automatización del formulario</td></tr>
+        </tbody>
+      </table>
+    </div>
 
-  <!-- FUENTES TIPOGRÁFICAS -->
-  <div class="credits-section">
-    <h2>Tipografía</h2>
-    <table class="credits-table">
-      <thead>
-        <tr>
-          <th>Fuente</th>
-          <th>Autor</th>
-          <th>Licencia</th>
-          <th>Fuente</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Space Grotesk</strong></td>
-          <td>Florian Karsten</td>
-          <td><span class="badge badge-mit">SIL Open Font License 1.1</span></td>
-          <td><a href="https://fonts.google.com/specimen/Space+Grotesk" target="_blank" rel="noopener">Google Fonts</a></td>
-        </tr>
-        <tr>
-          <td><strong>Inter</strong></td>
-          <td>Rasmus Andersson</td>
-          <td><span class="badge badge-mit">SIL Open Font License 1.1</span></td>
-          <td><a href="https://fonts.google.com/specimen/Inter" target="_blank" rel="noopener">Google Fonts</a></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <div class="cr-sec">
+      <h2>Imágenes y fotografías</h2>
+      <table class="cr-table">
+        <thead><tr><th>Uso en web</th><th>Licencia</th><th>Origen</th></tr></thead>
+        <tbody>
+          <tr><td>Portadas del blog y casos de uso</td><td><span class="badge badge-cc0">Unsplash License</span></td><td><a href="https://unsplash.com/license" target="_blank" rel="noopener">Unsplash (libre uso comercial)</a></td></tr>
+          <tr><td>Imágenes de fondo y texturas</td><td><span class="badge badge-cc0">Uso propio / generadas</span></td><td>NexaFlow Studio</td></tr>
+        </tbody>
+      </table>
+      <div class="note">La licencia de Unsplash permite uso gratuito en proyectos comerciales sin atribución obligatoria. Ver <a href="https://unsplash.com/license" target="_blank" rel="noopener">licencia completa</a>.</div>
+    </div>
 
-  <!-- IMÁGENES Y FOTOS -->
-  <div class="credits-section">
-    <h2>Imágenes y fotografías</h2>
-    <table class="credits-table">
-      <thead>
-        <tr>
-          <th>Imagen</th>
-          <th>Uso en web</th>
-          <th>Licencia</th>
-          <th>Fuente</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Interior clínica dental</strong><br><span style="font-size:0.75rem;opacity:0.55;">demo-dental.jpg</span></td>
-          <td>Sección "Casos de uso"</td>
-          <td><span class="badge badge-cc0">Unsplash License</span></td>
-          <td><a href="https://unsplash.com/license" target="_blank" rel="noopener">Unsplash (libre uso comercial)</a></td>
-        </tr>
-        <tr>
-          <td><strong>Centro de estética</strong><br><span style="font-size:0.75rem;opacity:0.55;">demo-estetica.jpg</span></td>
-          <td>Sección "Casos de uso"</td>
-          <td><span class="badge badge-cc0">Unsplash License</span></td>
-          <td><a href="https://unsplash.com/license" target="_blank" rel="noopener">Unsplash (libre uso comercial)</a></td>
-        </tr>
-        <tr>
-          <td><strong>Taller mecánico</strong><br><span style="font-size:0.75rem;opacity:0.55;">demo-taller.jpg</span></td>
-          <td>Sección "Casos de uso"</td>
-          <td><span class="badge badge-cc0">Unsplash License</span></td>
-          <td><a href="https://unsplash.com/license" target="_blank" rel="noopener">Unsplash (libre uso comercial)</a></td>
-        </tr>
-        <tr>
-          <td><strong>Apartamento inmobiliaria</strong><br><span style="font-size:0.75rem;opacity:0.55;">demo-inmobiliaria.jpg</span></td>
-          <td>Sección "Casos de uso"</td>
-          <td><span class="badge badge-cc0">Unsplash License</span></td>
-          <td><a href="https://unsplash.com/license" target="_blank" rel="noopener">Unsplash (libre uso comercial)</a></td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="note">La licencia de Unsplash permite uso gratuito en proyectos comerciales sin necesidad de atribución explícita, aunque se recomienda como buena práctica. Ver <a href="https://unsplash.com/license" target="_blank" rel="noopener">licencia completa</a>.</div>
-  </div>
+    <div class="cr-sec">
+      <h2>Iconografía</h2>
+      <table class="cr-table">
+        <thead><tr><th>Set</th><th>Licencia</th><th>Uso</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Iconos SVG (estilo Feather)</strong></td><td><span class="badge badge-mit">MIT</span></td><td>Iconos inline en toda la web</td></tr>
+          <tr><td><strong>WhatsApp / Instagram</strong></td><td><span class="badge badge-free">Brand Guidelines</span></td><td>Botones de contacto</td></tr>
+        </tbody>
+      </table>
+    </div>
 
-  <!-- ICONOGRAFÍA -->
-  <div class="credits-section">
-    <h2>Iconografía</h2>
-    <table class="credits-table">
-      <thead>
-        <tr>
-          <th>Set de iconos</th>
-          <th>Licencia</th>
-          <th>Fuente</th>
-          <th>Uso</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Heroicons / Feather-style</strong></td>
-          <td><span class="badge badge-mit">MIT</span></td>
-          <td><a href="https://heroicons.com" target="_blank" rel="noopener">heroicons.com</a></td>
-          <td>Iconos SVG inline en toda la web</td>
-        </tr>
-        <tr>
-          <td><strong>WhatsApp icon</strong></td>
-          <td><span class="badge badge-free">Brand Guidelines</span></td>
-          <td><a href="https://www.whatsapp.com/brand" target="_blank" rel="noopener">WhatsApp Brand</a></td>
-          <td>Botones y sección de chatbot</td>
-        </tr>
-        <tr>
-          <td><strong>Google icons (G, Maps)</strong></td>
-          <td><span class="badge badge-free">Brand Guidelines</span></td>
-          <td><a href="https://about.google/brand-resource-center/" target="_blank" rel="noopener">Google Brand</a></td>
-          <td>Sección de integraciones</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- CÓDIGO PROPIO -->
-  <div class="credits-section">
-    <h2>Código propio</h2>
-    <div class="note">
-      Todo el HTML, CSS y JavaScript de este sitio web (salvo las librerías listadas arriba) es código original desarrollado por <strong>NexaFlow Studio</strong>. Queda prohibida su reproducción total o parcial sin autorización expresa.
-      <br><br>
-      Contacto: <a href="mailto:hola@nexaflowestudio.com">hola@nexaflowestudio.com</a>
+    <div class="cr-sec">
+      <h2>Código propio</h2>
+      <div class="note">Todo el HTML, CSS y JavaScript de este sitio web (salvo las herramientas y fuentes listadas) es código original desarrollado por <strong>NexaFlow Studio</strong>. Queda prohibida su reproducción total o parcial sin autorización expresa.<br /><br />Contacto: <a href="mailto:hola@nexaflowestudio.com">hola@nexaflowestudio.com</a></div>
     </div>
   </div>
+</section>
 
-</main>
-
-<footer class="footer" role="contentinfo" style="margin-top:0;">
-  <div class="container">
-    <div class="footer-bottom">
-      <p>© 2026 NexaFlow Studio. Todos los derechos reservados.</p>
-      <p><a href="/" style="color:rgba(240,237,232,0.35);">← Volver al inicio</a></p>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-brand">
+      <span class="logo-word">Nexa<span>Flow</span> Studio</span>
+      <p>Estudio de IA y sistemas digitales en Valencia. Conectamos web, SEO, IA, CRM y WhatsApp para negocios locales.</p>
+      <div class="foot-soc">
+        <a href="https://www.instagram.com/nexaflow.studio" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
+        <a href="https://wa.me/34644218863" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2z"/></svg></a>
+        <a href="mailto:hola@nexaflowestudio.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 6l9 6.5L21 6"/></svg></a>
+      </div>
+    </div>
+    <div class="foot-col">
+      <h5>Estudio</h5>
+      <a href="index.html">Inicio</a>
+      <a href="sistema.html">El sistema</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#contacto">Contacto</a>
+    </div>
+    <div class="foot-col">
+      <h5>Contacto directo</h5>
+      <a href="https://wa.me/34644218863" target="_blank" rel="noopener">WhatsApp · +34 644 218 863</a>
+      <a href="https://ig.me/m/nexaflow.studio" target="_blank" rel="noopener">@nexaflow.studio</a>
+      <a href="mailto:hola@nexaflowestudio.com">hola@nexaflowestudio.com</a>
+      <p>Valencia, España</p>
+    </div>
+    <div class="foot-col">
+      <h5>Legal</h5>
+      <a href="politica-privacidad.html">Política de privacidad</a>
+      <a href="creditos.html">Créditos</a>
+      <a href="index.html#contacto">Auditoría gratuita</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="foot-bot">
+      <div>© 2026 NexaFlow Studio · Valencia, España</div>
+      <div>Estudio de IA y sistemas digitales</div>
     </div>
   </div>
 </footer>
 
-<!-- FLOATING WHATSAPP -->
-<style>
-.fab-wa{position:fixed;right:22px;bottom:22px;z-index:700;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 14px 38px rgba(37,211,102,.42);transition:transform .3s ease,box-shadow .3s;animation:fabIn .5s ease .8s both}
-.fab-wa svg{width:30px;height:30px;color:#fff}
-.fab-wa:hover{transform:scale(1.08) translateY(-2px);box-shadow:0 18px 48px rgba(37,211,102,.55)}
-.fab-wa::after{content:'';position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:fabPulse 2.4s ease-out infinite;pointer-events:none}
-@keyframes fabIn{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}
-@keyframes fabPulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.7);opacity:0}}
-@media (max-width:600px){.fab-wa{width:54px;height:54px;right:16px;bottom:16px}.fab-wa svg{width:27px;height:27px}}
-body.nav-open .fab-wa{opacity:0;visibility:hidden;pointer-events:none}
-</style>
-<a class="fab-wa" href="https://wa.me/34644218863?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20para%20mi%20negocio%20local." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.3-3.8-4.4-4-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2 0 .4 0 .5l-.4.5c-.2.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3 0 .2 0 .8-.2 1.4z"/></svg>
+<a class="fab-wa" href="https://wa.me/34644218863?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20para%20mi%20negocio." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2z"/></svg>
 </a>
+
+<script src="js/nf.js?v=3"></script>
 </body>
 </html>
