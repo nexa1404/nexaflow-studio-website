@@ -64,6 +64,8 @@ export default async function handler(req, res) {
 
     // 201/204 = correo de confirmación enviado correctamente
     if (r.status === 201 || r.status === 204) {
+      // Aviso interno al propietario por cada registro (no bloquea la respuesta)
+      await notifyOwner(apiKey, { email, nombre, source: String(body.source || "web") }).catch(() => {});
       return res.status(200).json({ ok: true });
     }
 
@@ -77,4 +79,32 @@ export default async function handler(req, res) {
   } catch (e) {
     return res.status(502).json({ ok: false, error: "network" });
   }
+}
+
+// Envía un aviso interno a NexaFlow por cada nuevo registro (pendiente de confirmar).
+async function notifyOwner(apiKey, { email, nombre, source }) {
+  const when = new Date().toLocaleString("es-ES", { timeZone: "Europe/Madrid" });
+  const safe = (v) => String(v || "—").replace(/[<>]/g, "");
+  const html =
+    '<div style="font-family:Arial,Helvetica,sans-serif;color:#0e0f10;font-size:15px;line-height:1.6">' +
+    '<p style="margin:0 0 14px"><b>🟢 Nuevo registro en la newsletter</b> (pendiente de confirmar).</p>' +
+    '<table cellpadding="0" cellspacing="0" style="font-size:14px">' +
+    '<tr><td style="padding:3px 14px 3px 0;color:#565a5e">Nombre</td><td><b>' + safe(nombre) + '</b></td></tr>' +
+    '<tr><td style="padding:3px 14px 3px 0;color:#565a5e">Email</td><td><b>' + safe(email) + '</b></td></tr>' +
+    '<tr><td style="padding:3px 14px 3px 0;color:#565a5e">Origen</td><td>' + safe(source) + '</td></tr>' +
+    '<tr><td style="padding:3px 14px 3px 0;color:#565a5e">Fecha</td><td>' + safe(when) + '</td></tr>' +
+    '</table>' +
+    '<p style="margin:14px 0 0;color:#8a8d90;font-size:12.5px">Entrará en la lista solo cuando confirme el doble opt-in. Puedes responder a este correo para contactar directamente.</p>' +
+    '</div>';
+  await fetch("https://api.brevo.com/v3/smtp/email", {
+    method: "POST",
+    headers: { "accept": "application/json", "content-type": "application/json", "api-key": apiKey },
+    body: JSON.stringify({
+      sender: { name: "NexaFlow · Web", email: "hola@nexaflowestudio.com" },
+      to: [{ email: "hola@nexaflowestudio.com", name: "NexaFlow Studio" }],
+      replyTo: { email, name: nombre || email },
+      subject: "🟢 Nuevo registro newsletter: " + email,
+      htmlContent: html,
+    }),
+  });
 }
