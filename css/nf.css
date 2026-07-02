@@ -398,7 +398,10 @@ nav#nav.on-dark .nav-links a.nl:hover,nav#nav.on-dark .nav-links a.nl.active{col
 .toast em{color:var(--lime);font-style:normal;margin-right:6px}
 
 @media (max-width:860px){
-  .art-grid{grid-template-columns:1fr;gap:0}
+  .art-grid{grid-template-columns:1fr;gap:0;max-width:100%}
+  .art-grid>*{min-width:0}
+  .prose{max-width:100%}
+  .prose p,.prose li,.prose h2,.prose h3,.prose blockquote,.prose a,.prose strong,.prose em,.callout{overflow-wrap:break-word;word-break:break-word}
   .toc{display:none}
   .rel-grid{grid-template-columns:1fr}
   .pn{grid-template-columns:1fr}
