@@ -47,7 +47,7 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!.*\\.[a-z]{2,5}$).*)",
+      "source": "/((?!api/)(?!.*\\.[a-z]{2,5}$).*)",
       "destination": "/index.html"
     }
   ]

@@ -168,25 +168,49 @@
     });
   }
 
-  /* ===== NEWSLETTER FORM (id="nlForm": nombre/email) ===== */
+  /* ===== NEWSLETTER FORM (.js-nl-form -> /api/subscribe, doble opt-in Brevo) ===== */
   function initNewsletter(){
-    var form=document.getElementById('nlForm');if(!form)return;
-    var ok=document.getElementById('nlOk');
-    form.addEventListener('submit',function(e){
-      e.preventDefault();
-      var fd=new FormData(form);
-      var data={nombre:fd.get('nombre'),email:fd.get('email'),tipo:'newsletter',origen:'nexaflow-blog',fecha:new Date().toISOString()};
-      function done(){if(ok)ok.style.display='block';form.style.display='none';
-        try{if(window.gtag)window.gtag('event','newsletter_signup',{event_label:'nlForm'});if(window.dataLayer)window.dataLayer.push({event:'newsletter_signup'})}catch(e){}}
-      if(MAKE_WEBHOOK){
-        fetch(MAKE_WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
-          .then(function(r){if(!r.ok)throw 0;done()}).catch(function(){mailto();});
-      }else{mailto();}
-      function mailto(){
-        window.location.href="mailto:"+CONTACT_MAIL+"?subject="+encodeURIComponent("Alta newsletter NexaFlow")+
-          "&body="+encodeURIComponent("Nombre: "+(data.nombre||"-")+"\nEmail: "+(data.email||"-"));
-        done();
+    var forms=document.querySelectorAll('.js-nl-form');
+    if(!forms.length)return;
+    Array.prototype.forEach.call(forms,function(form){
+      var body=form.parentElement||form;
+      var ok=body.querySelector('.nl-ok');
+      var err=form.querySelector('.nl-err');
+      var btn=form.querySelector('button[type=submit]');
+      var bs=btn?btn.querySelector('span'):null;
+      var label=bs?bs.textContent:'';
+      function showErr(m){if(err){err.textContent=m;err.classList.add('show');}}
+      function clearErr(){if(err){err.textContent='';err.classList.remove('show');}}
+      function done(){
+        if(ok)ok.style.display='block';form.style.display='none';
+        try{if(window.gtag)window.gtag('event','newsletter_signup');if(window.dataLayer)window.dataLayer.push({event:'newsletter_signup'});}catch(e){}
       }
+      function fail(m){
+        if(btn){btn.disabled=false;if(bs)bs.textContent=label;}
+        showErr(m||('No hemos podido completar la suscripcion. Vuelve a intentarlo o escribenos a '+CONTACT_MAIL+'.'));
+      }
+      form.addEventListener('submit',function(e){
+        e.preventDefault();clearErr();
+        var fd=new FormData(form);
+        var email=(fd.get('email')||'').trim();
+        var consent=form.querySelector('input[name=consent]');
+        if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){showErr('Escribe un email valido.');return;}
+        if(consent&&!consent.checked){showErr('Marca la casilla para poder enviarte la newsletter.');return;}
+        if(fd.get('website')){done();return;} /* honeypot: bot -> exito silencioso */
+        var data={nombre:(fd.get('nombre')||'').trim(),email:email,consent:true,source:form.getAttribute('data-source')||'web'};
+        if(btn){btn.disabled=true;if(bs)bs.textContent='Enviando…';}
+        fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+          .then(function(r){return r.json().then(function(j){return {s:r.status,b:j};},function(){return {s:r.status,b:{}};});})
+          .then(function(res){
+            if(res.s>=200&&res.s<300&&res.b&&res.b.ok){done();return;}
+            var er=res.b&&res.b.error;
+            if(er==='email'){fail('Escribe un email valido.');return;}
+            if(er==='consent'){fail('Marca la casilla de consentimiento.');return;}
+            if(er==='not_configured'){fail('La newsletter se activa en breve. Escribenos a '+CONTACT_MAIL+' y te anadimos.');return;}
+            fail();
+          })
+          .catch(function(){fail();});
+      });
     });
   }
 

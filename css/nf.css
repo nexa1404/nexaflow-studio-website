@@ -272,7 +272,14 @@ nav#nav.on-dark .nav-links a.nl:hover,nav#nav.on-dark .nav-links a.nl.active{col
 .nl-form input::placeholder{color:rgba(242,242,238,.5)}
 .nl-form input:focus{border-color:var(--lime);background:rgba(255,255,255,.1)}
 .nl-note{font-size:11.5px;color:rgba(242,242,238,.45);margin-top:4px}
-.nl-ok{display:none;padding:16px 0;color:var(--lime);font-family:'Syne';font-weight:700}
+.nl-ok{display:none;padding:16px 0;color:var(--lime);font-family:'Syne';font-weight:700;line-height:1.5}
+.nl-ok b{color:#fff}
+.nl-consent{display:flex;gap:9px;align-items:flex-start;font-size:12.5px;line-height:1.5;color:rgba(242,242,238,.62);cursor:pointer;margin-top:2px}
+.nl-consent input{width:16px;height:16px;margin-top:1px;flex-shrink:0;accent-color:#c8ff41;cursor:pointer}
+.nl-consent a{color:rgba(242,242,238,.9);text-decoration:underline}
+.nl-err{display:none;font-size:13px;line-height:1.5;color:#ff9078;margin-top:2px}
+.nl-err.show{display:block}
+.nl-hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none}
 
 /* ============================================================
    BLOG ARTICLE (light theme)
